@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu &amp; Packages | Tacon'Todo — Cathedral City Taco Catering</title>
+  <meta name="description" content="Explore Tacon'Todo's catering packages — Sabor Essentials, Bachelor/Bachelorette Fiesta, After Party, and Morning After. Custom taco menus for every occasion in the Coachella Valley.">
+  <link rel="canonical" href="https://www.tacontodops.com/menu">
+  <meta property="og:title" content="Menu & Packages | Tacon'Todo — Cathedral City Taco Catering">
+  <meta property="og:description" content="Catering packages starting at $27/person. Birria, street tacos, pastor trompo, and more for your next Coachella Valley event.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.tacontodops.com/menu">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-weight: 400; color: #1A1A1A; background-color: #F5F0EB;
+      line-height: 1.7; -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    :root {
+      --red: #E02B20; --teal: #2FB8A8; --charcoal: #1A1A1A; --off-white: #F5F0EB;
+      --sand: #D4A574; --wood: #3D2B1F; --muted: #7A7067; --cream: #FFFAF5;
+      --sage: #6B7F5E; --divider: #E8E0D8;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.06); --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+      --radius: 6px;
+    }
+
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    .section-padding { padding: 100px 0; }
+    .pattern-divider {
+      width: 80px; height: 8px; margin: 0 auto 40px; border-radius: 2px;
+      background: repeating-linear-gradient(90deg, var(--red) 0px, var(--red) 8px, transparent 8px, transparent 12px, var(--sand) 12px, var(--sand) 20px, transparent 20px, transparent 24px, var(--teal) 24px, var(--teal) 32px, transparent 32px, transparent 36px);
+    }
+    .pattern-divider-wide {
+      width: 100%; height: 4px;
+      background: repeating-linear-gradient(90deg, var(--red) 0px, var(--red) 16px, var(--off-white) 16px, var(--off-white) 20px, var(--sand) 20px, var(--sand) 36px, var(--off-white) 36px, var(--off-white) 40px, var(--teal) 40px, var(--teal) 56px, var(--off-white) 56px, var(--off-white) 60px, var(--sage) 60px, var(--sage) 76px, var(--off-white) 76px, var(--off-white) 80px);
+    }
+    .zigzag-divider {
+      width: 100%; height: 12px; opacity: 0.3; background-color: var(--sand);
+      background-image: linear-gradient(135deg, var(--off-white) 33.33%, transparent 33.33%), linear-gradient(225deg, var(--off-white) 33.33%, transparent 33.33%);
+      background-size: 12px 12px;
+    }
+    .section-heading { text-align: center; margin-bottom: 60px; }
+    .section-heading h1, .section-heading h2 { font-size: 2.2rem; font-weight: 300; color: var(--charcoal); margin-bottom: 12px; }
+    .section-heading p { color: var(--muted); font-size: 1.05rem; max-width: 560px; margin: 0 auto; }
+
+    /* HEADER */
+    .header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 14px 0;
+      background: rgba(245,240,235,0.97); box-shadow: var(--shadow-sm); backdrop-filter: blur(8px);
+    }
+    .header .container { display: flex; align-items: center; justify-content: space-between; }
+    .logo { display: flex; align-items: center; }
+    .logo-img { height: 46px; width: auto; }
+    /* Nav Links */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: var(--radius);
+      transition: opacity 0.2s;
+    }
+    .nav-links a:hover { opacity: 0.7; }
+    .header.scrolled .nav-links a { color: var(--charcoal); }
+    .nav-links a.active { opacity: 0.6; }
+    .nav-phone {
+      font-size: 0.82rem !important;
+      padding: 8px 18px !important;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: var(--radius);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .nav-phone svg { width: 14px; height: 14px; }
+    .header.scrolled .nav-phone { border-color: var(--divider); }
+    .nav-phone:hover { opacity: 1 !important; border-color: rgba(255,255,255,0.5); }
+    .header.scrolled .nav-phone:hover { border-color: var(--muted); }
+    /* Animated SVG Menu Toggle */
+    .menu-toggle {
+      display: none; align-items: center; justify-content: center;
+      width: 40px; height: 40px; border-radius: var(--radius);
+      border: 1px solid var(--divider); background: transparent;
+      cursor: pointer; padding: 0; transition: background 0.2s;
+    }
+    .menu-toggle:hover { background: rgba(26,26,26,0.04); }
+    .menu-toggle svg {
+      width: 22px; height: 22px; stroke: var(--charcoal); fill: none;
+      stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .menu-toggle.active svg { transform: rotate(-45deg); }
+    .menu-toggle svg .menu-path {
+      stroke-dasharray: 12 63;
+      transition: stroke-dasharray 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                  stroke-dashoffset 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .menu-toggle.active svg .menu-path {
+      stroke-dasharray: 20 300;
+      stroke-dashoffset: -32.42px;
+    }
+
+    /* Side Panel */
+    .side-panel-overlay {
+      position: fixed; inset: 0; z-index: 998;
+      background: rgba(0,0,0,0.4); backdrop-filter: blur(4px);
+      opacity: 0; visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s;
+    }
+    .side-panel-overlay.active { opacity: 1; visibility: visible; }
+    .side-panel {
+      position: fixed; top: 0; left: 0; bottom: 0;
+      width: 300px; max-width: 75vw; z-index: 999;
+      background: rgba(245,240,235,0.85); backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-right: 1px solid var(--divider);
+      box-shadow: 4px 0 24px rgba(0,0,0,0.08);
+      transform: translateX(-100%);
+      transition: transform 0.4s cubic-bezier(0.32, 0.72, 0, 1);
+      display: flex; flex-direction: column;
+    }
+    .side-panel.active { transform: translateX(0); }
+    .side-panel-nav {
+      flex: 1; padding: 80px 20px 20px;
+      display: flex; flex-direction: column; gap: 4px; overflow-y: auto;
+    }
+    .side-panel-nav a {
+      display: block; font-size: 0.95rem; font-weight: 500;
+      color: var(--charcoal); padding: 12px 16px; border-radius: var(--radius);
+      transition: background 0.2s, color 0.2s;
+    }
+    .side-panel-nav a:hover { background: rgba(26,26,26,0.06); }
+    .side-panel-nav a.active { color: var(--red); }
+    .side-panel-footer {
+      padding: 16px 20px; border-top: 1px solid var(--divider);
+      background: rgba(26,26,26,0.02);
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .side-panel-footer a {
+      display: block; text-align: center; padding: 12px;
+      border-radius: var(--radius); font-size: 0.88rem; font-weight: 600;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .sp-btn-outline { border: 1px solid var(--divider); color: var(--charcoal); }
+    .sp-btn-outline:hover { background: rgba(26,26,26,0.04); }
+    .sp-btn-primary { background: var(--red); color: #fff; }
+    .sp-btn-primary:hover { background: #c42419; }
+
+    /* PAGE HERO */
+    .page-hero {
+      padding: 160px 0 80px; text-align: center;
+      background: linear-gradient(160deg, rgba(26,26,26,0.75) 0%, rgba(61,43,31,0.6) 50%, rgba(26,26,26,0.7) 100%), url('menu-hero.jpg') center/cover no-repeat;
+    }
+    .page-hero h1 { font-size: 2.8rem; font-weight: 300; color: #fff; margin-bottom: 12px; }
+    .page-hero p { color: rgba(255,255,255,0.65); font-size: 1.05rem; }
+
+    /* PACKAGES */
+    .packages-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-bottom: 60px; }
+    .package-card {
+      background: var(--cream); border: 1px solid var(--divider); border-radius: var(--radius);
+      padding: 36px; position: relative; transition: all 0.3s;
+    }
+    .package-card:hover { box-shadow: var(--shadow-md); border-color: var(--sand); }
+    .package-badge {
+      position: absolute; top: -1px; right: 24px; background: var(--red); color: #fff;
+      font-size: 0.65rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 6px 14px; border-radius: 0 0 var(--radius) var(--radius);
+    }
+    .package-card h3 { font-size: 1.2rem; font-weight: 600; color: var(--charcoal); margin-bottom: 6px; }
+    .package-price { font-size: 0.9rem; color: var(--red); font-weight: 600; margin-bottom: 12px; }
+    .package-desc { font-size: 0.88rem; color: var(--muted); margin-bottom: 16px; line-height: 1.6; font-style: italic; }
+    .package-list { margin-bottom: 20px; }
+    .package-list-heading { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--charcoal); margin-bottom: 8px; margin-top: 14px; }
+    .package-list li { font-size: 0.85rem; color: var(--muted); padding: 4px 0; padding-left: 16px; position: relative; }
+    .package-list li::before { content: ''; position: absolute; left: 0; top: 12px; width: 6px; height: 6px; border-radius: 50%; background: var(--sand); }
+    .package-note { font-size: 0.8rem; color: var(--sage); background: rgba(107,127,94,0.08); padding: 10px 14px; border-radius: 4px; margin-bottom: 16px; }
+    .package-cta {
+      display: inline-block; padding: 10px 28px; font-size: 0.82rem; font-weight: 600;
+      color: var(--red); border: 1.5px solid var(--red); border-radius: var(--radius);
+      transition: all 0.2s; letter-spacing: 0.03em;
+    }
+    .package-cta:hover { background: var(--red); color: #fff; }
+    .sub-option { background: var(--off-white); border-radius: 4px; padding: 16px; margin-bottom: 12px; }
+    .sub-option h4 { font-size: 0.95rem; font-weight: 600; color: var(--charcoal); margin-bottom: 6px; }
+    .sub-option p { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+
+    .menu-categories { text-align: center; padding: 40px; background: var(--cream); border: 1px solid var(--divider); border-radius: var(--radius); }
+    .menu-cats-list { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin-bottom: 16px; }
+    .menu-cats-list span { font-size: 0.85rem; font-weight: 500; color: var(--charcoal); padding: 6px 0; border-bottom: 2px solid var(--sand); }
+    .menu-categories p { font-size: 0.85rem; color: var(--muted); margin-top: 12px; }
+
+    /* CTA */
+    .cta-banner {
+      background: linear-gradient(160deg, rgba(26,26,26,0.8) 0%, rgba(61,43,31,0.75) 100%), url('images/taco-bar-sign.jpg') center/cover no-repeat;
+      padding: 80px 0; text-align: center;
+    }
+    .cta-banner h2 { font-size: 2rem; font-weight: 300; color: #fff; margin-bottom: 12px; }
+    .cta-banner p { color: rgba(255,255,255,0.65); font-size: 1rem; margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto; }
+    /* Shine hover buttons */
+    .btn-primary,
+    .btn-outline {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 44px;
+      padding: 0 28px;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      overflow: hidden;
+      transition: background 0.2s;
+    }
+    .btn-primary {
+      background: var(--red);
+    }
+    .btn-primary:hover { background: #c42419; }
+    .btn-outline {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    .btn-outline:hover { background: rgba(255,255,255,0.18); }
+    /* Shine sweep */
+    .btn-primary::before,
+    .btn-outline::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(45deg, transparent 25%, rgba(255,255,255,0.7) 50%, transparent 75%, transparent 100%);
+      background-size: 250% 250%;
+      background-position: 200% 0;
+      background-repeat: no-repeat;
+      transition: background-position 0s ease;
+      transition-duration: 1s;
+    }
+    .btn-primary:hover::before,
+    .btn-outline:hover::before {
+      background-position: -100% 0;
+    }
+
+    /* ========== FOOTER ========== */
+    .footer { width: 100%; margin-top: 64px; background: #000; border-radius: 0.75rem 0.75rem 0 0; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; padding: 64px 16px 24px; }
+    @media (min-width: 640px) { .footer-inner { padding: 64px 24px 24px; } }
+    @media (min-width: 1024px) { .footer-inner { padding: 96px 32px 24px; } }
+    .footer-top { display: grid; grid-template-columns: 1fr; gap: 32px; }
+    @media (min-width: 1024px) { .footer-top { grid-template-columns: 1fr 2fr; } }
+    .footer-brand { text-align: center; }
+    @media (min-width: 640px) { .footer-brand { text-align: left; } }
+    .footer-brand-header { display: flex; align-items: center; gap: 12px; justify-content: center; }
+    @media (min-width: 640px) { .footer-brand-header { justify-content: flex-start; } }
+    .footer .footer-logo-img { height: 40px; width: auto; border-radius: 50%; }
+    .footer-brand-name { font-size: 1.5rem; font-weight: 600; color: #fff; }
+    .footer-brand-desc { margin-top: 20px; font-size: 0.875rem; line-height: 1.7; color: rgba(255,255,255,0.5); max-width: 320px; }
+    @media (min-width: 640px) { .footer-brand-desc { text-align: left; } }
+    @media (max-width: 639px) { .footer-brand-desc { margin: 20px auto 0; text-align: center; } }
+    .footer-socials { display: flex; gap: 24px; margin-top: 32px; list-style: none; padding: 0; justify-content: center; }
+    @media (min-width: 640px) { .footer-socials { justify-content: flex-start; } }
+    .footer-socials a { color: var(--red); transition: opacity 0.2s; }
+    .footer-socials a:hover { opacity: 0.7; }
+    .footer-socials svg { width: 24px; height: 24px; }
+    .footer-cols { display: grid; grid-template-columns: 1fr; gap: 32px; margin-top: 40px; }
+    @media (min-width: 640px) { .footer-cols { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 768px) { .footer-cols { grid-template-columns: repeat(4, 1fr); } }
+    @media (min-width: 1024px) { .footer-cols { margin-top: 0; } }
+    .footer-col { text-align: center; }
+    @media (min-width: 640px) { .footer-col { text-align: left; } }
+    .footer-col h3 { font-size: 1.05rem; font-weight: 500; color: #fff; margin-bottom: 24px; }
+    .footer-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
+    .footer-col ul a { font-size: 0.875rem; color: rgba(255,255,255,0.45); transition: color 0.3s; display: inline-flex; align-items: center; gap: 8px; }
+    .footer-col ul a:hover { color: #fff; }
+    .footer-col ul a svg { width: 18px; height: 18px; flex-shrink: 0; color: var(--red); }
+    .footer-contact-text { flex: 1; }
+    .footer-bottom { margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: column; text-align: center; gap: 8px; font-size: 0.82rem; color: rgba(255,255,255,0.35); }
+    @media (min-width: 640px) { .footer-bottom { flex-direction: row; justify-content: space-between; text-align: left; } }
+    .footer-bottom .credit { order: -1; }
+    @media (min-width: 640px) { .footer-bottom .credit { order: 0; } }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .menu-toggle { display: flex; }
+      .page-hero { padding: 130px 0 60px; }
+      .page-hero h1 { font-size: 2rem; }
+      .section-heading h1, .section-heading h2 { font-size: 1.8rem; }
+      .section-padding { padding: 60px 0; }
+      .packages-grid { grid-template-columns: 1fr; }
+
+    }
+    @media (max-width: 480px) {
+      .package-card { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" role="banner">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="TacoNtodo-logo.png" alt="Tacon'Todo" class="logo-img"></a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html" class="active">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Book Now</a>
+        <a href="tel:+17606686547" class="nav-phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (760) 668-6547
+        </a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg viewBox="0 0 32 32">
+          <path class="menu-path" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"/>
+          <path d="M7 16 27 16"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+  <div class="side-panel-overlay" id="sidePanelOverlay"></div>
+  <div class="side-panel" id="sidePanel">
+    <div class="side-panel-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html" class="active">Menu</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+    <div class="side-panel-footer">
+      <a href="tel:+17606686547" class="sp-btn-outline">(760) 668-6547</a>
+      <a href="contact.html" class="sp-btn-primary">Book Now</a>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Our Menu</h1>
+      <p>Personalized Catering for Every Occasion</p>
+    </div>
+  </section>
+
+  <div class="zigzag-divider"></div>
+
+  <!-- PACKAGES -->
+  <section class="section-padding" style="background: var(--off-white);">
+    <div class="container">
+      <div class="section-heading">
+        <div class="pattern-divider"></div>
+        <h2>Catering Packages</h2>
+        <p>Choose a package or mix and match to build your perfect menu.</p>
+      </div>
+
+      <div class="packages-grid">
+
+        <!-- Sabor Essentials -->
+        <div class="package-card">
+          <div class="package-badge">Most Popular</div>
+          <h3>Sabor Essentials</h3>
+          <div class="package-price">$27 per person &middot; Min. 20 guests</div>
+          <p class="package-desc">Our signature taco experience with your choice of proteins and all the fixings.</p>
+          <ul class="package-list">
+            <p class="package-list-heading">Choose Your Style</p>
+            <li>Birria Tacos with Consomé</li>
+            <li>Street Tacos — choose 2 proteins: steak, chicken, pastor, chorizo, birria, vegetarian, carnitas</li>
+            <li>Carnitas Tacos — choose 2: carnitas, buche, costilla</li>
+            <li>Pastor Trompo (available for 40+ guests)</li>
+          </ul>
+          <ul class="package-list">
+            <p class="package-list-heading">Includes</p>
+            <li>Rice, beans, salsa, garnish bar, disposable dinnerware</li>
+          </ul>
+          <div class="package-note">Double Up — Mix and match any two packages for just +$5/person</div>
+          <a href="contact.html" class="package-cta">Book This Package</a>
+        </div>
+
+        <!-- Bachelor / Bachelorette Fiesta -->
+        <div class="package-card">
+          <h3>Bachelor / Bachelorette Fiesta</h3>
+          <div class="package-price">$60 per person &middot; Min. 10 guests &middot; 2-hour service</div>
+          <p class="package-desc">Celebrate the last hurrah in style with our bespoke fiesta package.</p>
+          <ul class="package-list">
+            <p class="package-list-heading">Build Your Menu</p>
+            <li><strong>1 Appetizer:</strong> Shrimp Cocktail, Shrimp Ceviche, Queso Fundido, or Shrimp Stuffed Peppers</li>
+            <li><strong>2 Entrées:</strong> Street Tacos, Birria Tacos, Fajitas, Garlic Shrimp, Camarones a la Diabla, Fish Tacos, Shrimp Tacos</li>
+            <li><strong>1 Dessert:</strong> Tres Leches Cake, Churros w/ Ice Cream, Flan, or Pan Dulce Assortment</li>
+          </ul>
+          <ul class="package-list">
+            <p class="package-list-heading">Includes</p>
+            <li>Guacamole, chips, and salsa</li>
+          </ul>
+          <a href="contact.html" class="package-cta">Book This Package</a>
+        </div>
+
+        <!-- After Party -->
+        <div class="package-card">
+          <h3>After Party Packages</h3>
+          <div class="package-price">Starting at $600 &middot; 2-hour service</div>
+          <div class="sub-option">
+            <h4>Midnight Taquiza</h4>
+            <p>Steak &amp; pastor tacos + agua fresca</p>
+            <p>20 guests — $600 &nbsp;|&nbsp; 30 guests — $750 &nbsp;|&nbsp; +$25 per additional</p>
+          </div>
+          <div class="sub-option">
+            <h4>Bacon Wrapped Hot Dog Fiesta</h4>
+            <p>Loaded bacon dogs with all the toppings</p>
+            <p>20 guests — $600 &nbsp;|&nbsp; 30 guests — $750 &nbsp;|&nbsp; +$25 per additional</p>
+          </div>
+          <div class="package-note">Add-on: Cooler of Mexican Cokes — $3 each</div>
+          <a href="contact.html" class="package-cta">Book This Package</a>
+        </div>
+
+        <!-- The Morning After -->
+        <div class="package-card">
+          <h3>The Morning After</h3>
+          <div class="package-price">$35 per person &middot; 2-hour service</div>
+          <p class="package-desc">Wave goodbye to your hangover with our rejuvenating "Adios" selections.</p>
+          <ul class="package-list">
+            <p class="package-list-heading">Choose 2 Entrées</p>
+            <li>Vuelve a la Vida</li>
+            <li>Shrimp Ceviche</li>
+            <li>Menudo</li>
+            <li>Chilaquiles</li>
+            <li>Birria Quesatacos</li>
+            <li>Birria en Caldo</li>
+            <li>Huevos a la Mexicana</li>
+            <li>Huevos Rancheros</li>
+            <li>Breakfast Burrito</li>
+          </ul>
+          <ul class="package-list">
+            <p class="package-list-heading">Includes</p>
+            <li>Café de Hoya / OJ, garnish bar, guacamole, chips, salsa</li>
+          </ul>
+          <div class="package-note">Add-on: Michelada Mix Prep &amp; Service +$5/person (customer provides beer)</div>
+          <a href="contact.html" class="package-cta">Book This Package</a>
+        </div>
+
+      </div>
+
+      <!-- Menu Categories -->
+      <div class="menu-categories">
+        <div class="menu-cats-list">
+          <span>Appetizers</span>
+          <span>Vegetarian Options</span>
+          <span>Entrées</span>
+          <span>Desserts</span>
+        </div>
+        <p>Full personalized menu available upon request. Contact us to build your custom catering experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Found Your Perfect Package?</h2>
+      <p>Let's lock in your date and build your custom menu.</p>
+      <a href="contact.html" class="btn-primary">Book Your Event</a>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-brand-header">
+            <img src="TacoNtodo-logo.png" alt="Tacon'Todo" class="footer-logo-img">
+            <span class="footer-brand-name">Tacon'Todo</span>
+          </div>
+          <p class="footer-brand-desc">Authentic street-style taco catering for weddings, corporate events, private parties, and everything in between. Serving the Coachella Valley since 2021.</p>
+          <ul class="footer-socials">
+            <li><a href="https://www.instagram.com/tacontodo.est2021" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></li>
+            <li><a href="https://www.facebook.com/tacontodo" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></li>
+            <li><a href="https://www.tiktok.com/@tacontodo" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a></li>
+          </ul>
+        </div>
+        <div class="footer-cols">
+          <div class="footer-col"><h3>Navigate</h3><ul><li><a href="index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li></ul></div>
+          <div class="footer-col"><h3>Our Services</h3><ul><li><a href="contact.html">Taco Catering</a></li><li><a href="contact.html">Weddings</a></li><li><a href="contact.html">Corporate Events</a></li><li><a href="contact.html">Private Parties</a></li></ul></div>
+          <div class="footer-col"><h3>Helpful Links</h3><ul><li><a href="menu.html">Full Menu</a></li><li><a href="contact.html">Book Now</a></li><li><a href="gallery.html">Event Photos</a></li></ul></div>
+          <div class="footer-col"><h3>Contact Us</h3><ul>
+            <li><a href="mailto:info@tacontodops.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span class="footer-contact-text">info@tacontodops.com</span></a></li>
+            <li><a href="tel:+17606686547"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="footer-contact-text">(760) 668-6547</span></a></li>
+            <li><a href="https://maps.google.com/?q=Cathedral+City+CA" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><address class="footer-contact-text" style="font-style:normal;">Cathedral City, CA</address></a></li>
+          </ul></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tacon'Todo. All rights reserved.</p>
+        <p class="credit">Website by Desert Nomad Media</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const sidePanel = document.getElementById('sidePanel');
+    const sidePanelOverlay = document.getElementById('sidePanelOverlay');
+    function openPanel() {
+      menuToggle.classList.add('active');
+      sidePanel.classList.add('active');
+      sidePanelOverlay.classList.add('active');
+      menuToggle.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closePanel() {
+      menuToggle.classList.remove('active');
+      sidePanel.classList.remove('active');
+      sidePanelOverlay.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.contains('active') ? closePanel() : openPanel();
+    });
+    sidePanelOverlay.addEventListener('click', closePanel);
+    sidePanel.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closePanel);
+    });
+  </script>
+</body>
+</html>

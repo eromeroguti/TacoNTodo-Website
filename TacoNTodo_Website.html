@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tacon'Todo | Authentic Taco Catering — Cathedral City, CA</title>
+  <meta name="description" content="Tacon'Todo is a family-owned taco catering service in Cathedral City, CA. Taco carts, event catering, wedding packages, and custom menus for the entire Coachella Valley. Call (760) 668-6547.">
+  <link rel="canonical" href="https://www.tacontodops.com">
+  <meta property="og:title" content="Tacon'Todo | Authentic Taco Catering — Cathedral City, CA">
+  <meta property="og:description" content="Family-owned taco catering service in Cathedral City, CA. Taco carts, event catering, wedding packages, and custom menus for the Coachella Valley.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.tacontodops.com">
+  <!-- REPLACE: Add og:image meta tag with actual image URL -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CateringService",
+    "name": "Tacon'Todo",
+    "image": "https://tacontodops.com/logo.webp",
+    "description": "Authentic taco catering service for events, parties, and weddings in Cathedral City and the Coachella Valley.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Cathedral City",
+      "addressRegion": "CA",
+      "postalCode": "92234",
+      "addressCountry": "US"
+    },
+    "telephone": "+17606686547",
+    "url": "https://www.tacontodops.com",
+    "sameAs": ["https://www.instagram.com/tacontodo.est2021"],
+    "priceRange": "$$",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "7"
+    },
+    "openingHoursSpecification": [
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "10:00", "closes": "20:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "10:00", "closes": "17:00"}
+    ],
+    "areaServed": ["Cathedral City","Palm Springs","Rancho Mirage","Palm Desert","Indio","La Quinta","Coachella","Desert Hot Springs","Thousand Palms"],
+    "servesCuisine": "Mexican"
+  }
+  </script>
+  <style>
+    /* ========== RESET & BASE ========== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-weight: 400;
+      color: #1A1A1A;
+      background-color: #F5F0EB;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ========== DESIGN TOKENS ========== */
+    :root {
+      --red: #E02B20;
+      --teal: #2FB8A8;
+      --charcoal: #1A1A1A;
+      --off-white: #F5F0EB;
+      --sand: #D4A574;
+      --wood: #3D2B1F;
+      --muted: #7A7067;
+      --cream: #FFFAF5;
+      --sage: #6B7F5E;
+      --divider: #E8E0D8;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+      --radius: 6px;
+    }
+
+    /* ========== UTILITY ========== */
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .accent-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .section-padding { padding: 100px 0; }
+
+    /* ========== MEXICAN PATTERN DIVIDERS ========== */
+    .pattern-divider {
+      width: 80px;
+      height: 8px;
+      margin: 0 auto 40px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--red) 0px, var(--red) 8px,
+        transparent 8px, transparent 12px,
+        var(--sand) 12px, var(--sand) 20px,
+        transparent 20px, transparent 24px,
+        var(--teal) 24px, var(--teal) 32px,
+        transparent 32px, transparent 36px
+      );
+      border-radius: 2px;
+    }
+    .pattern-divider-wide {
+      width: 100%;
+      height: 4px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--red) 0px, var(--red) 16px,
+        var(--off-white) 16px, var(--off-white) 20px,
+        var(--sand) 20px, var(--sand) 36px,
+        var(--off-white) 36px, var(--off-white) 40px,
+        var(--teal) 40px, var(--teal) 56px,
+        var(--off-white) 56px, var(--off-white) 60px,
+        var(--sage) 60px, var(--sage) 76px,
+        var(--off-white) 76px, var(--off-white) 80px
+      );
+    }
+    .zigzag-divider {
+      width: 100%;
+      height: 12px;
+      background:
+        linear-gradient(135deg, var(--off-white) 33.33%, transparent 33.33%) 0 0,
+        linear-gradient(225deg, var(--off-white) 33.33%, transparent 33.33%) 0 0;
+      background-size: 12px 12px;
+      background-color: var(--sand);
+      opacity: 0.3;
+    }
+
+    /* ========== SECTION HEADINGS ========== */
+    .section-heading {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .section-heading h2 {
+      font-size: 2.2rem;
+      font-weight: 300;
+      color: var(--charcoal);
+      margin-bottom: 12px;
+    }
+    .section-heading p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* ========== HEADER / NAV ========== */
+    .header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 20px 0;
+      transition: all 0.3s ease;
+    }
+    .header.scrolled {
+      background: rgba(245, 240, 235, 0.97);
+      box-shadow: var(--shadow-sm);
+      padding: 14px 0;
+      backdrop-filter: blur(8px);
+    }
+    .header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo-img {
+      height: 56px;
+      width: auto;
+      transition: height 0.3s ease;
+    }
+    .header.scrolled .logo-img {
+      height: 46px;
+    }
+    .footer-logo-img {
+      height: 72px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+    }
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      transition: color 0.2s;
+      position: relative;
+    }
+    .header:not(.scrolled) .nav-links a { color: #fff; }
+    .nav-links a:hover { color: var(--red); }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0;
+      width: 0; height: 2px;
+      background: var(--red);
+      transition: width 0.2s;
+    }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-cta {
+      font-size: 0.8rem !important;
+      background: var(--red);
+      color: #fff !important;
+      padding: 10px 24px;
+      border-radius: var(--radius);
+      transition: background 0.2s, transform 0.2s !important;
+    }
+    .nav-cta:hover {
+      background: #c42419 !important;
+      color: #fff !important;
+      transform: translateY(-1px);
+    }
+    .nav-cta::after { display: none !important; }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      width: 24px; height: 2px;
+      background: var(--charcoal);
+      transition: all 0.3s;
+      border-radius: 2px;
+    }
+    .header:not(.scrolled) .hamburger span { background: #fff; }
+    .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ========== HERO ========== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(160deg, rgba(26,26,26,0.85) 0%, rgba(61,43,31,0.6) 50%, rgba(26,26,26,0.75) 100%),
+        linear-gradient(45deg, #3D2B1F 25%, #D4A574 50%, #6B7F5E 75%, #3D2B1F 100%);
+      background-size: cover;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 80%, rgba(224,43,32,0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(47,184,168,0.06) 0%, transparent 50%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      padding: 0 24px;
+    }
+    .hero-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sand);
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 300;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .hero-sub {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 40px;
+      font-weight: 300;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-block;
+      padding: 14px 36px;
+      background: var(--red);
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      border-radius: var(--radius);
+      transition: background 0.2s, transform 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary:hover { background: #c42419; transform: translateY(-2px); }
+    .btn-outline {
+      display: inline-block;
+      padding: 14px 36px;
+      background: transparent;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      border-radius: var(--radius);
+      border: 1.5px solid rgba(255,255,255,0.4);
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .btn-outline:hover {
+      border-color: #fff;
+      background: rgba(255,255,255,0.08);
+    }
+    .scroll-indicator {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: scrollBounce 2s ease infinite;
+    }
+    .scroll-indicator svg { width: 24px; height: 24px; stroke: rgba(255,255,255,0.4); fill: none; }
+    @keyframes scrollBounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* ========== TRUST BADGES ========== */
+    .trust-bar {
+      background: var(--cream);
+      border-bottom: 1px solid var(--divider);
+      padding: 28px 0;
+    }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      text-align: center;
+    }
+    .trust-item {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--charcoal);
+    }
+    .trust-icon {
+      font-size: 1.3rem;
+      margin-bottom: 6px;
+    }
+    .trust-label {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* ========== FEATURED SERVICES ========== */
+    .services-preview { background: var(--off-white); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .service-card {
+      background: var(--cream);
+      border: 1px solid var(--divider);
+      border-radius: var(--radius);
+      padding: 40px 32px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .service-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--sand);
+      transform: translateY(-4px);
+    }
+    .service-icon {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 1.4rem;
+      background: rgba(224,43,32,0.08);
+    }
+    .service-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--charcoal);
+    }
+    .service-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ========== ABOUT ========== */
+    .about { background: var(--cream); }
+    .about-content {
+      max-width: 720px;
+      margin: 0 auto 60px;
+      text-align: center;
+    }
+    .about-content p {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 24px;
+      line-height: 1.8;
+    }
+    .about-content p:last-child { margin-bottom: 0; }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+    }
+    .value-card {
+      text-align: center;
+      padding: 32px 20px;
+      background: var(--off-white);
+      border-radius: var(--radius);
+      border: 1px solid var(--divider);
+    }
+    .value-icon {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      font-size: 1.2rem;
+      background: rgba(107,127,94,0.1);
+      color: var(--sage);
+    }
+    .value-card h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--charcoal);
+    }
+    .value-card p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ========== MENU & PACKAGES ========== */
+    .menu-section { background: var(--off-white); }
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-bottom: 60px;
+    }
+    .package-card {
+      background: var(--cream);
+      border: 1px solid var(--divider);
+      border-radius: var(--radius);
+      padding: 36px;
+      position: relative;
+      transition: all 0.3s;
+    }
+    .package-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--sand);
+    }
+    .package-badge {
+      position: absolute;
+      top: -1px; right: 24px;
+      background: var(--red);
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 0 0 var(--radius) var(--radius);
+    }
+    .package-card h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 6px;
+    }
+    .package-price {
+      font-size: 0.9rem;
+      color: var(--red);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .package-desc {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+      line-height: 1.6;
+      font-style: italic;
+    }
+    .package-list {
+      margin-bottom: 20px;
+    }
+    .package-list-heading {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+      margin-top: 14px;
+    }
+    .package-list li {
+      font-size: 0.85rem;
+      color: var(--muted);
+      padding: 4px 0;
+      padding-left: 16px;
+      position: relative;
+    }
+    .package-list li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 12px;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--sand);
+    }
+    .package-note {
+      font-size: 0.8rem;
+      color: var(--sage);
+      background: rgba(107,127,94,0.08);
+      padding: 10px 14px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+    }
+    .package-cta {
+      display: inline-block;
+      padding: 10px 28px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--red);
+      border: 1.5px solid var(--red);
+      border-radius: var(--radius);
+      transition: all 0.2s;
+      letter-spacing: 0.03em;
+    }
+    .package-cta:hover {
+      background: var(--red);
+      color: #fff;
+    }
+    .sub-option {
+      background: var(--off-white);
+      border-radius: 4px;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+    .sub-option h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 6px;
+    }
+    .sub-option p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* Menu categories bar */
+    .menu-categories {
+      text-align: center;
+      padding: 40px;
+      background: var(--cream);
+      border: 1px solid var(--divider);
+      border-radius: var(--radius);
+    }
+    .menu-cats-list {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .menu-cats-list span {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      padding: 6px 0;
+      border-bottom: 2px solid var(--sand);
+    }
+    .menu-categories p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 12px;
+    }
+
+    /* ========== GALLERY ========== */
+    .gallery-section { background: var(--cream); }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 80px;
+    }
+    .gallery-item {
+      aspect-ratio: 4/3;
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-weight: 500;
+      border: 1px solid var(--divider);
+    }
+    .gallery-item:nth-child(1) { background: linear-gradient(135deg, #D4A574 0%, #E8E0D8 100%); }
+    .gallery-item:nth-child(2) { background: linear-gradient(135deg, #F5F0EB 0%, #D4A574 100%); }
+    .gallery-item:nth-child(3) { background: linear-gradient(135deg, #6B7F5E 0%, #D4A574 100%); }
+    .gallery-item:nth-child(4) { background: linear-gradient(135deg, #E8E0D8 0%, #FFFAF5 100%); }
+    .gallery-item:nth-child(5) { background: linear-gradient(135deg, #D4A574 0%, #6B7F5E 100%); }
+    .gallery-item:nth-child(6) { background: linear-gradient(135deg, #3D2B1F 0%, #D4A574 100%); color: rgba(255,255,255,0.7); }
+    .gallery-item:nth-child(7) { background: linear-gradient(135deg, #F5F0EB 0%, #E8E0D8 100%); }
+    .gallery-item:nth-child(8) { background: linear-gradient(135deg, #D4A574 0%, #F5F0EB 100%); }
+
+    /* Testimonials */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .testimonial-card {
+      background: var(--off-white);
+      border: 1px solid var(--divider);
+      border-radius: var(--radius);
+      padding: 32px;
+    }
+    .testimonial-stars {
+      color: var(--sand);
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+      letter-spacing: 2px;
+    }
+    .testimonial-card blockquote {
+      font-size: 0.9rem;
+      color: var(--charcoal);
+      line-height: 1.7;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    .testimonial-author {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    /* ========== CONTACT ========== */
+    .contact-section { background: var(--off-white); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 48px;
+    }
+    .form-group { margin-bottom: 20px; }
+    .form-group label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: var(--charcoal);
+      background: var(--cream);
+      border: 1px solid var(--divider);
+      border-radius: var(--radius);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--sand);
+    }
+    .form-group textarea { min-height: 120px; resize: vertical; }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .contact-info-card {
+      background: var(--cream);
+      border: 1px solid var(--divider);
+      border-radius: var(--radius);
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--divider);
+    }
+    .contact-info-item:last-child { border-bottom: none; }
+    .contact-info-icon {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      background: rgba(224,43,32,0.08);
+      flex-shrink: 0;
+    }
+    .contact-info-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+    .contact-info-value {
+      font-size: 0.9rem;
+      color: var(--charcoal);
+      font-weight: 500;
+    }
+    .contact-info-value a {
+      color: var(--red);
+      transition: color 0.2s;
+    }
+    .contact-info-value a:hover { color: #c42419; }
+
+    .service-area-box {
+      background: var(--cream);
+      border: 1px solid var(--divider);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .service-area-box h3 {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+    }
+    .service-area-box p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .map-placeholder {
+      background: var(--cream);
+      border: 1px solid var(--divider);
+      border-radius: var(--radius);
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-bottom: 24px;
+    }
+
+    .seasonal-note {
+      background: rgba(47,184,168,0.08);
+      border-left: 3px solid var(--teal);
+      padding: 14px 18px;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      font-size: 0.82rem;
+      color: var(--charcoal);
+    }
+
+    /* ========== FOOTER ========== */
+    .footer {
+      background: var(--charcoal);
+      color: rgba(255,255,255,0.7);
+      padding: 48px 0 32px;
+    }
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .footer-brand .logo-text {
+      color: #fff;
+      font-size: 1.2rem;
+    }
+    .footer-brand .logo-tagline {
+      color: rgba(255,255,255,0.4);
+    }
+    .footer-info {
+      text-align: center;
+      font-size: 0.82rem;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .footer-info a {
+      color: rgba(255,255,255,0.7);
+      transition: color 0.2s;
+    }
+    .footer-info a:hover { color: var(--red); }
+    .footer-social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.15);
+      transition: all 0.2s;
+      font-size: 1.1rem;
+    }
+    .footer-social a:hover {
+      border-color: var(--red);
+      background: rgba(224,43,32,0.1);
+    }
+    .footer-bottom {
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.35);
+    }
+    .footer-credit { color: rgba(255,255,255,0.25); }
+
+    /* ========== MOBILE NAV OVERLAY ========== */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(245,240,235,0.98);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      backdrop-filter: blur(12px);
+    }
+    .mobile-nav.active { display: flex; }
+    .mobile-nav a {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      letter-spacing: 0.05em;
+      transition: color 0.2s;
+    }
+    .mobile-nav a:hover { color: var(--red); }
+    .mobile-nav .btn-primary {
+      margin-top: 8px;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+      .packages-grid { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .hero h1 { font-size: 2.2rem; }
+      .hero-sub { font-size: 0.95rem; }
+      .section-heading h2 { font-size: 1.8rem; }
+      .section-padding { padding: 60px 0; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-content { flex-direction: column; text-align: center; }
+      .footer-bottom { flex-direction: column; text-align: center; gap: 8px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 1.8rem; }
+      .package-card { padding: 24px; }
+      .hero-ctas { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" role="banner" aria-label="Main navigation">
+    <div class="container">
+      <a href="#home" class="logo">
+        <img src="TacoNtodo-logo.png" alt="Tacon'Todo — Running on Salsa, Established 2021" class="logo-img">
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact" class="nav-cta">Book Now</a>
+      </nav>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav" aria-label="Mobile navigation">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact" class="btn-primary">Book Now</a>
+  </div>
+
+  <!-- ==================== HERO ==================== -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <p class="hero-label">Running on Salsa</p>
+      <h1>Authentic Taco Catering for Every Occasion</h1>
+      <p class="hero-sub">Cathedral City, CA — Serving the Coachella Valley Since 2021</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary">Book Your Event</a>
+        <a href="#menu" class="btn-outline">View Our Menu</a>
+      </div>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <svg viewBox="0 0 24 24" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </div>
+  </section>
+
+  <!-- ==================== TRUST BADGES ==================== -->
+  <div class="trust-bar">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-icon">&#9733;</div>
+          <div>5.0 Google Rating</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">&#127968;</div>
+          <div>Family-Owned Since 2021</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">&#128205;</div>
+          <div>Cathedral City Local</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">&#127881;</div>
+          <div>Events of All Sizes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FEATURED SERVICES ==================== -->
+  <section class="services-preview section-padding">
+    <div class="container">
+      <div class="section-heading">
+        <div class="pattern-divider"></div>
+        <h2>What We Do</h2>
+        <p>From intimate gatherings to grand celebrations, we bring the taqueria to you.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">&#127790;</div>
+          <h3>Taco Cart Catering</h3>
+          <p>Our signature mobile taco cart brings the full taqueria experience to your location.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#127878;</div>
+          <h3>Event &amp; Party Catering</h3>
+          <p>Birthdays, corporate events, graduations — any gathering is better with tacos.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#128141;</div>
+          <h3>Wedding Packages</h3>
+          <p>Make your reception unforgettable with a custom taco bar your guests will rave about.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section id="about" class="about section-padding">
+    <div class="container">
+      <div class="section-heading">
+        <div class="pattern-divider"></div>
+        <h2>Our Story</h2>
+      </div>
+      <div class="about-content">
+        <p>Every meal at Tacon'Todo is more than just dining — it's a personalized fiesta of authentic Mexican flavors. Our family-owned business pours love into every dish, transforming each event we cater into an irresistible celebration of vibrant tastes and aromas.</p>
+        <p>When you choose Tacon'Todo to cater your event, you're choosing more than just a catering service. You're choosing to treat your guests to an authentic Mexican culinary experience, presented with as much attention to aesthetics as to flavors. From selecting the freshest ingredients to preparing dishes with utmost care and presenting them beautifully, our commitment to quality is evident in every aspect of our service.</p>
+        <p>As we bring our kitchen to your party, we ensure an atmosphere as warm, inviting, and festive as the food we serve. Based in Cathedral City and proudly serving the entire Coachella Valley, Tacon'Todo turns every gathering into a Mexican culinary festival.</p>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">&#127807;</div>
+          <h3>Fresh Ingredients</h3>
+          <p>Sourced daily for maximum flavor</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">&#128293;</div>
+          <h3>Authentic Recipes</h3>
+          <p>Traditional Mexican flavors passed down through generations</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">&#9733;</div>
+          <h3>Professional Service</h3>
+          <p>From setup to cleanup, we handle everything</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">&#128150;</div>
+          <h3>Community Roots</h3>
+          <p>Proudly serving Cathedral City and the Coachella Valley</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="zigzag-divider"></div>
+
+  <!-- ==================== MENU & PACKAGES ==================== -->
+  <section id="menu" class="menu-section section-padding">
+    <div class="container">
+      <div class="section-heading">
+        <div class="pattern-divider"></div>
+        <h2>Our Menu</h2>
+        <p>Personalized Catering for Every Occasion</p>
+      </div>
+
+      <div class="packages-grid">
+
+        <!-- Package 1: Sabor Essentials -->
+        <div class="package-card">
+          <div class="package-badge">Most Popular</div>
+          <h3>Sabor Essentials</h3>
+          <div class="package-price">$27 per person &middot; Min. 20 guests</div>
+          <p class="package-desc">Our signature taco experience with your choice of proteins and all the fixings.</p>
+          <ul class="package-list">
+            <p class="package-list-heading">Choose Your Style</p>
+            <li>Birria Tacos with Consomé</li>
+            <li>Street Tacos — choose 2 proteins: steak, chicken, pastor, chorizo, birria, vegetarian, carnitas</li>
+            <li>Carnitas Tacos — choose 2: carnitas, buche, costilla</li>
+            <li>Pastor Trompo (available for 40+ guests)</li>
+          </ul>
+          <ul class="package-list">
+            <p class="package-list-heading">Includes</p>
+            <li>Rice, beans, salsa, garnish bar, disposable dinnerware</li>
+          </ul>
+          <div class="package-note">Double Up — Mix and match any two packages for just +$5/person</div>
+          <a href="#contact" class="package-cta">Book This Package</a>
+        </div>
+
+        <!-- Package 2: Bachelor / Bachelorette Fiesta -->
+        <div class="package-card">
+          <h3>Bachelor / Bachelorette Fiesta</h3>
+          <div class="package-price">$60 per person &middot; Min. 10 guests &middot; 2-hour service</div>
+          <p class="package-desc">Celebrate the last hurrah in style with our bespoke fiesta package.</p>
+          <ul class="package-list">
+            <p class="package-list-heading">Build Your Menu</p>
+            <li><strong>1 Appetizer:</strong> Shrimp Cocktail, Shrimp Ceviche, Queso Fundido, or Shrimp Stuffed Peppers</li>
+            <li><strong>2 Entrées:</strong> Street Tacos, Birria Tacos, Fajitas, Garlic Shrimp, Camarones a la Diabla, Fish Tacos, Shrimp Tacos</li>
+            <li><strong>1 Dessert:</strong> Tres Leches Cake, Churros w/ Ice Cream, Flan, or Pan Dulce Assortment</li>
+          </ul>
+          <ul class="package-list">
+            <p class="package-list-heading">Includes</p>
+            <li>Guacamole, chips, and salsa</li>
+          </ul>
+          <a href="#contact" class="package-cta">Book This Package</a>
+        </div>
+
+        <!-- Package 3: After Party Packages -->
+        <div class="package-card">
+          <h3>After Party Packages</h3>
+          <div class="package-price">Starting at $600 &middot; 2-hour service</div>
+
+          <div class="sub-option">
+            <h4>Midnight Taquiza</h4>
+            <p>Steak &amp; pastor tacos + agua fresca</p>
+            <p>20 guests — $600 &nbsp;|&nbsp; 30 guests — $750 &nbsp;|&nbsp; +$25 per additional</p>
+          </div>
+
+          <div class="sub-option">
+            <h4>Bacon Wrapped Hot Dog Fiesta</h4>
+            <p>Loaded bacon dogs with all the toppings</p>
+            <p>20 guests — $600 &nbsp;|&nbsp; 30 guests — $750 &nbsp;|&nbsp; +$25 per additional</p>
+          </div>
+
+          <div class="package-note">Add-on: Cooler of Mexican Cokes — $3 each</div>
+          <a href="#contact" class="package-cta">Book This Package</a>
+        </div>
+
+        <!-- Package 4: The Morning After -->
+        <div class="package-card">
+          <h3>The Morning After</h3>
+          <div class="package-price">$35 per person &middot; 2-hour service</div>
+          <p class="package-desc">Wave goodbye to your hangover with our rejuvenating "Adios" selections.</p>
+          <ul class="package-list">
+            <p class="package-list-heading">Choose 2 Entrées</p>
+            <li>Vuelve a la Vida</li>
+            <li>Shrimp Ceviche</li>
+            <li>Menudo</li>
+            <li>Chilaquiles</li>
+            <li>Birria Quesatacos</li>
+            <li>Birria en Caldo</li>
+            <li>Huevos a la Mexicana</li>
+            <li>Huevos Rancheros</li>
+            <li>Breakfast Burrito</li>
+          </ul>
+          <ul class="package-list">
+            <p class="package-list-heading">Includes</p>
+            <li>Café de Hoya / OJ, garnish bar, guacamole, chips, salsa</li>
+          </ul>
+          <div class="package-note">Add-on: Michelada Mix Prep &amp; Service +$5/person (customer provides beer)</div>
+          <a href="#contact" class="package-cta">Book This Package</a>
+        </div>
+
+      </div>
+
+      <!-- Menu Categories -->
+      <div class="menu-categories">
+        <div class="menu-cats-list">
+          <span>Appetizers</span>
+          <span>Vegetarian Options</span>
+          <span>Entrées</span>
+          <span>Desserts</span>
+        </div>
+        <p>Full personalized menu available upon request. Contact us to build your custom catering experience.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="zigzag-divider"></div>
+
+  <!-- ==================== GALLERY / EXPERIENCE ==================== -->
+  <section id="gallery" class="gallery-section section-padding">
+    <div class="container">
+      <div class="section-heading">
+        <div class="pattern-divider"></div>
+        <h2>The Tacon'Todo Experience</h2>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- REPLACE: Insert food/event photo here -->
+        <div class="gallery-item" role="img" aria-label="Photo placeholder">Photo Coming Soon</div>
+        <!-- REPLACE: Insert food/event photo here -->
+        <div class="gallery-item" role="img" aria-label="Photo placeholder">Photo Coming Soon</div>
+        <!-- REPLACE: Insert food/event photo here -->
+        <div class="gallery-item" role="img" aria-label="Photo placeholder">Photo Coming Soon</div>
+        <!-- REPLACE: Insert food/event photo here -->
+        <div class="gallery-item" role="img" aria-label="Photo placeholder">Photo Coming Soon</div>
+        <!-- REPLACE: Insert food/event photo here -->
+        <div class="gallery-item" role="img" aria-label="Photo placeholder">Photo Coming Soon</div>
+        <!-- REPLACE: Insert food/event photo here -->
+        <div class="gallery-item" role="img" aria-label="Photo placeholder">Photo Coming Soon</div>
+        <!-- REPLACE: Insert food/event photo here -->
+        <div class="gallery-item" role="img" aria-label="Photo placeholder">Photo Coming Soon</div>
+        <!-- REPLACE: Insert food/event photo here -->
+        <div class="gallery-item" role="img" aria-label="Photo placeholder">Photo Coming Soon</div>
+      </div>
+
+      <!-- REPLACE: Replace placeholder testimonials with real Google reviews -->
+      <div class="section-heading">
+        <div class="pattern-divider"></div>
+        <h2>What Our Clients Say</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"The birria tacos were out of this world. Our guests could not stop talking about the food. Tacon'Todo made our daughter's quinceañera absolutely perfect."</blockquote>
+          <div class="testimonial-author">— Maria G., Cathedral City</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"From setup to cleanup, the team was incredibly professional. They handled everything while we enjoyed our own party. Best catering decision we ever made."</blockquote>
+          <div class="testimonial-author">— James R., Palm Springs</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"We hired Tacon'Todo for our company team building event and it was a huge hit. The taco cart was the highlight of the day. Already booking them for our holiday party."</blockquote>
+          <div class="testimonial-author">— Sarah L., Palm Desert</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT / BOOK ==================== -->
+  <section id="contact" class="contact-section section-padding">
+    <div class="container">
+      <div class="section-heading">
+        <div class="pattern-divider"></div>
+        <h2>Book Your Event</h2>
+        <p>Let's make your next event unforgettable</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Contact Form -->
+        <div>
+          <!-- CONNECT: Add form action/backend handler -->
+          <form aria-label="Event booking form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your full name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="you@email.com">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="(760) 555-0000">
+              </div>
+              <div class="form-group">
+                <label for="date">Event Date</label>
+                <input type="date" id="date" name="date">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="event-type">Event Type</label>
+                <select id="event-type" name="event-type">
+                  <option value="">Select an event type</option>
+                  <option value="party">Party</option>
+                  <option value="wedding">Wedding</option>
+                  <option value="corporate">Corporate</option>
+                  <option value="festival">Festival</option>
+                  <option value="bachelor-bachelorette">Bachelor / Bachelorette</option>
+                  <option value="after-party">After Party</option>
+                  <option value="morning-after">Morning After</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="guests">Estimated Guest Count</label>
+                <input type="number" id="guests" name="guests" min="1" placeholder="25">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us about your event — any details, dietary needs, or questions..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="width:100%;">Send Request</button>
+          </form>
+        </div>
+
+        <!-- Contact Info Sidebar -->
+        <div>
+          <div class="contact-info-card">
+            <div class="contact-info-item">
+              <div class="contact-info-icon">&#128222;</div>
+              <div>
+                <div class="contact-info-label">Phone</div>
+                <div class="contact-info-value"><a href="tel:+17606686547">(760) 668-6547</a></div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">&#9993;</div>
+              <div>
+                <div class="contact-info-label">Email</div>
+                <div class="contact-info-value"><a href="mailto:info@tacontodops.com">info@tacontodops.com</a></div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">&#128247;</div>
+              <div>
+                <div class="contact-info-label">Instagram</div>
+                <div class="contact-info-value"><a href="https://www.instagram.com/tacontodo.est2021" target="_blank" rel="noopener">@tacontodo.est2021</a></div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">&#128338;</div>
+              <div>
+                <div class="contact-info-label">Hours</div>
+                <div class="contact-info-value">Tue–Fri 10am–8pm<br>Sat–Sun 10am–5pm<br>Mon — Closed</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-area-box">
+            <h3>Service Area</h3>
+            <p>Proudly serving Cathedral City, Palm Springs, Rancho Mirage, Palm Desert, Indio, La Quinta, Coachella, Desert Hot Springs, Thousand Palms, and the entire Coachella Valley.</p>
+          </div>
+
+          <!-- REPLACE: Add Google Maps embed iframe -->
+          <div class="map-placeholder">Google Map</div>
+
+          <div class="seasonal-note">
+            Book early for peak season dates (October through April) and festival weekends.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="pattern-divider-wide"></div>
+    <div class="container" style="padding-top: 48px;">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="TacoNtodo-logo.png" alt="Tacon'Todo — Running on Salsa, Established 2021" class="footer-logo-img">
+        </div>
+        <div class="footer-info">
+          <span>Cathedral City, CA</span>
+          <a href="tel:+17606686547">(760) 668-6547</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/tacontodo.est2021" target="_blank" rel="noopener" aria-label="Follow us on Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Tacon'Todo. All rights reserved.</span>
+        <span class="footer-credit">Website by Desert Nomad Media</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    // Header scroll effect
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Mobile menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const mobileNav = document.querySelector('.mobile-nav');
+    hamburger.addEventListener('click', () => {
+      const isActive = hamburger.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', isActive);
+      document.body.style.overflow = isActive ? 'hidden' : '';
+    });
+
+    // Close mobile nav on link click
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileNav.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+  </script>
+
+</body>
+</html>
