@@ -3,912 +3,676 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery | Tacon'Todo — Cathedral City Taco Catering</title>
-  <meta name="description" content="See the Tacon'Todo experience — photos from events, weddings, and parties across the Coachella Valley. Read what our clients say about our taco catering.">
+  <title>Gallery | Tacon'Todo — Authentic Mexican Catering, Coachella Valley</title>
+  <meta name="description" content="Browse the Tacon'Todo gallery — birria tacos, street taco bars, weddings, and corporate catering across the Coachella Valley. See the food, fiesta, and unforgettable moments. Call (760) 668-6547.">
   <link rel="canonical" href="https://www.tacontodops.com/gallery">
-  <meta property="og:title" content="Gallery | Tacon'Todo — Cathedral City Taco Catering">
-  <meta property="og:description" content="Photos and testimonials from Tacon'Todo catering events across the Coachella Valley.">
+  <meta property="og:title" content="Gallery | Tacon'Todo — Authentic Mexican Catering, Coachella Valley">
+  <meta property="og:description" content="Photos from Tacon'Todo catering events — birria, street taco bars, weddings, and celebrations across the Coachella Valley.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.tacontodops.com/gallery">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta property="og:image" content="https://www.tacontodops.com/images/omar-grilling.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <style>
+    /* ============================================================
+       TACON'TODO — Authentic Mexican Catering
+       Warm vintage / talavera design system
+       ============================================================ */
+
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
+    /* ========== DESIGN TOKENS ========== */
+    :root {
+      --cream:        #F4ECDB;   /* page background */
+      --cream-2:      #FBF6EA;   /* lighter cards / panels */
+      --cream-3:      #ECE0C9;   /* deeper sand panel */
+      --terracotta:   #B0492E;   /* primary brick red */
+      --terracotta-d: #93371F;   /* darker hover */
+      --brick:        #BE3A26;   /* display red */
+      --olive:        #6E7539;   /* accent green */
+      --olive-d:      #565E2C;
+      --ink:          #2C2520;   /* warm near-black text */
+      --muted:        #7C6E5C;   /* muted brown body text */
+      --line:         #DBC9AC;   /* hairline borders */
+      --gold:         #C8A062;   /* faint decorative accents */
+      --shadow-sm: 0 2px 10px rgba(64,38,20,0.08);
+      --shadow-md: 0 14px 40px rgba(64,38,20,0.16);
+      --radius: 4px;
+    }
+
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-weight: 400; color: #1A1A1A; background-color: #F5F0EB;
-      line-height: 1.7; -webkit-font-smoothing: antialiased;
+      font-family: 'EB Garamond', Georgia, serif;
+      font-weight: 400;
+      color: var(--ink);
+      background-color: var(--cream);
+      line-height: 1.7;
+      font-size: 1.05rem;
+      -webkit-font-smoothing: antialiased;
     }
     img { max-width: 100%; display: block; }
     a { text-decoration: none; color: inherit; }
     ul { list-style: none; }
 
-    :root {
-      --red: #E02B20; --teal: #2FB8A8; --charcoal: #1A1A1A; --off-white: #F5F0EB;
-      --sand: #D4A574; --wood: #3D2B1F; --muted: #7A7067; --cream: #FFFAF5;
-      --sage: #6B7F5E; --divider: #E8E0D8;
-      --shadow-sm: 0 2px 8px rgba(0,0,0,0.06); --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
-      --radius: 6px;
-    }
-
-    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
-    .section-padding { padding: 100px 0; }
-    .pattern-divider {
-      width: 80px; height: 8px; margin: 0 auto 40px; border-radius: 2px;
-      background: repeating-linear-gradient(90deg, var(--red) 0px, var(--red) 8px, transparent 8px, transparent 12px, var(--sand) 12px, var(--sand) 20px, transparent 20px, transparent 24px, var(--teal) 24px, var(--teal) 32px, transparent 32px, transparent 36px);
-    }
-    .pattern-divider-wide {
-      width: 100%; height: 4px;
-      background: repeating-linear-gradient(90deg, var(--red) 0px, var(--red) 16px, var(--off-white) 16px, var(--off-white) 20px, var(--sand) 20px, var(--sand) 36px, var(--off-white) 36px, var(--off-white) 40px, var(--teal) 40px, var(--teal) 56px, var(--off-white) 56px, var(--off-white) 60px, var(--sage) 60px, var(--sage) 76px, var(--off-white) 76px, var(--off-white) 80px);
-    }
-    .zigzag-divider {
-      width: 100%; height: 12px; opacity: 0.3; background-color: var(--sand);
-      background-image: linear-gradient(135deg, var(--off-white) 33.33%, transparent 33.33%), linear-gradient(225deg, var(--off-white) 33.33%, transparent 33.33%);
-      background-size: 12px 12px;
-    }
-    .section-heading { text-align: center; margin-bottom: 60px; }
-    .section-heading h1, .section-heading h2 { font-size: 2.2rem; font-weight: 300; color: var(--charcoal); margin-bottom: 12px; }
-    .section-heading p { color: var(--muted); font-size: 1.05rem; max-width: 560px; margin: 0 auto; }
-
-    /* HEADER */
-    .header {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 14px 0;
-      background: rgba(245,240,235,0.97); box-shadow: var(--shadow-sm); backdrop-filter: blur(8px);
-    }
-    .header .container { display: flex; align-items: center; justify-content: space-between; }
-    .logo { display: flex; align-items: center; }
-    .logo-img { height: 46px; width: auto; }
-    /* Nav Links */
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .nav-links a {
-      font-size: 0.85rem;
+    /* ========== UTILITY ========== */
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+    .section { padding: 96px 0; }
+    .label {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.8rem;
       font-weight: 500;
-      letter-spacing: 0.02em;
-      color: var(--charcoal);
-      padding: 8px 16px;
-      border-radius: var(--radius);
-      transition: opacity 0.2s;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--terracotta);
     }
-    .nav-links a:hover { opacity: 0.7; }
-    .header.scrolled .nav-links a { color: var(--charcoal); }
-    .nav-links a.active { opacity: 0.6; }
-    .nav-phone {
-      font-size: 0.82rem !important;
-      padding: 8px 18px !important;
-      border: 1px solid var(--divider);
-      border-radius: var(--radius);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
+    .script { font-family: 'Great Vibes', cursive; font-weight: 400; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--ink); line-height: 1.12; font-weight: 700; }
+
+    /* Small decorative flourish */
+    .flourish {
+      display: inline-flex; align-items: center; gap: 10px;
+      color: var(--terracotta);
     }
-    .nav-phone svg { width: 14px; height: 14px; }
-    .header.scrolled .nav-phone { border-color: var(--divider); }
-    .nav-phone:hover { opacity: 1 !important; border-color: var(--muted); }
-    .header.scrolled .nav-phone:hover { border-color: var(--muted); }
-    /* Animated SVG Menu Toggle */
+    .flourish::before, .flourish::after {
+      content: ""; width: 42px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--terracotta));
+    }
+    .flourish::after { background: linear-gradient(90deg, var(--terracotta), transparent); }
+    .flourish svg { width: 22px; height: 22px; }
+
+    /* ========== TALAVERA TILE BORDER ========== */
+    .talavera {
+      height: 44px;
+      background-color: var(--terracotta);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='66' height='44' viewBox='0 0 66 44'%3E%3Crect width='66' height='44' fill='%23B0492E'/%3E%3Cpath d='M33 5 L52 22 L33 39 L14 22 Z' fill='none' stroke='%23F4ECDB' stroke-width='1.6'/%3E%3Cpath d='M33 13 L43 22 L33 31 L23 22 Z' fill='%236E7539'/%3E%3Ccircle cx='33' cy='22' r='3' fill='%23F4ECDB'/%3E%3Ccircle cx='0' cy='22' r='4.5' fill='none' stroke='%23F4ECDB' stroke-width='1.6'/%3E%3Ccircle cx='66' cy='22' r='4.5' fill='none' stroke='%23F4ECDB' stroke-width='1.6'/%3E%3Ccircle cx='0' cy='22' r='1.8' fill='%23ECE0C9'/%3E%3Ccircle cx='66' cy='22' r='1.8' fill='%23ECE0C9'/%3E%3Ccircle cx='16' cy='6' r='1.6' fill='%23ECE0C9'/%3E%3Ccircle cx='50' cy='6' r='1.6' fill='%23ECE0C9'/%3E%3Ccircle cx='16' cy='38' r='1.6' fill='%23ECE0C9'/%3E%3Ccircle cx='50' cy='38' r='1.6' fill='%23ECE0C9'/%3E%3C/svg%3E");
+      background-repeat: repeat-x;
+      background-position: center;
+    }
+
+    /* ========== BUTTONS ========== */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-size: 0.84rem;
+      padding: 16px 32px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      border: 1.5px solid transparent;
+      transition: background .25s, color .25s, transform .2s, box-shadow .25s;
+    }
+    .btn-primary { background: var(--terracotta); color: var(--cream-2); }
+    .btn-primary:hover { background: var(--terracotta-d); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .btn-light { background: var(--cream-2); color: var(--terracotta); }
+    .btn-light:hover { background: #fff; transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+    /* ========== HEADER / NAV ========== */
+    .header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 18px 0;
+      background: rgba(244,236,219,0);
+      transition: background .35s, padding .35s, box-shadow .35s;
+    }
+    .header.scrolled {
+      background: rgba(244,236,219,0.96);
+      padding: 10px 0;
+      box-shadow: 0 4px 20px rgba(64,38,20,0.08);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .header .container { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+
+    .brand { display: flex; flex-direction: column; line-height: 1; }
+    .brand-logo { height: 42px; width: auto; transition: height .35s; }
+    .header.scrolled .brand-logo { height: 34px; }
+    .brand-tag {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.6rem; font-weight: 500;
+      letter-spacing: 0.26em; text-transform: uppercase;
+      color: var(--olive); margin-top: 5px; padding-left: 3px;
+    }
+
+    .nav { display: flex; align-items: center; gap: 4px; }
+    .nav a {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.82rem; font-weight: 400;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--ink); padding: 8px 14px; border-radius: var(--radius);
+      position: relative; transition: color .2s;
+    }
+    .nav a:hover { color: var(--terracotta); }
+    .nav a.active { color: var(--terracotta); }
+    .nav a.active::after {
+      content: ""; position: absolute; left: 14px; right: 14px; bottom: 2px;
+      height: 2px; background: var(--terracotta); border-radius: 2px;
+    }
+    .nav .btn { margin-left: 10px; padding: 11px 22px; }
+
+    /* Hamburger */
     .menu-toggle {
       display: none; align-items: center; justify-content: center;
-      width: 40px; height: 40px; border-radius: var(--radius);
-      border: 1px solid var(--divider); background: transparent;
-      cursor: pointer; padding: 0; transition: background 0.2s;
+      width: 44px; height: 44px; border-radius: var(--radius);
+      border: 1.5px solid var(--line); background: rgba(251,246,234,0.6); cursor: pointer;
     }
-    .menu-toggle:hover { background: rgba(26,26,26,0.04); }
-    .menu-toggle svg {
-      width: 22px; height: 22px; stroke: var(--charcoal); fill: none;
-      stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;
-      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .menu-toggle.active svg { transform: rotate(-45deg); }
-    .menu-toggle svg .menu-path {
-      stroke-dasharray: 12 63;
-      transition: stroke-dasharray 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-                  stroke-dashoffset 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .menu-toggle.active svg .menu-path {
-      stroke-dasharray: 20 300;
-      stroke-dashoffset: -32.42px;
-    }
+    .menu-toggle svg { width: 22px; height: 22px; stroke: var(--ink); fill: none; stroke-width: 2; stroke-linecap: round; }
 
-    /* Side Panel */
-    .side-panel-overlay {
-      position: fixed; inset: 0; z-index: 998;
-      background: rgba(0,0,0,0.4); backdrop-filter: blur(4px);
-      opacity: 0; visibility: hidden;
-      transition: opacity 0.3s ease, visibility 0.3s;
+    /* ========== MOBILE SIDE PANEL ========== */
+    .panel-overlay {
+      position: fixed; inset: 0; z-index: 1098; background: rgba(44,37,32,0.45);
+      backdrop-filter: blur(3px); opacity: 0; visibility: hidden; transition: opacity .3s, visibility .3s;
     }
-    .side-panel-overlay.active { opacity: 1; visibility: visible; }
-    .side-panel {
-      position: fixed; top: 0; left: 0; bottom: 0;
-      width: 300px; max-width: 75vw; z-index: 999;
-      background: rgba(245,240,235,0.85); backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-right: 1px solid var(--divider);
-      box-shadow: 4px 0 24px rgba(0,0,0,0.08);
-      transform: translateX(-100%);
-      transition: transform 0.4s cubic-bezier(0.32, 0.72, 0, 1);
-      display: flex; flex-direction: column;
+    .panel-overlay.active { opacity: 1; visibility: visible; }
+    .panel {
+      position: fixed; top: 0; right: 0; bottom: 0; width: 300px; max-width: 80vw; z-index: 1099;
+      background: var(--cream-2); border-left: 4px solid var(--terracotta);
+      box-shadow: -10px 0 40px rgba(64,38,20,0.18);
+      transform: translateX(100%); transition: transform .4s cubic-bezier(.32,.72,0,1);
+      display: flex; flex-direction: column; padding: 90px 24px 24px;
     }
-    .side-panel.active { transform: translateX(0); }
-    .side-panel-nav {
-      flex: 1; padding: 80px 20px 20px;
-      display: flex; flex-direction: column; gap: 4px; overflow-y: auto;
+    .panel.active { transform: translateX(0); }
+    .panel a {
+      font-family: 'Oswald', sans-serif; font-size: 0.95rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--ink); padding: 14px 8px;
+      border-bottom: 1px solid var(--line); transition: color .2s;
     }
-    .side-panel-nav a {
-      display: block; font-size: 0.95rem; font-weight: 500;
-      color: var(--charcoal); padding: 12px 16px; border-radius: var(--radius);
-      transition: background 0.2s, color 0.2s;
-    }
-    .side-panel-nav a:hover { background: rgba(26,26,26,0.06); }
-    .side-panel-nav a.active { color: var(--red); }
-    .side-panel-footer {
-      padding: 16px 20px; border-top: 1px solid var(--divider);
-      background: rgba(26,26,26,0.02);
-      display: flex; flex-direction: column; gap: 10px;
-    }
-    .side-panel-footer a {
-      display: block; text-align: center; padding: 12px;
-      border-radius: var(--radius); font-size: 0.88rem; font-weight: 600;
-      transition: background 0.2s, transform 0.2s;
-    }
-    .sp-btn-outline { border: 1px solid var(--divider); color: var(--charcoal); }
-    .sp-btn-outline:hover { background: rgba(26,26,26,0.04); }
-    .sp-btn-primary { background: var(--red); color: #fff; }
-    .sp-btn-primary:hover { background: #c42419; }
+    .panel a:hover { color: var(--terracotta); }
+    .panel .btn { margin-top: 24px; border: none; }
 
-    /* PAGE HERO */
+    /* ========== INTERIOR PAGE HERO ========== */
     .page-hero {
-      padding: 160px 0 80px; text-align: center;
-      background: linear-gradient(160deg, rgba(26,26,26,0.75) 0%, rgba(61,43,31,0.6) 50%, rgba(26,26,26,0.7) 100%), url('gallery-hero.jpg') center/cover no-repeat;
-    }
-    .page-hero h1 { font-size: 2.8rem; font-weight: 300; color: #fff; margin-bottom: 12px; }
-    .page-hero p { color: rgba(255,255,255,0.65); font-size: 1.05rem; }
-
-    /* ========== BENTO GALLERY ========== */
-    .bento-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-auto-rows: 70px;
-      gap: 12px;
-      max-width: 960px;
-      margin: 0 auto;
-    }
-    .bento-item {
+      background: var(--cream);
+      padding: 150px 0 70px;
+      text-align: center;
       position: relative;
-      border-radius: 12px;
       overflow: hidden;
-      cursor: pointer;
-      background: var(--divider);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .bento-item:hover {
-      transform: scale(1.02);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    .page-hero .label { display: inline-block; margin-bottom: 18px; }
+    .page-hero h1 {
+      font-size: clamp(2.6rem, 5vw, 4rem); font-weight: 800; letter-spacing: -0.01em;
     }
-    .bento-item img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      position: absolute; inset: 0;
-      transition: transform 0.5s ease;
+    .page-hero h1 .script {
+      display: block; color: var(--terracotta); font-weight: 400;
+      font-size: clamp(2.6rem, 5.4vw, 4.6rem); margin-top: 4px; letter-spacing: 0;
     }
-    .bento-item:hover img {
-      transform: scale(1.06);
+    .page-hero .flourish { margin: 26px 0 20px; justify-content: center; display: inline-flex; }
+    .page-hero p { color: var(--muted); font-size: 1.15rem; max-width: 540px; margin: 0 auto; }
+    .page-hero-agave {
+      position: absolute; right: -50px; top: 50%; transform: translateY(-50%);
+      width: 320px; opacity: 0.10; color: var(--olive); pointer-events: none; z-index: 0;
     }
-    .bento-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.15) 40%, transparent 100%);
-      display: flex; flex-direction: column; justify-content: flex-end;
-      padding: 16px;
-      opacity: 0;
-      transition: opacity 0.3s ease;
+    .page-hero .container { position: relative; z-index: 1; }
+
+    /* ========== GALLERY GRID ========== */
+    .gallery-section { background: var(--cream); }
+    .section-head { text-align: center; margin-bottom: 54px; }
+    .section-head .label { display: block; margin-bottom: 14px; }
+    .section-head h2 { font-size: clamp(2rem, 3.4vw, 2.7rem); font-weight: 700; }
+    .section-head > p { color: var(--muted); margin-top: 12px; max-width: 540px; margin-left: auto; margin-right: auto; }
+
+    .cat-head { margin: 70px 0 34px; text-align: center; }
+    .cat-head:first-of-type { margin-top: 0; }
+    .cat-head .label { display: block; margin-bottom: 10px; }
+    .cat-head h3 {
+      font-family: 'Playfair Display', serif; font-weight: 700;
+      font-size: clamp(1.7rem, 2.8vw, 2.2rem); color: var(--ink);
     }
-    .bento-item:hover .bento-overlay { opacity: 1; }
-    .bento-overlay h3 {
-      color: #fff; font-size: 0.9rem; font-weight: 600;
-      line-height: 1.3; margin-bottom: 4px;
+    .cat-head .cat-rule { width: 56px; height: 3px; background: var(--terracotta); margin: 16px auto 0; border-radius: 2px; }
+
+    .photo-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
     }
-    .bento-overlay p {
-      color: rgba(255,255,255,0.75); font-size: 0.75rem;
-      line-height: 1.4;
+    .photo-card {
+      position: relative; overflow: hidden; border-radius: 6px;
+      box-shadow: var(--shadow-sm); border: 1px solid var(--line);
+      cursor: pointer; background: var(--cream-2);
+      aspect-ratio: 4 / 3;
+      transition: transform .3s, box-shadow .3s;
+    }
+    .photo-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .photo-card img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform .6s ease;
+    }
+    .photo-card:hover img { transform: scale(1.08); }
+    /* terracotta caption bar on hover */
+    .photo-caption {
+      position: absolute; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(180deg, transparent, rgba(147,55,31,0.92) 60%);
+      padding: 28px 18px 16px;
+      transform: translateY(101%);
+      transition: transform .35s cubic-bezier(.32,.72,0,1);
+    }
+    .photo-card:hover .photo-caption { transform: translateY(0); }
+    .photo-caption h4 {
+      font-family: 'Playfair Display', serif; color: var(--cream-2);
+      font-size: 1.08rem; font-weight: 600; line-height: 1.2; margin-bottom: 3px;
+    }
+    .photo-caption p {
+      font-family: 'Oswald', sans-serif; font-weight: 300;
+      color: rgba(244,236,219,0.85); font-size: 0.72rem;
+      text-transform: uppercase; letter-spacing: 0.1em;
     }
 
-    /* Bento span classes */
-    .bento-col1-row3 { grid-column: span 1; grid-row: span 3; }
-    .bento-col2-row2 { grid-column: span 2; grid-row: span 2; }
-    .bento-col1-row2 { grid-column: span 1; grid-row: span 2; }
-    .bento-col2-row3 { grid-column: span 2; grid-row: span 3; }
-    .bento-col1-row4 { grid-column: span 1; grid-row: span 4; }
+    /* ========== TERRACOTTA SCRIPT BAND ========== */
+    .script-band {
+      background: var(--terracotta); position: relative; padding: 66px 0 70px;
+      color: var(--cream-2); text-align: center;
+    }
+    .script-band::before, .script-band::after {
+      content: ""; position: absolute; left: 0; right: 0; height: 16px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='16' viewBox='0 0 32 16'%3E%3Cpath d='M16 1 L31 8 L16 15 L1 8 Z' fill='none' stroke='%23F4ECDB' stroke-width='1' opacity='0.5'/%3E%3C/svg%3E");
+      background-repeat: repeat-x; background-position: center;
+    }
+    .script-band::before { top: 16px; }
+    .script-band::after { bottom: 16px; }
+    .script-band .label { color: rgba(244,236,219,0.75); display: block; margin-bottom: 8px; }
+    .script-band h2 {
+      color: var(--cream-2); font-family: 'Great Vibes', cursive;
+      font-weight: 400; font-size: clamp(2.4rem, 5vw, 3.6rem);
+    }
 
-    /* ========== LIGHTBOX MODAL ========== */
+    /* ========== LIGHTBOX ========== */
     .lightbox {
       position: fixed; inset: 0; z-index: 2000;
       display: none; align-items: center; justify-content: center;
-      background: rgba(245,240,235,0.55);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      opacity: 0;
-      transition: opacity 0.3s ease;
+      background: rgba(44,37,32,0.82);
+      backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+      opacity: 0; transition: opacity .3s ease;
+      padding: 24px;
     }
-    .lightbox.active {
-      display: flex;
-      opacity: 1;
-    }
+    .lightbox.active { display: flex; opacity: 1; }
     .lightbox-content {
-      position: relative;
-      width: 90vw; max-width: 860px;
-      max-height: 80vh;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 24px 80px rgba(0,0,0,0.2);
-      transform: scale(0.95) translateY(20px);
-      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-      background: var(--charcoal);
+      position: relative; width: 92vw; max-width: 880px; max-height: 84vh;
+      border-radius: 8px; overflow: hidden;
+      box-shadow: var(--shadow-md);
+      background: var(--ink);
+      border: 4px solid var(--cream-2);
+      transform: scale(0.96) translateY(14px);
+      transition: transform .35s cubic-bezier(.32,.72,0,1);
     }
-    .lightbox.active .lightbox-content {
-      transform: scale(1) translateY(0);
-    }
+    .lightbox.active .lightbox-content { transform: scale(1) translateY(0); }
     .lightbox-content img {
-      width: 100%; height: auto;
-      max-height: 80vh;
-      object-fit: contain;
-      display: block;
+      width: 100%; height: auto; max-height: 84vh; object-fit: contain; display: block;
     }
     .lightbox-info {
       position: absolute; bottom: 0; left: 0; right: 0;
-      padding: 20px 24px;
-      background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+      padding: 26px 24px 18px;
+      background: linear-gradient(180deg, transparent, rgba(44,37,32,0.85));
     }
-    .lightbox-info h3 {
-      color: #fff; font-size: 1.15rem; font-weight: 600; margin-bottom: 4px;
-    }
-    .lightbox-info p {
-      color: rgba(255,255,255,0.75); font-size: 0.85rem;
-    }
+    .lightbox-info h3 { font-family: 'Playfair Display', serif; color: var(--cream-2); font-size: 1.25rem; font-weight: 600; margin-bottom: 4px; }
+    .lightbox-info p { font-family: 'EB Garamond', serif; color: rgba(244,236,219,0.82); font-size: 0.98rem; }
     .lightbox-close {
-      position: absolute; top: 16px; right: 16px;
-      width: 36px; height: 36px;
-      border-radius: 50%;
-      background: rgba(245,240,235,0.85);
-      backdrop-filter: blur(8px);
-      border: none; cursor: pointer;
+      position: absolute; top: 14px; right: 14px;
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--cream-2); border: none; cursor: pointer;
       display: flex; align-items: center; justify-content: center;
-      transition: transform 0.2s, background 0.2s;
-      z-index: 10;
+      transition: transform .2s, background .2s; z-index: 10;
     }
-    .lightbox-close:hover {
-      transform: scale(1.1);
-      background: #fff;
+    .lightbox-close:hover { transform: scale(1.08); background: #fff; }
+    .lightbox-close svg { width: 18px; height: 18px; stroke: var(--terracotta); stroke-width: 2.4; fill: none; stroke-linecap: round; }
+    .lightbox-nav {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 44px; height: 44px; border-radius: 50%;
+      background: rgba(251,246,234,0.92); border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: transform .2s, background .2s; z-index: 10;
     }
-    .lightbox-close svg {
-      width: 16px; height: 16px;
-      stroke: var(--charcoal); stroke-width: 2.5;
-      fill: none;
-    }
+    .lightbox-nav:hover { transform: translateY(-50%) scale(1.08); background: #fff; }
+    .lightbox-nav svg { width: 20px; height: 20px; stroke: var(--terracotta); stroke-width: 2.4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .lightbox-prev { left: 14px; }
+    .lightbox-next { right: 14px; }
 
-    /* Thumbnail Dock */
-    .lightbox-dock {
-      position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
-      z-index: 2001;
-      display: none;
-      padding: 10px 16px;
-      border-radius: 16px;
-      background: rgba(47,184,168,0.15);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(47,184,168,0.25);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-    }
-    .lightbox.active ~ .lightbox-dock,
-    .lightbox-dock.active { display: flex; }
-    .dock-thumbs {
-      display: flex;
-      align-items: center;
-      gap: 0;
-    }
-    .dock-thumb {
-      width: 40px; height: 40px;
-      border-radius: 10px;
-      overflow: hidden;
-      cursor: pointer;
-      flex-shrink: 0;
-      margin-left: -6px;
-      border: 2px solid transparent;
-      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-      transform: rotate(0deg);
-      position: relative;
-    }
-    .dock-thumb:first-child { margin-left: 0; }
-    .dock-thumb:nth-child(odd) { transform: rotate(-12deg); }
-    .dock-thumb:nth-child(even) { transform: rotate(12deg); }
-    .dock-thumb.active-thumb {
-      border-color: rgba(255,255,255,0.7);
-      transform: scale(1.25) rotate(0deg) translateY(-8px) !important;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-      z-index: 10;
-    }
-    .dock-thumb:hover:not(.active-thumb) {
-      transform: scale(1.3) rotate(0deg) translateY(-10px) !important;
-      z-index: 20;
-    }
-    .dock-thumb img {
-      width: 100%; height: 100%; object-fit: cover;
-    }
-
-    /* TESTIMONIALS */
-    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-    .testimonial-card { background: var(--off-white); border: 1px solid var(--divider); border-radius: var(--radius); padding: 32px; }
-    .testimonial-stars { color: var(--sand); font-size: 0.9rem; margin-bottom: 16px; letter-spacing: 2px; }
-    .testimonial-card blockquote { font-size: 0.9rem; color: var(--charcoal); line-height: 1.7; margin-bottom: 20px; font-style: italic; }
-    .testimonial-author { font-size: 0.8rem; font-weight: 600; color: var(--muted); }
-
-    /* CTA */
-    .cta-banner {
-      background: linear-gradient(160deg, rgba(26,26,26,0.8) 0%, rgba(61,43,31,0.75) 100%), url('images/team-group.jpg') center/cover no-repeat;
-      padding: 80px 0; text-align: center;
-    }
-    .cta-banner h2 { font-size: 2rem; font-weight: 300; color: #fff; margin-bottom: 12px; }
-    .cta-banner p { color: rgba(255,255,255,0.65); font-size: 1rem; margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto; }
-    /* Shine hover buttons */
-    .btn-primary,
-    .btn-outline {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      height: 44px;
-      padding: 0 28px;
-      border: none;
-      border-radius: 8px;
-      color: #fff;
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      cursor: pointer;
-      overflow: hidden;
-      transition: background 0.2s;
-    }
-    .btn-primary {
-      background: var(--red);
-    }
-    .btn-primary:hover { background: #c42419; }
-    .btn-outline {
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.3);
-    }
-    .btn-outline:hover { background: rgba(255,255,255,0.18); }
-    /* Shine sweep */
-    .btn-primary::before,
-    .btn-outline::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      background: linear-gradient(45deg, transparent 25%, rgba(255,255,255,0.7) 50%, transparent 75%, transparent 100%);
-      background-size: 250% 250%;
-      background-position: 200% 0;
-      background-repeat: no-repeat;
-      transition: background-position 0s ease;
-      transition-duration: 1s;
-    }
-    .btn-primary:hover::before,
-    .btn-outline:hover::before {
-      background-position: -100% 0;
-    }
+    /* ========== FINAL CTA ========== */
+    .final-cta { background: var(--terracotta); color: var(--cream-2); padding: 80px 0; position: relative; overflow: hidden; }
+    .final-cta .container { display: grid; grid-template-columns: 1.1fr 1fr auto; gap: 40px; align-items: center; }
+    .final-cta .label { color: rgba(244,236,219,0.75); display: block; margin-bottom: 10px; }
+    .final-cta h2 { font-family: 'Great Vibes', cursive; font-weight: 400; color: var(--cream-2); font-size: clamp(2.4rem, 4.5vw, 3.4rem); }
+    .final-cta p { color: rgba(244,236,219,0.85); font-size: 1.1rem; }
+    .final-cta-cactus { position: absolute; left: -10px; bottom: -20px; width: 120px; opacity: 0.18; color: #fff; pointer-events: none; }
 
     /* ========== FOOTER ========== */
-    .footer { width: 100%; margin-top: 64px; background: #000; border-radius: 0.75rem 0.75rem 0 0; }
-    .footer-inner { max-width: 1200px; margin: 0 auto; padding: 64px 16px 24px; }
-    @media (min-width: 640px) { .footer-inner { padding: 64px 24px 24px; } }
-    @media (min-width: 1024px) { .footer-inner { padding: 96px 32px 24px; } }
-    .footer-top { display: grid; grid-template-columns: 1fr; gap: 32px; }
-    @media (min-width: 1024px) { .footer-top { grid-template-columns: 1fr 2fr; } }
-    .footer-brand { text-align: center; }
-    @media (min-width: 640px) { .footer-brand { text-align: left; } }
-    .footer-brand-header { display: flex; align-items: center; gap: 12px; justify-content: center; }
-    @media (min-width: 640px) { .footer-brand-header { justify-content: flex-start; } }
-    .footer .footer-logo-img { height: 40px; width: auto; border-radius: 50%; }
-    .footer-brand-name { font-size: 1.5rem; font-weight: 600; color: #fff; }
-    .footer-brand-desc { margin-top: 20px; font-size: 0.875rem; line-height: 1.7; color: rgba(255,255,255,0.5); max-width: 320px; }
-    @media (min-width: 640px) { .footer-brand-desc { text-align: left; } }
-    @media (max-width: 639px) { .footer-brand-desc { margin: 20px auto 0; text-align: center; } }
-    .footer-socials { display: flex; gap: 24px; margin-top: 32px; list-style: none; padding: 0; justify-content: center; }
-    @media (min-width: 640px) { .footer-socials { justify-content: flex-start; } }
-    .footer-socials a { color: var(--red); transition: opacity 0.2s; }
+    .footer { background: var(--ink); color: rgba(244,236,219,0.7); }
+    .footer-inner { max-width: 1180px; margin: 0 auto; padding: 70px 28px 28px; }
+    .footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 40px; }
+    .footer-brand-name { font-family: 'Playfair Display', serif; font-size: 1.7rem; font-weight: 800; color: var(--cream-2); letter-spacing: 0.02em; }
+    .footer-brand-tag { font-family: 'Great Vibes', cursive; color: var(--gold); font-size: 1.4rem; margin-top: 2px; }
+    .footer-brand p { font-size: 0.98rem; margin-top: 16px; max-width: 300px; color: rgba(244,236,219,0.55); }
+    .footer-socials { display: flex; gap: 18px; margin-top: 22px; }
+    .footer-socials a { color: var(--gold); transition: opacity .2s; }
     .footer-socials a:hover { opacity: 0.7; }
-    .footer-socials svg { width: 24px; height: 24px; }
-    .footer-cols { display: grid; grid-template-columns: 1fr; gap: 32px; margin-top: 40px; }
-    @media (min-width: 640px) { .footer-cols { grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 768px) { .footer-cols { grid-template-columns: repeat(4, 1fr); } }
-    @media (min-width: 1024px) { .footer-cols { margin-top: 0; } }
-    .footer-col { text-align: center; }
-    @media (min-width: 640px) { .footer-col { text-align: left; } }
-    .footer-col h3 { font-size: 1.05rem; font-weight: 500; color: #fff; margin-bottom: 24px; }
-    .footer-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
-    .footer-col ul a { font-size: 0.875rem; color: rgba(255,255,255,0.45); transition: color 0.3s; display: inline-flex; align-items: center; gap: 8px; }
-    .footer-col ul a:hover { color: #fff; }
-    .footer-col ul a svg { width: 18px; height: 18px; flex-shrink: 0; color: var(--red); }
-    .footer-contact-text { flex: 1; }
-    .footer-bottom { margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: column; text-align: center; gap: 8px; font-size: 0.82rem; color: rgba(255,255,255,0.35); }
-    @media (min-width: 640px) { .footer-bottom { flex-direction: row; justify-content: space-between; text-align: left; } }
-    .footer-bottom .credit { order: -1; }
-    @media (min-width: 640px) { .footer-bottom .credit { order: 0; } }
-
-    /* ========== BENTO ANIMATION ON LOAD ========== */
-    .bento-item {
-      opacity: 0;
-      transform: translateY(40px) scale(0.95);
-    }
-    .bento-item.visible {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-      transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    .footer-socials svg { width: 22px; height: 22px; }
+    .footer-col h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.85rem; color: var(--cream-2); margin-bottom: 20px; font-weight: 500; }
+    .footer-col ul { display: flex; flex-direction: column; gap: 12px; }
+    .footer-col a, .footer-col li span { font-size: 0.96rem; color: rgba(244,236,219,0.6); transition: color .2s; display: inline-flex; align-items: center; gap: 9px; }
+    .footer-col a:hover { color: var(--cream-2); }
+    .footer-col svg { width: 17px; height: 17px; color: var(--gold); flex-shrink: 0; }
+    .footer-bottom {
+      max-width: 1180px; margin: 0 auto; padding: 22px 28px;
+      border-top: 1px solid rgba(244,236,219,0.12);
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+      font-size: 0.85rem; color: rgba(244,236,219,0.4);
     }
 
+    /* ========== RESPONSIVE ========== */
     @media (max-width: 1024px) {
-      .bento-grid {
-        grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: 65px;
-      }
-      /* Reset all desktop spans */
-      .bento-col1-row3 { grid-column: span 1; grid-row: span 2; }
-      .bento-col2-row2 { grid-column: span 2; grid-row: span 2; }
-      .bento-col1-row2 { grid-column: span 1; grid-row: span 2; }
-      .bento-col2-row3 { grid-column: span 2; grid-row: span 2; }
-      .bento-col1-row4 { grid-column: span 1; grid-row: span 3; }
+      .photo-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
     }
-
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
+    @media (max-width: 880px) {
+      .nav { display: none; }
       .menu-toggle { display: flex; }
-      .page-hero { padding: 130px 0 60px; }
-      .page-hero h1 { font-size: 2rem; }
-      .section-heading h1, .section-heading h2 { font-size: 1.8rem; }
-      .section-padding { padding: 60px 0; }
-      .bento-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 100px;
-        gap: 8px;
-      }
-      .bento-col1-row3,
-      .bento-col2-row2,
-      .bento-col1-row2,
-      .bento-col2-row3,
-      .bento-col1-row4 { grid-column: span 1; grid-row: span 2; }
-      .bento-item:first-child { grid-column: span 2; grid-row: span 2; }
-      .testimonials-grid { grid-template-columns: 1fr; }
-      .dock-thumb { width: 34px; height: 34px; }
+      .page-hero-agave { display: none; }
+      .final-cta .container { grid-template-columns: 1fr; text-align: center; gap: 22px; }
+      .final-cta-cactus { display: none; }
     }
-    @media (max-width: 480px) {
-      .bento-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-auto-rows: 90px;
-      }
-      .lightbox-content { width: 95vw; border-radius: 12px; }
-      .dock-thumb { width: 30px; height: 30px; border-radius: 8px; }
+    @media (max-width: 560px) {
+      .section { padding: 64px 0; }
+      .container { padding: 0 20px; }
+      .photo-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+      .page-hero { padding: 130px 0 56px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- ==================== HEADER ==================== -->
   <header class="header" role="banner">
     <div class="container">
-      <a href="index.html" class="logo"><img src="TacoNtodo-logo.png" alt="Tacon'Todo" class="logo-img"></a>
-      <nav class="nav-links" aria-label="Primary navigation">
+      <a href="index.html" class="brand" aria-label="Tacon'Todo — Authentic Mexican Catering">
+        <img src="tacontodo-text-logo.png" alt="Tacon'Todo" class="brand-logo">
+        <span class="brand-tag">Authentic Mexican Catering</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="menu.html">Menu</a>
+        <a href="about.html">Our Story</a>
+        <a href="menu.html">Packages</a>
         <a href="gallery.html" class="active">Gallery</a>
-        <a href="contact.html">Book Now</a>
-        <a href="tel:+17606686547" class="nav-phone">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          (760) 668-6547
-        </a>
+        <a href="index.html#reviews">Reviews</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
       </nav>
-      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <svg viewBox="0 0 32 32">
-          <path class="menu-path" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"/>
-          <path d="M7 16 27 16"/>
-        </svg>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </header>
-  <div class="side-panel-overlay" id="sidePanelOverlay"></div>
-  <div class="side-panel" id="sidePanel">
-    <div class="side-panel-nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="menu.html">Menu</a>
-      <a href="gallery.html" class="active">Gallery</a>
-    </div>
-    <div class="side-panel-footer">
-      <a href="tel:+17606686547" class="sp-btn-outline">(760) 668-6547</a>
-      <a href="contact.html" class="sp-btn-primary">Book Now</a>
-    </div>
-  </div>
 
-  <!-- PAGE HERO -->
+  <!-- Mobile panel -->
+  <div class="panel-overlay" id="panelOverlay"></div>
+  <aside class="panel" id="panel" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">Our Story</a>
+    <a href="menu.html">Packages</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="index.html#reviews">Reviews</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+  </aside>
+
+  <!-- ==================== INTERIOR PAGE HERO ==================== -->
   <section class="page-hero">
+    <svg class="page-hero-agave" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><path d="M50 0 C53 35 62 46 100 50 C62 54 53 65 50 100 C47 65 38 54 0 50 C38 46 47 35 50 0 Z"/></svg>
     <div class="container">
-      <h1>The Tacon'Todo Experience</h1>
-      <p>Food, fiesta, and unforgettable moments</p>
+      <span class="label">Gallery</span>
+      <h1>Celebrating<span class="script">Life's Best Moments</span></h1>
+      <div class="flourish" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1 4 3 6 7 7-4 1-6 3-7 7-1-4-3-6-7-7 4-1 6-3 7-7z"/></svg>
+      </div>
+      <p>Food, fiesta, and unforgettable moments — straight from Tacon'Todo events across the Coachella Valley.</p>
     </div>
   </section>
 
-  <div class="zigzag-divider"></div>
+  <div class="talavera" aria-hidden="true"></div>
 
-  <!-- ==================== BENTO GALLERY ==================== -->
-  <section class="section-padding" style="background: var(--cream);">
+  <!-- ==================== GALLERY GRID ==================== -->
+  <section class="section gallery-section">
     <div class="container">
-      <div class="section-heading">
-        <div class="pattern-divider"></div>
-        <h2>Our Work</h2>
-        <p>Click to explore our curated collection of moments</p>
+      <div class="section-head">
+        <span class="label">Our Work</span>
+        <h2>Moments We've Catered</h2>
+        <p>Tap any photo to take a closer look at the food, the fiesta, and the details.</p>
       </div>
 
-      <div class="bento-grid" id="bentoGrid">
+      <!-- ===== Category: Events & Setups ===== -->
+      <div class="cat-head">
+        <span class="label">Events &amp; Setups</span>
+        <h3>Fiestas Across the Valley</h3>
+        <div class="cat-rule"></div>
+      </div>
 
-        <div class="bento-item bento-col1-row3"
-             data-title="Sunset Salsa Bar"
-             data-desc="Fresh guacamole, salsas, and garnishes with a Rancho Mirage sunset backdrop">
-          <img src="images/hero-salsa-bar.jpg" alt="Sunset salsa bar with guacamole and fresh salsas at Rancho Mirage catering" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Sunset Salsa Bar</h3>
-            <p>Rancho Mirage private event</p>
-          </div>
+      <div class="photo-grid">
+
+        <div class="photo-card" data-title="Sunset Salsa Bar" data-desc="Fresh guacamole, salsas, and garnishes with a Rancho Mirage sunset backdrop.">
+          <img src="images/hero-salsa-bar.jpg" alt="Sunset salsa bar with guacamole and fresh salsas at a Rancho Mirage catering event" loading="lazy">
+          <div class="photo-caption"><h4>Sunset Salsa Bar</h4><p>Rancho Mirage private event</p></div>
         </div>
 
-        <div class="bento-item bento-col2-row2"
-             data-title="Team Ready to Serve"
-             data-desc="The Tacon'Todo crew at a private catering station — setup complete, ready to go">
-          <img src="images/team-station.jpg" alt="Tacon'Todo team at catering station ready to serve" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Team Ready to Serve</h3>
-            <p>Private event setup</p>
-          </div>
+        <div class="photo-card" data-title="Team Ready to Serve" data-desc="The Tacon'Todo crew at a private catering station — setup complete and ready to go.">
+          <img src="images/team-station.jpg" alt="Tacon'Todo team at a catering station ready to serve guests" loading="lazy">
+          <div class="photo-caption"><h4>Team Ready to Serve</h4><p>Private event setup</p></div>
         </div>
 
-        <div class="bento-item bento-col1-row3"
-             data-title="Fresh Garnish Bar"
-             data-desc="Colorful garnish bar with fresh cilantro, onions, corn, and limes on vibrant Mexican textiles">
-          <img src="images/garnish-bar-colorful.jpg" alt="Colorful garnish bar with fresh toppings on Mexican textile" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Fresh Garnish Bar</h3>
-            <p>Corporate appreciation lunch</p>
-          </div>
+        <div class="photo-card" data-title="Fresh Garnish Bar" data-desc="Colorful garnish bar with fresh cilantro, onions, corn, and limes on vibrant Mexican textiles.">
+          <img src="images/garnish-bar-colorful.jpg" alt="Colorful Tacon'Todo garnish bar with fresh toppings on a Mexican textile" loading="lazy">
+          <div class="photo-caption"><h4>Fresh Garnish Bar</h4><p>Corporate appreciation lunch</p></div>
         </div>
 
-        <div class="bento-item bento-col2-row2"
-             data-title="Desert Dining"
-             data-desc="Framed catering menu with cacti, mountains, and poolside views — the Coachella Valley at its finest">
-          <img src="images/menu-frame-cacti.jpg" alt="Framed catering menu with desert cacti and pool backdrop" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Desert Dining</h3>
-            <p>Private dinner, Coachella Valley</p>
-          </div>
+        <div class="photo-card" data-title="Desert Dining" data-desc="Framed catering menu with cacti, mountains, and poolside views — the Coachella Valley at its finest.">
+          <img src="images/menu-frame-cacti.jpg" alt="Framed Tacon'Todo catering menu with desert cacti and a pool backdrop" loading="lazy">
+          <div class="photo-caption"><h4>Desert Dining</h4><p>Private dinner, Coachella Valley</p></div>
         </div>
 
-        <div class="bento-item bento-col1-row4"
-             data-title="Elegant Table Setting"
-             data-desc="Luxury outdoor dining setup for a private catered event — clean, modern, beautiful">
-          <img src="images/table-setting.jpg" alt="Elegant outdoor table setting for a private catering event" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Elegant Table Setting</h3>
-            <p>Rancho Mirage private dinner</p>
-          </div>
+        <div class="photo-card" data-title="Elegant Table Setting" data-desc="Luxury outdoor dining setup for a private catered event — clean, modern, beautiful.">
+          <img src="images/table-setting.jpg" alt="Elegant outdoor table setting for a private Tacon'Todo catering event" loading="lazy">
+          <div class="photo-caption"><h4>Elegant Table Setting</h4><p>Rancho Mirage private dinner</p></div>
         </div>
 
-        <div class="bento-item bento-col2-row2"
-             data-title="Signature Salsas"
-             data-desc="Tacon'Todo branded salsas — Mom's Salsa, Miss Jalapeño, Mr. Habanero, La Taquera — with mountain views">
-          <img src="images/salsa-bottles-mountains.jpg" alt="Tacon'Todo signature salsa bottles with mountain views" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Signature Salsas</h3>
-            <p>Our handcrafted salsa lineup</p>
-          </div>
+        <div class="photo-card" data-title="Wedding Rehearsal Dinner" data-desc="A stunning long table with colorful floral runners and coral napkins under the palm trees.">
+          <img src="images/wedding-table-long.jpg" alt="Long wedding rehearsal dinner table with a floral runner under palm trees" loading="lazy">
+          <div class="photo-caption"><h4>Wedding Rehearsal Dinner</h4><p>Palm Springs wedding catering</p></div>
         </div>
 
-        <div class="bento-item bento-col1-row3"
-             data-title="Casino Catering"
-             data-desc="Tacon'Todo taco cart setup at Agua Caliente Casino Palm Springs — employee appreciation event">
-          <img src="images/casino-setup.jpg" alt="Tacon'Todo taco cart setup at Agua Caliente Casino Palm Springs" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Casino Catering</h3>
-            <p>Agua Caliente Casino, Palm Springs</p>
-          </div>
-        </div>
-
-        <div class="bento-item bento-col2-row2"
-             data-title="Bachelorette Fiesta"
-             data-desc="Cocktails, flowers, and the perfect fiesta setup for a destination bachelorette in the desert">
-          <img src="images/flowers-cocktails.jpg" alt="Cocktail menu and fresh flowers at a bachelorette catering event" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Bachelorette Fiesta</h3>
-            <p>Destination party, Palm Springs</p>
-          </div>
-        </div>
-
-        <div class="bento-item bento-col1-row3"
-             data-title="Bridal Shower Salsas"
-             data-desc="Our signature salsa lineup beautifully displayed on wooden risers with pink florals for a bridal shower">
-          <img src="images/bridal-shower-salsas.jpg" alt="Tacon'Todo salsas displayed at a bridal shower catering event" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Bridal Shower Salsas</h3>
-            <p>Bridal shower, Cathedral City</p>
-          </div>
-        </div>
-
-        <div class="bento-item bento-col2-row2"
-             data-title="Elevated Spaces"
-             data-desc="Same hustle, elevated spaces — catering at a luxury Rolls-Royce showroom in Palm Springs">
-          <img src="images/rolls-royce-event.jpg" alt="Tacon'Todo team at Rolls-Royce showroom catering event" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Elevated Spaces</h3>
-            <p>Rolls-Royce, Palm Springs</p>
-          </div>
-        </div>
-
-        <div class="bento-item bento-col1-row3"
-             data-title="Omar Serving"
-             data-desc="Omar plating up with Tacon'Todo signature salsas at an outdoor taquiza party">
-          <img src="images/omar-serving.jpg" alt="Omar serving tacos with signature salsas at an outdoor event" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Omar Serving</h3>
-            <p>Taquiza party, Palm Springs</p>
-          </div>
-        </div>
-
-        <div class="bento-item bento-col2-row2"
-             data-title="Desert Cocktails"
-             data-desc="Craft cocktail with mountain views and poolside vibes — the Coachella Valley at golden hour">
-          <img src="images/cocktail-mountain-view.jpg" alt="Craft cocktail with desert mountain and pool views at sunset" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Desert Cocktails</h3>
-            <p>Private dinner, Coachella Valley</p>
-          </div>
-        </div>
-
-        <div class="bento-item bento-col1-row2"
-             data-title="Omar on the Grill"
-             data-desc="Omar working the flattop at an Agua Caliente Casino employee appreciation event">
-          <img src="images/omar-grilling.jpg" alt="Omar grilling at Agua Caliente Casino corporate event" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Omar on the Grill</h3>
-            <p>Agua Caliente Casino</p>
-          </div>
-        </div>
-
-        <div class="bento-item bento-col2-row2"
-             data-title="Meet Gabby"
-             data-desc="Gabby making handmade tortillas fresh to order — available for private catering events">
-          <img src="images/gabby-tortillas.jpg" alt="Gabby making handmade tortillas at a private catering event" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Meet Gabby</h3>
-            <p>Handmade tortillas, fresh to order</p>
-          </div>
-        </div>
-
-        <div class="bento-item bento-col2-row3"
-             data-title="Wedding Rehearsal Dinner"
-             data-desc="A stunning long table setup with colorful floral runners and coral napkins under the palm trees — wedding catering done right">
-          <img src="images/wedding-table-long.jpg" alt="Long wedding rehearsal dinner table with floral runner under palm trees" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Wedding Rehearsal Dinner</h3>
-            <p>Palm Springs wedding catering</p>
-          </div>
-        </div>
-
-        <div class="bento-item bento-col1-row3"
-             data-title="Birria El Jefe Style"
-             data-desc="Signature birria taco with bone marrow — crispy, loaded, and served on branded Tacon'Todo paper">
-          <img src="images/birria-taco-closeup.jpg" alt="Closeup of signature birria taco with bone marrow on branded paper" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Birria El Jefe Style</h3>
-            <p>Signature birria + bone marrow</p>
-          </div>
-        </div>
-
-        <div class="bento-item bento-col1-row2"
-             data-title="Churros &amp; Strawberries"
-             data-desc="Behind the scenes — prepping churros with fresh strawberries and ice cream for a private dinner at an Avanstay Airbnb">
-          <img src="images/churros-prep.jpg" alt="Preparing churros with fresh strawberries for a private dinner" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Churros &amp; Strawberries</h3>
-            <p>Private dinner dessert prep</p>
-          </div>
-        </div>
-
-        <div class="bento-item bento-col2-row2"
-             data-title="Tacos in the Dunes"
-             data-desc="The whole crew out in the desert dunes — catering meets adventure with curated vintage supercars">
-          <img src="images/team-dunes.jpg" alt="Tacon'Todo team in the desert sand dunes" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Tacos in the Dunes</h3>
-            <p>Desert dunes catering adventure</p>
-          </div>
-        </div>
-
-        <div class="bento-item bento-col1-row3"
-             data-title="The Night Before"
-             data-desc="Rehearsal dinner garnish bar — beautiful clay bowls with pickled onions, limes, and radishes set against lush greenery">
+        <div class="photo-card" data-title="The Night Before" data-desc="Rehearsal dinner garnish bar — clay bowls with pickled onions, limes, and radishes set against lush greenery.">
           <img src="images/rehearsal-garnish.jpg" alt="Elegant garnish bar in clay bowls at a rehearsal dinner" loading="lazy">
-          <div class="bento-overlay">
-            <h3>The Night Before</h3>
-            <p>Rehearsal dinner garnishes</p>
-          </div>
+          <div class="photo-caption"><h4>The Night Before</h4><p>Rehearsal dinner garnishes</p></div>
         </div>
 
-        <div class="bento-item bento-col2-row2"
-             data-title="Bachelorette Party"
-             data-desc="Omar standing proud after setting up a bachelorette party spread — cacti, chandelier, and chips ready to go">
+        <div class="photo-card" data-title="Bridal Shower Salsas" data-desc="Our signature salsa lineup on wooden risers with pink florals for a bridal shower.">
+          <img src="images/bridal-shower-salsas.jpg" alt="Tacon'Todo salsas displayed at a bridal shower catering event" loading="lazy">
+          <div class="photo-caption"><h4>Bridal Shower Salsas</h4><p>Bridal shower, Cathedral City</p></div>
+        </div>
+
+        <div class="photo-card" data-title="Bachelorette Fiesta" data-desc="Cocktails, flowers, and the perfect fiesta setup for a destination bachelorette in the desert.">
+          <img src="images/flowers-cocktails.jpg" alt="Cocktail menu and fresh flowers at a bachelorette catering event" loading="lazy">
+          <div class="photo-caption"><h4>Bachelorette Fiesta</h4><p>Destination party, Palm Springs</p></div>
+        </div>
+
+        <div class="photo-card" data-title="Bachelorette Party" data-desc="Omar standing proud after setting up a bachelorette spread — cacti, chandelier, and chips ready to go.">
           <img src="images/omar-bachelorette.jpg" alt="Omar at a bachelorette party catering setup with elegant decor" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Bachelorette Party</h3>
-            <p>Palm Springs bachelorette</p>
-          </div>
+          <div class="photo-caption"><h4>Bachelorette Party</h4><p>Palm Springs bachelorette</p></div>
         </div>
 
-        <div class="bento-item bento-col1-row2"
-             data-title="The Morning After"
-             data-desc="Loaded chilaquiles with crema, red onion, and cilantro — the ultimate recovery breakfast after the wedding">
-          <img src="images/chilaquiles-morning.jpg" alt="Loaded chilaquiles recovery breakfast for the morning after a wedding" loading="lazy">
-          <div class="bento-overlay">
-            <h3>The Morning After</h3>
-            <p>Wedding recovery breakfast</p>
-          </div>
+        <div class="photo-card" data-title="Casino Catering" data-desc="Tacon'Todo taco cart setup at Agua Caliente Casino Palm Springs for an employee appreciation event.">
+          <img src="images/casino-setup.jpg" alt="Tacon'Todo taco cart setup at Agua Caliente Casino in Palm Springs" loading="lazy">
+          <div class="photo-caption"><h4>Casino Catering</h4><p>Agua Caliente Casino, Palm Springs</p></div>
         </div>
 
-        <div class="bento-item bento-col2-row2"
-             data-title="Tacos &amp; Golf"
-             data-desc="Putting greens and taco dreams — catering at O'Donnell Golf Club with palm trees and mountain views">
+        <div class="photo-card" data-title="Elevated Spaces" data-desc="Same hustle, elevated spaces — catering at a luxury Rolls-Royce showroom in Palm Springs.">
+          <img src="images/rolls-royce-event.jpg" alt="Tacon'Todo team at a Rolls-Royce showroom catering event" loading="lazy">
+          <div class="photo-caption"><h4>Elevated Spaces</h4><p>Rolls-Royce, Palm Springs</p></div>
+        </div>
+
+        <div class="photo-card" data-title="Tacos in the Dunes" data-desc="The whole crew out in the desert dunes — catering meets adventure with curated vintage supercars.">
+          <img src="images/team-dunes.jpg" alt="Tacon'Todo team in the desert sand dunes with vintage cars" loading="lazy">
+          <div class="photo-caption"><h4>Tacos in the Dunes</h4><p>Desert dunes catering adventure</p></div>
+        </div>
+
+        <div class="photo-card" data-title="Tacos &amp; Golf" data-desc="Putting greens and taco dreams — catering at O'Donnell Golf Club with palm trees and mountain views.">
           <img src="images/golf-club-view.jpg" alt="O'Donnell Golf Club with palm trees and mountains in Palm Springs" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Tacos &amp; Golf</h3>
-            <p>O'Donnell Golf Club</p>
-          </div>
+          <div class="photo-caption"><h4>Tacos &amp; Golf</h4><p>O'Donnell Golf Club</p></div>
         </div>
 
-        <div class="bento-item bento-col1-row3"
-             data-title="Birria Platter"
-             data-desc="Magazine-quality birria taco platter with golden tortillas, consommé, and fresh lime">
+        <div class="photo-card" data-title="Signature Salsas" data-desc="Our handcrafted salsa lineup — Mom's Salsa, Miss Jalapeño, Mr. Habanero, La Taquera — with mountain views.">
+          <img src="images/salsa-bottles-mountains.jpg" alt="Tacon'Todo signature salsa bottles with desert mountain views" loading="lazy">
+          <div class="photo-caption"><h4>Signature Salsas</h4><p>Our handcrafted salsa lineup</p></div>
+        </div>
+
+        <div class="photo-card" data-title="Desert Cocktails" data-desc="Craft cocktail with mountain views and poolside vibes — the Coachella Valley at golden hour.">
+          <img src="images/cocktail-mountain-view.jpg" alt="Craft cocktail with desert mountain and pool views at sunset" loading="lazy">
+          <div class="photo-caption"><h4>Desert Cocktails</h4><p>Private dinner, Coachella Valley</p></div>
+        </div>
+
+      </div>
+
+      <!-- ===== Category: The Crew at Work ===== -->
+      <div class="cat-head">
+        <span class="label">The Crew at Work</span>
+        <h3>Made Fresh, On Site</h3>
+        <div class="cat-rule"></div>
+      </div>
+
+      <div class="photo-grid">
+
+        <div class="photo-card" data-title="Omar on the Grill" data-desc="Omar working the flattop at an Agua Caliente Casino employee appreciation event.">
+          <img src="images/omar-grilling.jpg" alt="Omar grilling fresh tacos at an Agua Caliente Casino corporate event" loading="lazy">
+          <div class="photo-caption"><h4>Omar on the Grill</h4><p>Agua Caliente Casino</p></div>
+        </div>
+
+        <div class="photo-card" data-title="Omar Serving" data-desc="Omar plating up with Tacon'Todo signature salsas at an outdoor taquiza party.">
+          <img src="images/omar-serving.jpg" alt="Omar serving tacos with signature salsas at an outdoor event" loading="lazy">
+          <div class="photo-caption"><h4>Omar Serving</h4><p>Taquiza party, Palm Springs</p></div>
+        </div>
+
+        <div class="photo-card" data-title="Meet Gabby" data-desc="Gabby making handmade tortillas fresh to order — available for private catering events.">
+          <img src="images/gabby-tortillas.jpg" alt="Gabby making handmade tortillas at a private catering event" loading="lazy">
+          <div class="photo-caption"><h4>Meet Gabby</h4><p>Handmade tortillas, fresh to order</p></div>
+        </div>
+
+        <div class="photo-card" data-title="Churros &amp; Strawberries" data-desc="Behind the scenes — prepping churros with fresh strawberries and ice cream for a private dinner.">
+          <img src="images/churros-prep.jpg" alt="Preparing churros with fresh strawberries for a private dinner" loading="lazy">
+          <div class="photo-caption"><h4>Churros &amp; Strawberries</h4><p>Private dinner dessert prep</p></div>
+        </div>
+
+        <div class="photo-card" data-title="The Morning After" data-desc="Loaded chilaquiles with crema, red onion, and cilantro — the ultimate recovery breakfast.">
+          <img src="images/chilaquiles-morning.jpg" alt="Loaded chilaquiles recovery breakfast for the morning after a wedding" loading="lazy">
+          <div class="photo-caption"><h4>The Morning After</h4><p>Wedding recovery breakfast</p></div>
+        </div>
+
+        <div class="photo-card" data-title="The Family Team" data-desc="The Tacon'Todo family catering team — the heart behind every event we serve.">
+          <img src="images/team-group.jpg" alt="The Tacon'Todo family catering team at a Coachella Valley event" loading="lazy">
+          <div class="photo-caption"><h4>The Family Team</h4><p>The heart behind every event</p></div>
+        </div>
+
+      </div>
+
+      <!-- ===== Terracotta script band ===== -->
+    </div>
+  </section>
+
+  <section class="script-band">
+    <div class="container">
+      <span class="label">Our Signature</span>
+      <h2>Birria Done Right</h2>
+    </div>
+  </section>
+
+  <section class="section gallery-section">
+    <div class="container">
+
+      <!-- ===== Category: Birria & Tacos ===== -->
+      <div class="cat-head" style="margin-top:0;">
+        <span class="label">Birria &amp; Tacos</span>
+        <h3>The Star of the Show</h3>
+        <div class="cat-rule"></div>
+      </div>
+
+      <div class="photo-grid">
+
+        <div class="photo-card" data-title="Birria El Jefe Style" data-desc="Signature birria taco with bone marrow — crispy, loaded, and served on branded Tacon'Todo paper.">
+          <img src="images/birria-taco-closeup.jpg" alt="Closeup of a signature Tacon'Todo birria taco with bone marrow on branded paper" loading="lazy">
+          <div class="photo-caption"><h4>Birria El Jefe Style</h4><p>Signature birria + bone marrow</p></div>
+        </div>
+
+        <div class="photo-card" data-title="Birria Platter" data-desc="Magazine-quality birria taco platter with golden tortillas, consommé, and fresh lime.">
           <img src="gallery-birria-01.jpg" alt="Birria taco platter with consommé and lime wedges" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Birria Platter</h3>
-            <p>Signature birria tacos</p>
-          </div>
+          <div class="photo-caption"><h4>Birria Platter</h4><p>Signature birria tacos</p></div>
         </div>
 
-        <div class="bento-item bento-col2-row2"
-             data-title="Cilantro Lime Birria"
-             data-desc="Golden birria tacos loaded with fresh cilantro, onions, and a side of lime">
-          <img src="gallery-birria-02.jpg" alt="Birria tacos with cilantro lime and fresh toppings" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Cilantro Lime Birria</h3>
-            <p>Fresh toppings, bold flavor</p>
-          </div>
+        <div class="photo-card" data-title="Cilantro Lime Birria" data-desc="Golden birria tacos loaded with fresh cilantro, onions, and a side of lime.">
+          <img src="gallery-birria-02.jpg" alt="Birria tacos with cilantro, lime, and fresh toppings" loading="lazy">
+          <div class="photo-caption"><h4>Cilantro Lime Birria</h4><p>Fresh toppings, bold flavor</p></div>
         </div>
 
-        <div class="bento-item bento-col1-row3"
-             data-title="Full Spread"
-             data-desc="Overhead view of birria tacos with consommé bowl, cilantro, lime wedges, and fresh radishes">
+        <div class="photo-card" data-title="Full Spread" data-desc="Overhead view of birria tacos with a consommé bowl, cilantro, lime wedges, and fresh radishes.">
           <img src="gallery-birria-03.jpg" alt="Overhead birria taco spread with consommé and garnishes" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Full Spread</h3>
-            <p>The complete birria experience</p>
-          </div>
+          <div class="photo-caption"><h4>Full Spread</h4><p>The complete birria experience</p></div>
         </div>
 
-        <div class="bento-item bento-col2-row2"
-             data-title="Cheese Pull"
-             data-desc="Melty cheese pull action shot — quesabirria dipped into rich consommé">
+        <div class="photo-card" data-title="Cheese Pull" data-desc="Melty cheese pull action shot — quesabirria dipped into rich consommé.">
           <img src="gallery-birria-04.jpg" alt="Quesabirria cheese pull dipping into consommé" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Cheese Pull</h3>
-            <p>Quesabirria perfection</p>
-          </div>
+          <div class="photo-caption"><h4>Cheese Pull</h4><p>Quesabirria perfection</p></div>
         </div>
 
-        <div class="bento-item bento-col1-row3"
-             data-title="Birria & Shrimp"
-             data-desc="Gourmet birria tacos with shrimp, cilantro, and rich consommé on newspaper-lined tray">
+        <div class="photo-card" data-title="Birria &amp; Shrimp" data-desc="Gourmet birria tacos with shrimp, cilantro, and rich consommé on a newspaper-lined tray.">
           <img src="gallery-birria-05.jpg" alt="Gourmet birria tacos with shrimp and consommé" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Birria &amp; Shrimp</h3>
-            <p>Gourmet taco plating</p>
-          </div>
+          <div class="photo-caption"><h4>Birria &amp; Shrimp</h4><p>Gourmet taco plating</p></div>
         </div>
 
-        <div class="bento-item bento-col2-row2"
-             data-title="Editorial Plating"
-             data-desc="Restaurant-quality single birria taco on a dark plate with fresh garnishes and salsa verde">
-          <img src="gallery-birria-06.jpg" alt="Editorial birria taco plating with garnishes" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Editorial Plating</h3>
-            <p>Restaurant-quality presentation</p>
-          </div>
+        <div class="photo-card" data-title="Editorial Plating" data-desc="Restaurant-quality single birria taco on a dark plate with fresh garnishes and salsa verde.">
+          <img src="gallery-birria-06.jpg" alt="Editorial-style birria taco plating with garnishes" loading="lazy">
+          <div class="photo-caption"><h4>Editorial Plating</h4><p>Restaurant-quality presentation</p></div>
         </div>
 
-        <div class="bento-item bento-col1-row2"
-             data-title="Fine Dining Taco"
-             data-desc="Elevated birria taco with fine dining presentation — colorful garnishes on a sleek dark plate">
+        <div class="photo-card" data-title="Fine Dining Taco" data-desc="Elevated birria taco with fine dining presentation — colorful garnishes on a sleek dark plate.">
           <img src="gallery-birria-07.jpg" alt="Fine dining style birria taco with elegant plating" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Fine Dining Taco</h3>
-            <p>Elevated taco experience</p>
-          </div>
+          <div class="photo-caption"><h4>Fine Dining Taco</h4><p>Elevated taco experience</p></div>
         </div>
 
-        <div class="bento-item bento-col2-row2"
-             data-title="Top-Down Spread"
-             data-desc="Rustic overhead view of birria tacos with consommé, cilantro, and onions on a wooden board">
+        <div class="photo-card" data-title="Top-Down Spread" data-desc="Rustic overhead view of birria tacos with consommé, cilantro, and onions on a wooden board.">
           <img src="gallery-birria-08.jpg" alt="Top-down rustic birria taco spread with consommé" loading="lazy">
-          <div class="bento-overlay">
-            <h3>Top-Down Spread</h3>
-            <p>Rustic birria styling</p>
-          </div>
+          <div class="photo-caption"><h4>Top-Down Spread</h4><p>Rustic birria styling</p></div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- ==================== LIGHTBOX MODAL ==================== -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-label="Image viewer">
-    <div class="lightbox-content" id="lightboxContent">
+  <!-- ==================== LIGHTBOX ==================== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="Image viewer" aria-modal="true">
+    <div class="lightbox-content">
       <img src="" alt="" id="lightboxImg">
       <div class="lightbox-info">
         <h3 id="lightboxTitle"></h3>
         <p id="lightboxDesc"></p>
       </div>
-      <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close image viewer">
         <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">
+        <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">
+        <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
       </button>
     </div>
   </div>
 
-  <!-- Thumbnail Dock -->
-  <div class="lightbox-dock" id="lightboxDock">
-    <div class="dock-thumbs" id="dockThumbs"></div>
-  </div>
-
-  <div class="zigzag-divider"></div>
-
-  <!-- TESTIMONIALS -->
-  <section class="section-padding" style="background: var(--off-white);">
+  <!-- ==================== FINAL CTA ==================== -->
+  <section class="final-cta">
+    <svg class="final-cta-cactus" viewBox="0 0 64 100" fill="currentColor" aria-hidden="true"><path d="M28 100V44c0-3-2-5-5-5h-3c-5 0-9-4-9-9v-6c0-3 3-6 6-6s6 3 6 6v5c0 2 1 3 3 3h1V20c0-4 3-7 4-7s4 3 4 7v30h1c2 0 3-1 3-3v-9c0-3 3-6 6-6s6 3 6 6v10c0 5-4 9-9 9h-3c-3 0-5 2-5 5v33z"/></svg>
     <div class="container">
-      <div class="section-heading">
-        <div class="pattern-divider"></div>
-        <h2>What Our Clients Say</h2>
+      <div>
+        <span class="label">Ready to Plan Your Event?</span>
+        <h2>Let's Taco 'Bout It.</h2>
       </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote>"The birria tacos were out of this world. Our guests could not stop talking about the food. Tacon'Todo made our daughter's quinceañera absolutely perfect."</blockquote>
-          <div class="testimonial-author">— Maria G., Cathedral City</div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote>"From setup to cleanup, the team was incredibly professional. They handled everything while we enjoyed our own party. Best catering decision we ever made."</blockquote>
-          <div class="testimonial-author">— James R., Palm Springs</div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote>"We hired Tacon'Todo for our company team building event and it was a huge hit. The taco cart was the highlight of the day. Already booking them for our holiday party."</blockquote>
-          <div class="testimonial-author">— Sarah L., Palm Desert</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-banner">
-    <div class="container">
-      <h2>Want This for Your Event?</h2>
-      <p>Let's make it happen — reach out and book your date.</p>
-      <a href="contact.html" class="btn-primary">Book Your Event</a>
+      <p>Tell us about your event and we'll create a custom menu that your guests won't stop talking about.</p>
+      <a href="contact.html" class="btn btn-light">Get a Quote</a>
     </div>
   </section>
 
@@ -917,152 +681,111 @@
     <div class="footer-inner">
       <div class="footer-top">
         <div class="footer-brand">
-          <div class="footer-brand-header">
-            <img src="TacoNtodo-logo.png" alt="Tacon'Todo" class="footer-logo-img">
-            <span class="footer-brand-name">Tacon'Todo</span>
+          <div class="footer-brand-name">TACON'TODO</div>
+          <div class="footer-brand-tag">Running on Salsa</div>
+          <p>Family-owned authentic Mexican catering, proudly serving Cathedral City and the entire Coachella Valley since 2021.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/tacontodo.est2021" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="tel:+17606686547" aria-label="Call us">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </a>
           </div>
-          <p class="footer-brand-desc">Authentic street-style taco catering for weddings, corporate events, private parties, and everything in between. Serving the Coachella Valley since 2021.</p>
-          <ul class="footer-socials">
-            <li><a href="https://www.instagram.com/tacontodo.est2021" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></li>
-            <li><a href="https://www.facebook.com/tacontodo" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></li>
-            <li><a href="https://www.tiktok.com/@tacontodo" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a></li>
+        </div>
+
+        <div class="footer-col">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="menu.html">Packages</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-        <div class="footer-cols">
-          <div class="footer-col"><h3>Navigate</h3><ul><li><a href="index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li></ul></div>
-          <div class="footer-col"><h3>Our Services</h3><ul><li><a href="contact.html">Taco Catering</a></li><li><a href="contact.html">Weddings</a></li><li><a href="contact.html">Corporate Events</a></li><li><a href="contact.html">Private Parties</a></li></ul></div>
-          <div class="footer-col"><h3>Helpful Links</h3><ul><li><a href="menu.html">Full Menu</a></li><li><a href="contact.html">Book Now</a></li><li><a href="gallery.html">Event Photos</a></li></ul></div>
-          <div class="footer-col"><h3>Contact Us</h3><ul>
-            <li><a href="mailto:info@tacontodops.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span class="footer-contact-text">info@tacontodops.com</span></a></li>
-            <li><a href="tel:+17606686547"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="footer-contact-text">(760) 668-6547</span></a></li>
-            <li><a href="https://maps.google.com/?q=Cathedral+City+CA" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><address class="footer-contact-text" style="font-style:normal;">Cathedral City, CA</address></a></li>
-          </ul></div>
+
+        <div class="footer-col">
+          <h3>Catering</h3>
+          <ul>
+            <li><a href="contact.html">Street Taco Bar</a></li>
+            <li><a href="contact.html">Birria Experience</a></li>
+            <li><a href="contact.html">Corporate Catering</a></li>
+            <li><a href="contact.html">Weddings &amp; Events</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Get in Touch</h3>
+          <ul>
+            <li><a href="tel:+17606686547"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(760) 668-6547</a></li>
+            <li><a href="mailto:info@tacontodops.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>info@tacontodops.com</a></li>
+            <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Cathedral City, CA</span></li>
+            <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Tue–Fri 10–8 · Sat–Sun 10–5</span></li>
+          </ul>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Tacon'Todo. All rights reserved.</p>
-        <p class="credit">Website by Desert Nomad Media</p>
-      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Tacon'Todo. All rights reserved.</p>
+      <p>Website by Desert Nomad Media</p>
     </div>
   </footer>
 
+  <!-- ==================== JS ==================== -->
   <script>
-    // ===== Mobile Menu =====
+    // Header scroll effect
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Mobile panel
     const menuToggle = document.querySelector('.menu-toggle');
-    const sidePanel = document.getElementById('sidePanel');
-    const sidePanelOverlay = document.getElementById('sidePanelOverlay');
-    function openPanel() {
-      menuToggle.classList.add('active');
-      sidePanel.classList.add('active');
-      sidePanelOverlay.classList.add('active');
-      menuToggle.setAttribute('aria-expanded', 'true');
-      document.body.style.overflow = 'hidden';
-    }
-    function closePanel() {
-      menuToggle.classList.remove('active');
-      sidePanel.classList.remove('active');
-      sidePanelOverlay.classList.remove('active');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    }
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.contains('active') ? closePanel() : openPanel();
-    });
-    sidePanelOverlay.addEventListener('click', closePanel);
-    sidePanel.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', closePanel);
-    });
+    const panel = document.getElementById('panel');
+    const overlay = document.getElementById('panelOverlay');
+    function openPanel(){ panel.classList.add('active'); overlay.classList.add('active'); menuToggle.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+    function closePanel(){ panel.classList.remove('active'); overlay.classList.remove('active'); menuToggle.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+    menuToggle.addEventListener('click', () => panel.classList.contains('active') ? closePanel() : openPanel());
+    overlay.addEventListener('click', closePanel);
+    panel.querySelectorAll('a').forEach(a => a.addEventListener('click', closePanel));
 
-    // ===== Bento Gallery Staggered Load Animation =====
-    const bentoItems = document.querySelectorAll('.bento-item');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          const idx = Array.from(bentoItems).indexOf(entry.target);
-          setTimeout(() => {
-            entry.target.classList.add('visible');
-          }, idx * 80);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    bentoItems.forEach(item => observer.observe(item));
-
-    // ===== Lightbox + Thumbnail Dock =====
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightboxImg');
-    const lightboxTitle = document.getElementById('lightboxTitle');
-    const lightboxDesc = document.getElementById('lightboxDesc');
-    const lightboxClose = document.getElementById('lightboxClose');
-    const lightboxDock = document.getElementById('lightboxDock');
-    const dockThumbs = document.getElementById('dockThumbs');
-
-    // Build media items array from DOM
-    const mediaItems = Array.from(bentoItems).map((item, i) => ({
-      id: i,
-      title: item.dataset.title,
-      desc: item.dataset.desc,
-      url: item.querySelector('img').src,
-      alt: item.querySelector('img').alt
+    // ===== Lightbox =====
+    const cards = Array.from(document.querySelectorAll('.photo-card'));
+    const items = cards.map(card => ({
+      url: card.querySelector('img').getAttribute('src'),
+      alt: card.querySelector('img').alt,
+      title: card.dataset.title,
+      desc: card.dataset.desc
     }));
+    const lightbox = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightboxImg');
+    const lbTitle = document.getElementById('lightboxTitle');
+    const lbDesc = document.getElementById('lightboxDesc');
+    let current = 0;
 
-    let currentIndex = 0;
-
-    // Build thumbnail dock
-    mediaItems.forEach((item, i) => {
-      const thumb = document.createElement('div');
-      thumb.className = 'dock-thumb';
-      thumb.innerHTML = `<img src="${item.url}" alt="${item.title}">`;
-      thumb.addEventListener('click', (e) => {
-        e.stopPropagation();
-        showLightbox(i);
-      });
-      dockThumbs.appendChild(thumb);
-    });
-
-    function showLightbox(index) {
-      currentIndex = index;
-      const item = mediaItems[index];
-      lightboxImg.src = item.url;
-      lightboxImg.alt = item.alt;
-      lightboxTitle.textContent = item.title;
-      lightboxDesc.textContent = item.desc;
+    function showLightbox(i){
+      current = (i + items.length) % items.length;
+      const it = items[current];
+      lbImg.src = it.url; lbImg.alt = it.alt;
+      lbTitle.textContent = it.title; lbDesc.textContent = it.desc;
       lightbox.classList.add('active');
-      lightboxDock.classList.add('active');
       document.body.style.overflow = 'hidden';
-      updateDockActive(index);
     }
-
-    function closeLightbox() {
+    function closeLightbox(){
       lightbox.classList.remove('active');
-      lightboxDock.classList.remove('active');
       document.body.style.overflow = '';
     }
-
-    function updateDockActive(index) {
-      dockThumbs.querySelectorAll('.dock-thumb').forEach((t, i) => {
-        t.classList.toggle('active-thumb', i === index);
-        t.style.zIndex = i === index ? 30 : mediaItems.length - i;
-      });
-    }
-
-    // Click bento items to open
-    bentoItems.forEach((item, i) => {
-      item.addEventListener('click', () => showLightbox(i));
-    });
-
-    // Close events
-    lightboxClose.addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) closeLightbox();
-    });
-
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
+    cards.forEach((card, i) => card.addEventListener('click', () => showLightbox(i)));
+    document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+    document.getElementById('lightboxPrev').addEventListener('click', e => { e.stopPropagation(); showLightbox(current - 1); });
+    document.getElementById('lightboxNext').addEventListener('click', e => { e.stopPropagation(); showLightbox(current + 1); });
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', e => {
       if (!lightbox.classList.contains('active')) return;
       if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowRight') showLightbox((currentIndex + 1) % mediaItems.length);
-      if (e.key === 'ArrowLeft') showLightbox((currentIndex - 1 + mediaItems.length) % mediaItems.length);
+      if (e.key === 'ArrowRight') showLightbox(current + 1);
+      if (e.key === 'ArrowLeft') showLightbox(current - 1);
     });
   </script>
 

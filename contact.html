@@ -10,372 +10,406 @@
   <meta property="og:description" content="Book authentic taco catering for your Coachella Valley event. Parties, weddings, corporate events — call (760) 668-6547.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.tacontodops.com/contact">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta property="og:image" content="https://www.tacontodops.com/images/omar-grilling.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <style>
+    /* ============================================================
+       TACON'TODO — Authentic Mexican Catering
+       Warm vintage / talavera design system
+       ============================================================ */
+
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
+    /* ========== DESIGN TOKENS ========== */
+    :root {
+      --cream:        #F4ECDB;   /* page background */
+      --cream-2:      #FBF6EA;   /* lighter cards / panels */
+      --cream-3:      #ECE0C9;   /* deeper sand panel */
+      --terracotta:   #B0492E;   /* primary brick red */
+      --terracotta-d: #93371F;   /* darker hover */
+      --brick:        #BE3A26;   /* display red */
+      --olive:        #6E7539;   /* accent green */
+      --olive-d:      #565E2C;
+      --ink:          #2C2520;   /* warm near-black text */
+      --muted:        #7C6E5C;   /* muted brown body text */
+      --line:         #DBC9AC;   /* hairline borders */
+      --gold:         #C8A062;   /* faint decorative accents */
+      --shadow-sm: 0 2px 10px rgba(64,38,20,0.08);
+      --shadow-md: 0 14px 40px rgba(64,38,20,0.16);
+      --radius: 4px;
+    }
+
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-weight: 400; color: #1A1A1A; background-color: #F5F0EB;
-      line-height: 1.7; -webkit-font-smoothing: antialiased;
+      font-family: 'EB Garamond', Georgia, serif;
+      font-weight: 400;
+      color: var(--ink);
+      background-color: var(--cream);
+      line-height: 1.7;
+      font-size: 1.05rem;
+      -webkit-font-smoothing: antialiased;
     }
     img { max-width: 100%; display: block; }
     a { text-decoration: none; color: inherit; }
     ul { list-style: none; }
 
-    :root {
-      --red: #E02B20; --teal: #2FB8A8; --charcoal: #1A1A1A; --off-white: #F5F0EB;
-      --sand: #D4A574; --wood: #3D2B1F; --muted: #7A7067; --cream: #FFFAF5;
-      --sage: #6B7F5E; --divider: #E8E0D8;
-      --shadow-sm: 0 2px 8px rgba(0,0,0,0.06); --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
-      --radius: 6px;
-    }
-
-    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
-    .section-padding { padding: 100px 0; }
-    .pattern-divider {
-      width: 80px; height: 8px; margin: 0 auto 40px; border-radius: 2px;
-      background: repeating-linear-gradient(90deg, var(--red) 0px, var(--red) 8px, transparent 8px, transparent 12px, var(--sand) 12px, var(--sand) 20px, transparent 20px, transparent 24px, var(--teal) 24px, var(--teal) 32px, transparent 32px, transparent 36px);
-    }
-    .pattern-divider-wide {
-      width: 100%; height: 4px;
-      background: repeating-linear-gradient(90deg, var(--red) 0px, var(--red) 16px, var(--off-white) 16px, var(--off-white) 20px, var(--sand) 20px, var(--sand) 36px, var(--off-white) 36px, var(--off-white) 40px, var(--teal) 40px, var(--teal) 56px, var(--off-white) 56px, var(--off-white) 60px, var(--sage) 60px, var(--sage) 76px, var(--off-white) 76px, var(--off-white) 80px);
-    }
-    .zigzag-divider {
-      width: 100%; height: 12px; opacity: 0.3; background-color: var(--sand);
-      background-image: linear-gradient(135deg, var(--off-white) 33.33%, transparent 33.33%), linear-gradient(225deg, var(--off-white) 33.33%, transparent 33.33%);
-      background-size: 12px 12px;
-    }
-    .section-heading { text-align: center; margin-bottom: 60px; }
-    .section-heading h1, .section-heading h2 { font-size: 2.2rem; font-weight: 300; color: var(--charcoal); margin-bottom: 12px; }
-    .section-heading p { color: var(--muted); font-size: 1.05rem; max-width: 560px; margin: 0 auto; }
-
-    /* HEADER */
-    .header {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 14px 0;
-      background: rgba(245,240,235,0.97); box-shadow: var(--shadow-sm); backdrop-filter: blur(8px);
-    }
-    .header .container { display: flex; align-items: center; justify-content: space-between; }
-    .logo { display: flex; align-items: center; }
-    .logo-img { height: 46px; width: auto; }
-    /* Nav Links */
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .nav-links a {
-      font-size: 0.85rem;
+    /* ========== UTILITY ========== */
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+    .section { padding: 96px 0; }
+    .label {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.8rem;
       font-weight: 500;
-      letter-spacing: 0.02em;
-      color: var(--charcoal);
-      padding: 8px 16px;
-      border-radius: var(--radius);
-      transition: opacity 0.2s;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--terracotta);
     }
-    .nav-links a:hover { opacity: 0.7; }
-    .header.scrolled .nav-links a { color: var(--charcoal); }
-    .nav-links a.active { opacity: 0.6; }
-    .nav-phone {
-      font-size: 0.82rem !important;
-      padding: 8px 18px !important;
-      border: 1px solid var(--divider);
-      border-radius: var(--radius);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
+    .script { font-family: 'Great Vibes', cursive; font-weight: 400; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--ink); line-height: 1.12; font-weight: 700; }
+
+    /* Small decorative flourish */
+    .flourish {
+      display: inline-flex; align-items: center; gap: 10px;
+      color: var(--terracotta);
     }
-    .nav-phone svg { width: 14px; height: 14px; }
-    .header.scrolled .nav-phone { border-color: var(--divider); }
-    .nav-phone:hover { opacity: 1 !important; border-color: var(--muted); }
-    .header.scrolled .nav-phone:hover { border-color: var(--muted); }
-    /* Animated SVG Menu Toggle */
+    .flourish::before, .flourish::after {
+      content: ""; width: 42px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--terracotta));
+    }
+    .flourish::after { background: linear-gradient(90deg, var(--terracotta), transparent); }
+    .flourish svg { width: 22px; height: 22px; }
+
+    /* ========== TALAVERA TILE BORDER ========== */
+    .talavera {
+      height: 44px;
+      background-color: var(--terracotta);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='66' height='44' viewBox='0 0 66 44'%3E%3Crect width='66' height='44' fill='%23B0492E'/%3E%3Cpath d='M33 5 L52 22 L33 39 L14 22 Z' fill='none' stroke='%23F4ECDB' stroke-width='1.6'/%3E%3Cpath d='M33 13 L43 22 L33 31 L23 22 Z' fill='%236E7539'/%3E%3Ccircle cx='33' cy='22' r='3' fill='%23F4ECDB'/%3E%3Ccircle cx='0' cy='22' r='4.5' fill='none' stroke='%23F4ECDB' stroke-width='1.6'/%3E%3Ccircle cx='66' cy='22' r='4.5' fill='none' stroke='%23F4ECDB' stroke-width='1.6'/%3E%3Ccircle cx='0' cy='22' r='1.8' fill='%23ECE0C9'/%3E%3Ccircle cx='66' cy='22' r='1.8' fill='%23ECE0C9'/%3E%3Ccircle cx='16' cy='6' r='1.6' fill='%23ECE0C9'/%3E%3Ccircle cx='50' cy='6' r='1.6' fill='%23ECE0C9'/%3E%3Ccircle cx='16' cy='38' r='1.6' fill='%23ECE0C9'/%3E%3Ccircle cx='50' cy='38' r='1.6' fill='%23ECE0C9'/%3E%3C/svg%3E");
+      background-repeat: repeat-x;
+      background-position: center;
+    }
+
+    /* ========== BUTTONS ========== */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-size: 0.84rem;
+      padding: 16px 32px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      border: 1.5px solid transparent;
+      transition: background .25s, color .25s, transform .2s, box-shadow .25s;
+    }
+    .btn-primary { background: var(--terracotta); color: var(--cream-2); }
+    .btn-primary:hover { background: var(--terracotta-d); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .btn-light { background: var(--cream-2); color: var(--terracotta); }
+    .btn-light:hover { background: #fff; transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+    /* ========== HEADER / NAV ========== */
+    .header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 18px 0;
+      background: rgba(244,236,219,0);
+      transition: background .35s, padding .35s, box-shadow .35s;
+    }
+    .header.scrolled {
+      background: rgba(244,236,219,0.96);
+      padding: 10px 0;
+      box-shadow: 0 4px 20px rgba(64,38,20,0.08);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .header .container { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+
+    .brand { display: flex; flex-direction: column; line-height: 1; }
+    .brand-logo { height: 42px; width: auto; transition: height .35s; }
+    .header.scrolled .brand-logo { height: 34px; }
+    .brand-tag {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.6rem; font-weight: 500;
+      letter-spacing: 0.26em; text-transform: uppercase;
+      color: var(--olive); margin-top: 5px; padding-left: 3px;
+    }
+
+    .nav { display: flex; align-items: center; gap: 4px; }
+    .nav a {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.82rem; font-weight: 400;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--ink); padding: 8px 14px; border-radius: var(--radius);
+      position: relative; transition: color .2s;
+    }
+    .nav a:hover { color: var(--terracotta); }
+    .nav a.active { color: var(--terracotta); }
+    .nav a.active::after {
+      content: ""; position: absolute; left: 14px; right: 14px; bottom: 2px;
+      height: 2px; background: var(--terracotta); border-radius: 2px;
+    }
+    .nav .btn { margin-left: 10px; padding: 11px 22px; }
+
+    /* Hamburger */
     .menu-toggle {
       display: none; align-items: center; justify-content: center;
-      width: 40px; height: 40px; border-radius: var(--radius);
-      border: 1px solid var(--divider); background: transparent;
-      cursor: pointer; padding: 0; transition: background 0.2s;
+      width: 44px; height: 44px; border-radius: var(--radius);
+      border: 1.5px solid var(--line); background: rgba(251,246,234,0.6); cursor: pointer;
     }
-    .menu-toggle:hover { background: rgba(26,26,26,0.04); }
-    .menu-toggle svg {
-      width: 22px; height: 22px; stroke: var(--charcoal); fill: none;
-      stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;
-      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .menu-toggle.active svg { transform: rotate(-45deg); }
-    .menu-toggle svg .menu-path {
-      stroke-dasharray: 12 63;
-      transition: stroke-dasharray 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-                  stroke-dashoffset 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .menu-toggle.active svg .menu-path {
-      stroke-dasharray: 20 300;
-      stroke-dashoffset: -32.42px;
-    }
+    .menu-toggle svg { width: 22px; height: 22px; stroke: var(--ink); fill: none; stroke-width: 2; stroke-linecap: round; }
 
-    /* Side Panel */
-    .side-panel-overlay {
-      position: fixed; inset: 0; z-index: 998;
-      background: rgba(0,0,0,0.4); backdrop-filter: blur(4px);
-      opacity: 0; visibility: hidden;
-      transition: opacity 0.3s ease, visibility 0.3s;
+    /* ========== MOBILE SIDE PANEL ========== */
+    .panel-overlay {
+      position: fixed; inset: 0; z-index: 1098; background: rgba(44,37,32,0.45);
+      backdrop-filter: blur(3px); opacity: 0; visibility: hidden; transition: opacity .3s, visibility .3s;
     }
-    .side-panel-overlay.active { opacity: 1; visibility: visible; }
-    .side-panel {
-      position: fixed; top: 0; left: 0; bottom: 0;
-      width: 300px; max-width: 75vw; z-index: 999;
-      background: rgba(245,240,235,0.85); backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-right: 1px solid var(--divider);
-      box-shadow: 4px 0 24px rgba(0,0,0,0.08);
-      transform: translateX(-100%);
-      transition: transform 0.4s cubic-bezier(0.32, 0.72, 0, 1);
-      display: flex; flex-direction: column;
+    .panel-overlay.active { opacity: 1; visibility: visible; }
+    .panel {
+      position: fixed; top: 0; right: 0; bottom: 0; width: 300px; max-width: 80vw; z-index: 1099;
+      background: var(--cream-2); border-left: 4px solid var(--terracotta);
+      box-shadow: -10px 0 40px rgba(64,38,20,0.18);
+      transform: translateX(100%); transition: transform .4s cubic-bezier(.32,.72,0,1);
+      display: flex; flex-direction: column; padding: 90px 24px 24px;
     }
-    .side-panel.active { transform: translateX(0); }
-    .side-panel-nav {
-      flex: 1; padding: 80px 20px 20px;
-      display: flex; flex-direction: column; gap: 4px; overflow-y: auto;
+    .panel.active { transform: translateX(0); }
+    .panel a {
+      font-family: 'Oswald', sans-serif; font-size: 0.95rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--ink); padding: 14px 8px;
+      border-bottom: 1px solid var(--line); transition: color .2s;
     }
-    .side-panel-nav a {
-      display: block; font-size: 0.95rem; font-weight: 500;
-      color: var(--charcoal); padding: 12px 16px; border-radius: var(--radius);
-      transition: background 0.2s, color 0.2s;
-    }
-    .side-panel-nav a:hover { background: rgba(26,26,26,0.06); }
-    .side-panel-nav a.active { color: var(--red); }
-    .side-panel-footer {
-      padding: 16px 20px; border-top: 1px solid var(--divider);
-      background: rgba(26,26,26,0.02);
-      display: flex; flex-direction: column; gap: 10px;
-    }
-    .side-panel-footer a {
-      display: block; text-align: center; padding: 12px;
-      border-radius: var(--radius); font-size: 0.88rem; font-weight: 600;
-      transition: background 0.2s, transform 0.2s;
-    }
-    .sp-btn-outline { border: 1px solid var(--divider); color: var(--charcoal); }
-    .sp-btn-outline:hover { background: rgba(26,26,26,0.04); }
-    .sp-btn-primary { background: var(--red); color: #fff; }
-    .sp-btn-primary:hover { background: #c42419; }
+    .panel a:hover { color: var(--terracotta); }
+    .panel .btn { margin-top: 24px; border: none; }
 
-    /* PAGE HERO */
+    /* ========== INTERIOR PAGE HERO ========== */
     .page-hero {
-      padding: 160px 0 80px; text-align: center;
-      background: linear-gradient(160deg, rgba(26,26,26,0.75) 0%, rgba(61,43,31,0.6) 50%, rgba(26,26,26,0.7) 100%), url('contact-hero.jpg') center/cover no-repeat;
+      background: var(--cream); text-align: center;
+      padding: 150px 0 70px; position: relative; overflow: hidden;
     }
-    .page-hero h1 { font-size: 2.8rem; font-weight: 300; color: #fff; margin-bottom: 12px; }
-    .page-hero p { color: rgba(255,255,255,0.65); font-size: 1.05rem; }
+    .page-hero .label { display: inline-block; margin-bottom: 18px; }
+    .page-hero h1 {
+      font-size: clamp(2.6rem, 5.4vw, 4.4rem); font-weight: 800; letter-spacing: -0.01em;
+    }
+    .page-hero h1 .script {
+      display: block; color: var(--terracotta); font-weight: 400;
+      font-size: clamp(2.4rem, 5vw, 4rem); margin-top: 4px; letter-spacing: 0;
+    }
+    .page-hero .flourish { margin: 26px auto 22px; display: inline-flex; }
+    .page-hero p {
+      font-size: 1.18rem; color: var(--muted); max-width: 560px; margin: 0 auto;
+    }
+    .page-hero-watermark {
+      position: absolute; right: -70px; top: 50%; transform: translateY(-50%);
+      width: 340px; opacity: 0.09; z-index: 0; pointer-events: none; color: var(--olive);
+    }
+    .page-hero .container { position: relative; z-index: 2; }
 
-    /* CONTACT */
-    .contact-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 48px; }
-    .form-group { margin-bottom: 20px; }
+    /* ========== CONTACT LAYOUT ========== */
+    .contact-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 52px; align-items: start; }
+
+    /* Form card */
+    .form-card {
+      background: var(--cream-2); border: 1px solid var(--line); border-radius: 6px;
+      box-shadow: var(--shadow-sm); padding: 44px 40px;
+    }
+    .form-card .label { display: block; margin-bottom: 6px; }
+    .form-card h2 { font-size: clamp(1.7rem, 2.6vw, 2.2rem); font-weight: 700; margin-bottom: 10px; }
+    .form-card-divider { width: 56px; height: 3px; background: var(--terracotta); margin: 0 0 26px; border-radius: 2px; }
+
+    .form-group { margin-bottom: 22px; }
     .form-group label {
-      display: block; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
-      text-transform: uppercase; color: var(--charcoal); margin-bottom: 8px;
+      display: block; font-family: 'Oswald', sans-serif; font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); margin-bottom: 8px;
     }
     .form-group input, .form-group select, .form-group textarea {
-      width: 100%; padding: 12px 16px; font-family: 'Inter', sans-serif; font-size: 0.9rem;
-      color: var(--charcoal); background: var(--cream); border: 1px solid var(--divider);
-      border-radius: var(--radius); transition: border-color 0.2s; outline: none;
+      width: 100%; padding: 13px 16px; font-family: 'EB Garamond', Georgia, serif; font-size: 1rem;
+      color: var(--ink); background: var(--cream); border: 1px solid var(--line);
+      border-radius: var(--radius); transition: border-color .2s, box-shadow .2s; outline: none;
     }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--sand); }
-    .form-group textarea { min-height: 120px; resize: vertical; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    /* Shine hover buttons */
-    .btn-primary,
-    .btn-outline {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      height: 44px;
-      padding: 0 28px;
-      border: none;
-      border-radius: 8px;
-      color: #fff;
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      cursor: pointer;
-      overflow: hidden;
-      transition: background 0.2s;
+    .form-group input::placeholder, .form-group textarea::placeholder { color: var(--muted); opacity: 0.7; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: var(--terracotta); box-shadow: 0 0 0 3px rgba(176,73,46,0.12);
     }
-    .btn-primary {
-      background: var(--red);
-    }
-    .btn-primary:hover { background: #c42419; }
-    .btn-outline {
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.3);
-    }
-    .btn-outline:hover { background: rgba(255,255,255,0.18); }
-    /* Shine sweep */
-    .btn-primary::before,
-    .btn-outline::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      background: linear-gradient(45deg, transparent 25%, rgba(255,255,255,0.7) 50%, transparent 75%, transparent 100%);
-      background-size: 250% 250%;
-      background-position: 200% 0;
-      background-repeat: no-repeat;
-      transition: background-position 0s ease;
-      transition-duration: 1s;
-    }
-    .btn-primary:hover::before,
-    .btn-outline:hover::before {
-      background-position: -100% 0;
-    }
+    .form-group textarea { min-height: 130px; resize: vertical; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .form-card .btn { width: 100%; margin-top: 6px; }
 
-    .contact-info-card {
-      background: var(--cream); border: 1px solid var(--divider); border-radius: var(--radius);
-      padding: 32px; margin-bottom: 24px;
+    /* Contact info panel */
+    .info-card {
+      background: var(--cream-2); border: 1px solid var(--line); border-radius: 6px;
+      box-shadow: var(--shadow-sm); padding: 32px 30px; margin-bottom: 24px;
     }
-    .contact-info-item { display: flex; align-items: flex-start; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--divider); }
-    .contact-info-item:last-child { border-bottom: none; }
-    .contact-info-icon {
-      width: 36px; height: 36px; border-radius: 50%;
+    .info-item { display: flex; align-items: flex-start; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+    .info-item:first-child { padding-top: 0; }
+    .info-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .info-icon {
+      width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0;
       display: flex; align-items: center; justify-content: center;
-      font-size: 1rem; background: rgba(224,43,32,0.08); flex-shrink: 0;
+      background: rgba(176,73,46,0.10); color: var(--terracotta);
     }
-    .contact-info-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
-    .contact-info-value { font-size: 0.9rem; color: var(--charcoal); font-weight: 500; }
-    .contact-info-value a { color: var(--red); transition: color 0.2s; }
-    .contact-info-value a:hover { color: #c42419; }
-
-    .service-area-box {
-      background: var(--cream); border: 1px solid var(--divider); border-radius: var(--radius);
-      padding: 24px; margin-bottom: 24px;
+    .info-icon svg { width: 19px; height: 19px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .info-label {
+      font-family: 'Oswald', sans-serif; font-size: 0.68rem; font-weight: 500;
+      letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px;
     }
-    .service-area-box h3 { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--charcoal); margin-bottom: 8px; }
-    .service-area-box p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+    .info-value { font-size: 1.02rem; color: var(--ink); }
+    .info-value a { color: var(--terracotta); transition: color .2s; }
+    .info-value a:hover { color: var(--terracotta-d); }
 
-    .map-placeholder {
-      background: var(--cream); border: 1px solid var(--divider); border-radius: var(--radius);
-      height: 200px; display: flex; align-items: center; justify-content: center;
-      color: var(--muted); font-size: 0.85rem; margin-bottom: 24px;
+    /* Service area */
+    .service-area {
+      background: var(--cream-2); border: 1px solid var(--line); border-radius: 6px;
+      box-shadow: var(--shadow-sm); padding: 28px 30px; margin-bottom: 24px;
     }
+    .service-area h3 {
+      font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.14em;
+      font-size: 0.82rem; font-weight: 600; color: var(--ink); margin-bottom: 16px;
+    }
+    .area-tags { display: flex; flex-wrap: wrap; gap: 9px; }
+    .area-tag {
+      font-family: 'Oswald', sans-serif; font-size: 0.74rem; font-weight: 400;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--olive-d); background: var(--cream-3); border: 1px solid var(--line);
+      padding: 6px 13px; border-radius: 20px;
+    }
+    .area-tag.all { color: var(--cream-2); background: var(--olive); border-color: var(--olive); }
 
+    /* Map placeholder */
+    .map-box {
+      background: var(--cream-3); border: 1px solid var(--line); border-radius: 6px;
+      height: 210px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 10px; color: var(--muted); margin-bottom: 24px; overflow: hidden;
+    }
+    .map-box svg { width: 30px; height: 30px; stroke: var(--terracotta); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; opacity: 0.8; }
+    .map-box span { font-family: 'Oswald', sans-serif; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; }
+
+    /* Seasonal note */
     .seasonal-note {
-      background: rgba(47,184,168,0.08); border-left: 3px solid var(--teal);
-      padding: 14px 18px; border-radius: 0 var(--radius) var(--radius) 0;
-      font-size: 0.82rem; color: var(--charcoal);
+      background: rgba(110,117,57,0.10); border-left: 3px solid var(--olive);
+      padding: 16px 20px; border-radius: 0 var(--radius) var(--radius) 0;
+      font-size: 1rem; color: var(--ink);
     }
+    .seasonal-note strong { color: var(--olive-d); }
+
+    /* ========== SLIM PHONE CTA BAND ========== */
+    .cta-band {
+      background: var(--terracotta); color: var(--cream-2); padding: 46px 0; position: relative; overflow: hidden;
+    }
+    .cta-band .container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 22px; }
+    .cta-band .label { color: rgba(244,236,219,0.75); display: block; margin-bottom: 6px; }
+    .cta-band h2 { font-family: 'Great Vibes', cursive; font-weight: 400; color: var(--cream-2); font-size: clamp(2rem, 4vw, 2.8rem); }
+    .cta-band-cactus { position: absolute; left: -10px; bottom: -20px; width: 110px; opacity: 0.18; color: #fff; pointer-events: none; }
 
     /* ========== FOOTER ========== */
-    .footer { width: 100%; margin-top: 64px; background: #000; border-radius: 0.75rem 0.75rem 0 0; }
-    .footer-inner { max-width: 1200px; margin: 0 auto; padding: 64px 16px 24px; }
-    @media (min-width: 640px) { .footer-inner { padding: 64px 24px 24px; } }
-    @media (min-width: 1024px) { .footer-inner { padding: 96px 32px 24px; } }
-    .footer-top { display: grid; grid-template-columns: 1fr; gap: 32px; }
-    @media (min-width: 1024px) { .footer-top { grid-template-columns: 1fr 2fr; } }
-    .footer-brand { text-align: center; }
-    @media (min-width: 640px) { .footer-brand { text-align: left; } }
-    .footer-brand-header { display: flex; align-items: center; gap: 12px; justify-content: center; }
-    @media (min-width: 640px) { .footer-brand-header { justify-content: flex-start; } }
-    .footer .footer-logo-img { height: 40px; width: auto; border-radius: 50%; }
-    .footer-brand-name { font-size: 1.5rem; font-weight: 600; color: #fff; }
-    .footer-brand-desc { margin-top: 20px; font-size: 0.875rem; line-height: 1.7; color: rgba(255,255,255,0.5); max-width: 320px; }
-    @media (min-width: 640px) { .footer-brand-desc { text-align: left; } }
-    @media (max-width: 639px) { .footer-brand-desc { margin: 20px auto 0; text-align: center; } }
-    .footer-socials { display: flex; gap: 24px; margin-top: 32px; list-style: none; padding: 0; justify-content: center; }
-    @media (min-width: 640px) { .footer-socials { justify-content: flex-start; } }
-    .footer-socials a { color: var(--red); transition: opacity 0.2s; }
+    .footer { background: var(--ink); color: rgba(244,236,219,0.7); }
+    .footer-inner { max-width: 1180px; margin: 0 auto; padding: 70px 28px 28px; }
+    .footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 40px; }
+    .footer-brand-name { font-family: 'Playfair Display', serif; font-size: 1.7rem; font-weight: 800; color: var(--cream-2); letter-spacing: 0.02em; }
+    .footer-brand-tag { font-family: 'Great Vibes', cursive; color: var(--gold); font-size: 1.4rem; margin-top: 2px; }
+    .footer-brand p { font-size: 0.98rem; margin-top: 16px; max-width: 300px; color: rgba(244,236,219,0.55); }
+    .footer-socials { display: flex; gap: 18px; margin-top: 22px; }
+    .footer-socials a { color: var(--gold); transition: opacity .2s; }
     .footer-socials a:hover { opacity: 0.7; }
-    .footer-socials svg { width: 24px; height: 24px; }
-    .footer-cols { display: grid; grid-template-columns: 1fr; gap: 32px; margin-top: 40px; }
-    @media (min-width: 640px) { .footer-cols { grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 768px) { .footer-cols { grid-template-columns: repeat(4, 1fr); } }
-    @media (min-width: 1024px) { .footer-cols { margin-top: 0; } }
-    .footer-col { text-align: center; }
-    @media (min-width: 640px) { .footer-col { text-align: left; } }
-    .footer-col h3 { font-size: 1.05rem; font-weight: 500; color: #fff; margin-bottom: 24px; }
-    .footer-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
-    .footer-col ul a { font-size: 0.875rem; color: rgba(255,255,255,0.45); transition: color 0.3s; display: inline-flex; align-items: center; gap: 8px; }
-    .footer-col ul a:hover { color: #fff; }
-    .footer-col ul a svg { width: 18px; height: 18px; flex-shrink: 0; color: var(--red); }
-    .footer-contact-text { flex: 1; }
-    .footer-bottom { margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: column; text-align: center; gap: 8px; font-size: 0.82rem; color: rgba(255,255,255,0.35); }
-    @media (min-width: 640px) { .footer-bottom { flex-direction: row; justify-content: space-between; text-align: left; } }
-    .footer-bottom .credit { order: -1; }
-    @media (min-width: 640px) { .footer-bottom .credit { order: 0; } }
+    .footer-socials svg { width: 22px; height: 22px; }
+    .footer-col h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.85rem; color: var(--cream-2); margin-bottom: 20px; font-weight: 500; }
+    .footer-col ul { display: flex; flex-direction: column; gap: 12px; }
+    .footer-col a, .footer-col li span { font-size: 0.96rem; color: rgba(244,236,219,0.6); transition: color .2s; display: inline-flex; align-items: center; gap: 9px; }
+    .footer-col a:hover { color: var(--cream-2); }
+    .footer-col svg { width: 17px; height: 17px; color: var(--gold); flex-shrink: 0; }
+    .footer-bottom {
+      max-width: 1180px; margin: 0 auto; padding: 22px 28px;
+      border-top: 1px solid rgba(244,236,219,0.12);
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+      font-size: 0.85rem; color: rgba(244,236,219,0.4);
+    }
 
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1024px) {
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
+    }
+    @media (max-width: 880px) {
+      .nav { display: none; }
       .menu-toggle { display: flex; }
-      .page-hero { padding: 130px 0 60px; }
-      .page-hero h1 { font-size: 2rem; }
-      .section-heading h1, .section-heading h2 { font-size: 1.8rem; }
-      .section-padding { padding: 60px 0; }
-      .contact-grid { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
+      .page-hero-watermark { display: none; }
+      .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+      .cta-band .container { flex-direction: column; text-align: center; }
+      .cta-band-cactus { display: none; }
+    }
+    @media (max-width: 560px) {
+      .section { padding: 64px 0; }
+      .container { padding: 0 20px; }
+      .footer-top { grid-template-columns: 1fr; }
+      .page-hero h1 { font-size: 2.4rem; }
+      .form-card { padding: 32px 24px; }
+      .form-row { grid-template-columns: 1fr; gap: 0; }
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- ==================== HEADER ==================== -->
   <header class="header" role="banner">
     <div class="container">
-      <a href="index.html" class="logo"><img src="TacoNtodo-logo.png" alt="Tacon'Todo" class="logo-img"></a>
-      <nav class="nav-links" aria-label="Primary navigation">
+      <a href="index.html" class="brand" aria-label="Tacon'Todo — Authentic Mexican Catering">
+        <img src="tacontodo-text-logo.png" alt="Tacon'Todo" class="brand-logo">
+        <span class="brand-tag">Authentic Mexican Catering</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="menu.html">Menu</a>
+        <a href="about.html">Our Story</a>
+        <a href="menu.html">Packages</a>
         <a href="gallery.html">Gallery</a>
-        <a href="contact.html" class="active">Book Now</a>
-        <a href="tel:+17606686547" class="nav-phone">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          (760) 668-6547
-        </a>
+        <a href="index.html#reviews">Reviews</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
       </nav>
-      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <svg viewBox="0 0 32 32">
-          <path class="menu-path" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"/>
-          <path d="M7 16 27 16"/>
-        </svg>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
   </header>
-  <div class="side-panel-overlay" id="sidePanelOverlay"></div>
-  <div class="side-panel" id="sidePanel">
-    <div class="side-panel-nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="menu.html">Menu</a>
-      <a href="gallery.html">Gallery</a>
-    </div>
-    <div class="side-panel-footer">
-      <a href="tel:+17606686547" class="sp-btn-outline">(760) 668-6547</a>
-      <a href="contact.html" class="sp-btn-primary active">Book Now</a>
-    </div>
-  </div>
 
-  <!-- PAGE HERO -->
+  <!-- Mobile panel -->
+  <div class="panel-overlay" id="panelOverlay"></div>
+  <aside class="panel" id="panel" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">Our Story</a>
+    <a href="menu.html">Packages</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="index.html#reviews">Reviews</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+  </aside>
+
+  <!-- ==================== INTERIOR PAGE HERO ==================== -->
   <section class="page-hero">
+    <svg class="page-hero-watermark" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><path d="M50 2 C52 30 60 40 80 50 C60 52 52 60 50 98 C48 60 40 52 20 50 C40 40 48 30 50 2 Z M50 20 C51 38 56 44 70 50 C56 56 51 62 50 80 C49 62 44 56 30 50 C44 44 49 38 50 20 Z"/></svg>
     <div class="container">
-      <h1>Book Your Event</h1>
-      <p>Let's make your next event unforgettable</p>
+      <span class="label">Get a Quote</span>
+      <h1>Let's<span class="script">Taco 'Bout It.</span></h1>
+      <div class="flourish" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1 4 3 6 7 7-4 1-6 3-7 7-1-4-3-6-7-7 4-1 6-3 7-7z"/></svg>
+      </div>
+      <p>Tell us about your event and we'll create a custom menu that your guests won't stop talking about.</p>
     </div>
   </section>
 
-  <div class="zigzag-divider"></div>
+  <div class="talavera" aria-hidden="true"></div>
 
-  <!-- CONTACT -->
-  <section class="section-padding" style="background: var(--off-white);">
+  <!-- ==================== CONTACT ==================== -->
+  <section class="section">
     <div class="container">
-      <div class="section-heading">
-        <div class="pattern-divider"></div>
-        <h2>Get in Touch</h2>
-        <p>Fill out the form and we'll get back to you within 24 hours.</p>
-      </div>
-
       <div class="contact-grid">
 
         <!-- Form -->
-        <div>
+        <div class="form-card">
+          <span class="label">Request a Quote</span>
+          <h2>Get in Touch</h2>
+          <div class="form-card-divider"></div>
+          <p style="color: var(--muted); margin-bottom: 30px;">Fill out the form and we'll get back to you within 24 hours.</p>
+
           <!-- CONNECT: Add form action/backend handler -->
           <form aria-label="Event booking form">
             <div class="form-row">
@@ -422,57 +456,91 @@
               <label for="message">Message</label>
               <textarea id="message" name="message" placeholder="Tell us about your event — any details, dietary needs, or questions..."></textarea>
             </div>
-            <button type="submit" class="btn-primary" style="width:100%;">Send Request</button>
+            <button type="submit" class="btn btn-primary">Send Request</button>
           </form>
         </div>
 
         <!-- Sidebar -->
         <div>
-          <div class="contact-info-card">
-            <div class="contact-info-item">
-              <div class="contact-info-icon">&#128222;</div>
+          <div class="info-card">
+            <div class="info-item">
+              <div class="info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
               <div>
-                <div class="contact-info-label">Phone</div>
-                <div class="contact-info-value"><a href="tel:+17606686547">(760) 668-6547</a></div>
+                <div class="info-label">Phone</div>
+                <div class="info-value"><a href="tel:+17606686547">(760) 668-6547</a></div>
               </div>
             </div>
-            <div class="contact-info-item">
-              <div class="contact-info-icon">&#9993;</div>
+            <div class="info-item">
+              <div class="info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
               <div>
-                <div class="contact-info-label">Email</div>
-                <div class="contact-info-value"><a href="mailto:info@tacontodops.com">info@tacontodops.com</a></div>
+                <div class="info-label">Email</div>
+                <div class="info-value"><a href="mailto:info@tacontodops.com">info@tacontodops.com</a></div>
               </div>
             </div>
-            <div class="contact-info-item">
-              <div class="contact-info-icon">&#128247;</div>
+            <div class="info-item">
+              <div class="info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </div>
               <div>
-                <div class="contact-info-label">Instagram</div>
-                <div class="contact-info-value"><a href="https://www.instagram.com/tacontodo.est2021" target="_blank" rel="noopener">@tacontodo.est2021</a></div>
+                <div class="info-label">Instagram</div>
+                <div class="info-value"><a href="https://www.instagram.com/tacontodo.est2021" target="_blank" rel="noopener">@tacontodo.est2021</a></div>
               </div>
             </div>
-            <div class="contact-info-item">
-              <div class="contact-info-icon">&#128338;</div>
+            <div class="info-item">
+              <div class="info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
               <div>
-                <div class="contact-info-label">Hours</div>
-                <div class="contact-info-value">Tue–Fri 10am–8pm<br>Sat–Sun 10am–5pm<br>Mon — Closed</div>
+                <div class="info-label">Hours</div>
+                <div class="info-value">Tue–Fri 10am–8pm<br>Sat–Sun 10am–5pm<br>Mon — Closed</div>
               </div>
             </div>
           </div>
 
-          <div class="service-area-box">
+          <div class="service-area">
             <h3>Service Area</h3>
-            <p>Proudly serving Cathedral City, Palm Springs, Rancho Mirage, Palm Desert, Indio, La Quinta, Coachella, Desert Hot Springs, Thousand Palms, and the entire Coachella Valley.</p>
+            <div class="area-tags">
+              <span class="area-tag">Cathedral City</span>
+              <span class="area-tag">Palm Springs</span>
+              <span class="area-tag">Rancho Mirage</span>
+              <span class="area-tag">Palm Desert</span>
+              <span class="area-tag">Indio</span>
+              <span class="area-tag">La Quinta</span>
+              <span class="area-tag">Coachella</span>
+              <span class="area-tag">Desert Hot Springs</span>
+              <span class="area-tag">Thousand Palms</span>
+              <span class="area-tag all">Entire Coachella Valley</span>
+            </div>
           </div>
 
           <!-- REPLACE: Add Google Maps embed iframe -->
-          <div class="map-placeholder">Google Map</div>
+          <div class="map-box">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Google Map</span>
+          </div>
 
           <div class="seasonal-note">
-            Book early for peak season dates (October through April) and festival weekends.
+            <strong>Book early for peak season</strong> — October through April and festival weekends fill up fast.
           </div>
         </div>
 
       </div>
+    </div>
+  </section>
+
+  <!-- ==================== SLIM PHONE CTA BAND ==================== -->
+  <section class="cta-band">
+    <svg class="cta-band-cactus" viewBox="0 0 64 100" fill="currentColor" aria-hidden="true"><path d="M28 100V44c0-3-2-5-5-5h-3c-5 0-9-4-9-9v-6c0-3 3-6 6-6s6 3 6 6v5c0 2 1 3 3 3h1V20c0-4 3-7 4-7s4 3 4 7v30h1c2 0 3-1 3-3v-9c0-3 3-6 6-6s6 3 6 6v10c0 5-4 9-9 9h-3c-3 0-5 2-5 5v33z"/></svg>
+    <div class="container">
+      <div>
+        <span class="label">Prefer to Talk It Out?</span>
+        <h2>Call us at (760) 668-6547</h2>
+      </div>
+      <a href="tel:+17606686547" class="btn btn-light">Call (760) 668-6547</a>
     </div>
   </section>
 
@@ -481,60 +549,75 @@
     <div class="footer-inner">
       <div class="footer-top">
         <div class="footer-brand">
-          <div class="footer-brand-header">
-            <img src="TacoNtodo-logo.png" alt="Tacon'Todo" class="footer-logo-img">
-            <span class="footer-brand-name">Tacon'Todo</span>
+          <div class="footer-brand-name">TACON'TODO</div>
+          <div class="footer-brand-tag">Running on Salsa</div>
+          <p>Family-owned authentic Mexican catering, proudly serving Cathedral City and the entire Coachella Valley since 2021.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/tacontodo.est2021" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="tel:+17606686547" aria-label="Call us">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </a>
           </div>
-          <p class="footer-brand-desc">Authentic street-style taco catering for weddings, corporate events, private parties, and everything in between. Serving the Coachella Valley since 2021.</p>
-          <ul class="footer-socials">
-            <li><a href="https://www.instagram.com/tacontodo.est2021" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></li>
-            <li><a href="https://www.facebook.com/tacontodo" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></li>
-            <li><a href="https://www.tiktok.com/@tacontodo" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a></li>
+        </div>
+
+        <div class="footer-col">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="menu.html">Packages</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-        <div class="footer-cols">
-          <div class="footer-col"><h3>Navigate</h3><ul><li><a href="index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li></ul></div>
-          <div class="footer-col"><h3>Our Services</h3><ul><li><a href="contact.html">Taco Catering</a></li><li><a href="contact.html">Weddings</a></li><li><a href="contact.html">Corporate Events</a></li><li><a href="contact.html">Private Parties</a></li></ul></div>
-          <div class="footer-col"><h3>Helpful Links</h3><ul><li><a href="menu.html">Full Menu</a></li><li><a href="contact.html">Book Now</a></li><li><a href="gallery.html">Event Photos</a></li></ul></div>
-          <div class="footer-col"><h3>Contact Us</h3><ul>
-            <li><a href="mailto:info@tacontodops.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span class="footer-contact-text">info@tacontodops.com</span></a></li>
-            <li><a href="tel:+17606686547"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="footer-contact-text">(760) 668-6547</span></a></li>
-            <li><a href="https://maps.google.com/?q=Cathedral+City+CA" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><address class="footer-contact-text" style="font-style:normal;">Cathedral City, CA</address></a></li>
-          </ul></div>
+
+        <div class="footer-col">
+          <h3>Catering</h3>
+          <ul>
+            <li><a href="contact.html">Street Taco Bar</a></li>
+            <li><a href="contact.html">Birria Experience</a></li>
+            <li><a href="contact.html">Corporate Catering</a></li>
+            <li><a href="contact.html">Weddings &amp; Events</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Get in Touch</h3>
+          <ul>
+            <li><a href="tel:+17606686547"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(760) 668-6547</a></li>
+            <li><a href="mailto:info@tacontodops.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>info@tacontodops.com</a></li>
+            <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Cathedral City, CA</span></li>
+            <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Tue–Fri 10–8 · Sat–Sun 10–5</span></li>
+          </ul>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Tacon'Todo. All rights reserved.</p>
-        <p class="credit">Website by Desert Nomad Media</p>
-      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Tacon'Todo. All rights reserved.</p>
+      <p>Website by Desert Nomad Media</p>
     </div>
   </footer>
 
+  <!-- ==================== JS ==================== -->
   <script>
+    // Header scroll effect
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Mobile panel
     const menuToggle = document.querySelector('.menu-toggle');
-    const sidePanel = document.getElementById('sidePanel');
-    const sidePanelOverlay = document.getElementById('sidePanelOverlay');
-    function openPanel() {
-      menuToggle.classList.add('active');
-      sidePanel.classList.add('active');
-      sidePanelOverlay.classList.add('active');
-      menuToggle.setAttribute('aria-expanded', 'true');
-      document.body.style.overflow = 'hidden';
-    }
-    function closePanel() {
-      menuToggle.classList.remove('active');
-      sidePanel.classList.remove('active');
-      sidePanelOverlay.classList.remove('active');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    }
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.contains('active') ? closePanel() : openPanel();
-    });
-    sidePanelOverlay.addEventListener('click', closePanel);
-    sidePanel.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', closePanel);
-    });
+    const panel = document.getElementById('panel');
+    const overlay = document.getElementById('panelOverlay');
+    function openPanel(){ panel.classList.add('active'); overlay.classList.add('active'); menuToggle.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+    function closePanel(){ panel.classList.remove('active'); overlay.classList.remove('active'); menuToggle.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+    menuToggle.addEventListener('click', () => panel.classList.contains('active') ? closePanel() : openPanel());
+    overlay.addEventListener('click', closePanel);
+    panel.querySelectorAll('a').forEach(a => a.addEventListener('click', closePanel));
   </script>
+
 </body>
 </html>
