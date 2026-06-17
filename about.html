@@ -14,7 +14,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Oswald:wght@300;400;500;600&family=Rozha+One&display=swap" rel="stylesheet">
 
   <style>
     /* ============================================================
@@ -70,6 +70,7 @@
     }
     .script { font-family: 'Great Vibes', cursive; font-weight: 400; }
     h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--ink); line-height: 1.12; font-weight: 700; }
+    h1, h2 { font-family: 'Rozha One', 'Playfair Display', serif; font-weight: 400; letter-spacing: 0.01em; }
 
     /* Small decorative flourish */
     .flourish {
@@ -127,15 +128,23 @@
     }
     .header .container { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 
-    .brand { display: flex; flex-direction: column; line-height: 1; }
-    .brand-logo { height: 42px; width: auto; transition: height .35s; }
-    .header.scrolled .brand-logo { height: 34px; }
+    .brand { display: flex; flex-direction: column; align-items: center; line-height: 1; gap: 3px; }
+    .brand-agave { width: 26px; height: 15px; color: var(--olive); transition: width .35s, height .35s; }
+    .header.scrolled .brand-agave { width: 21px; height: 12px; }
+    .brand-word {
+      font-family: 'Rozha One', serif;
+      font-size: 1.75rem; line-height: 0.92;
+      color: var(--brick); letter-spacing: 0.005em;
+      transition: font-size .35s;
+    }
+    .header.scrolled .brand-word { font-size: 1.45rem; }
     .brand-tag {
       font-family: 'Oswald', sans-serif;
-      font-size: 0.6rem; font-weight: 500;
-      letter-spacing: 0.26em; text-transform: uppercase;
-      color: var(--olive); margin-top: 5px; padding-left: 3px;
+      font-size: 0.55rem; font-weight: 500;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--olive); margin-top: 2px;
     }
+    @media (max-width: 560px) { .brand-word { font-size: 1.5rem; } }
 
     .nav { display: flex; align-items: center; gap: 4px; }
     .nav a {
@@ -297,7 +306,7 @@
     .footer { background: var(--ink); color: rgba(244,236,219,0.7); }
     .footer-inner { max-width: 1180px; margin: 0 auto; padding: 70px 28px 28px; }
     .footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 40px; }
-    .footer-brand-name { font-family: 'Playfair Display', serif; font-size: 1.7rem; font-weight: 800; color: var(--cream-2); letter-spacing: 0.02em; }
+    .footer-brand-name { font-family: 'Rozha One', serif; font-size: 1.85rem; font-weight: 400; color: var(--cream-2); letter-spacing: 0.02em; }
     .footer-brand-tag { font-family: 'Great Vibes', cursive; color: var(--gold); font-size: 1.4rem; margin-top: 2px; }
     .footer-brand p { font-size: 0.98rem; margin-top: 16px; max-width: 300px; color: rgba(244,236,219,0.55); }
     .footer-socials { display: flex; gap: 18px; margin-top: 22px; }
@@ -346,7 +355,8 @@
   <header class="header" role="banner">
     <div class="container">
       <a href="index.html" class="brand" aria-label="Tacon'Todo — Authentic Mexican Catering">
-        <img src="tacontodo-text-logo.png" alt="Tacon'Todo" class="brand-logo">
+        <svg class="brand-agave" viewBox="0 0 48 28" fill="currentColor" aria-hidden="true"><path d="M24 28C23 18 23 10 24 2 25 10 25 18 24 28Z"/><path d="M24 28C20 19 16 13 8 8 16 12 21 17 24 28Z"/><path d="M24 28C28 19 32 13 40 8 32 12 27 17 24 28Z"/><path d="M24 28C18 21 11 18 2 16 12 16 19 19 24 28Z"/><path d="M24 28C30 21 37 18 46 16 36 16 29 19 24 28Z"/></svg>
+        <span class="brand-word">TACONTODO</span>
         <span class="brand-tag">Authentic Mexican Catering</span>
       </a>
       <nav class="nav" aria-label="Primary">
@@ -539,7 +549,7 @@
     <div class="footer-inner">
       <div class="footer-top">
         <div class="footer-brand">
-          <div class="footer-brand-name">TACON'TODO</div>
+          <div class="footer-brand-name">TACONTODO</div>
           <div class="footer-brand-tag">Running on Salsa</div>
           <p>Family-owned authentic Mexican catering, proudly serving Cathedral City and the entire Coachella Valley since 2021.</p>
           <div class="footer-socials">
