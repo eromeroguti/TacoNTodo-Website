@@ -1,0 +1,9 @@
+{
+  "name": "tacontodo-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tacon'Todo — Authentic Mexican Catering website (static site + Resend contact API)",
+  "dependencies": {
+    "resend": "^4.0.0"
+  }
+}
