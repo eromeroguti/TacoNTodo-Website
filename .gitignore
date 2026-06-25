@@ -5,3 +5,4 @@ node_modules/
 .DS_Store
 *_thumb.jpeg
 CATERING_MENU_KAI_PROMPT.md
+.vercel
