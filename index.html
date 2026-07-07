@@ -16,15 +16,16 @@
     gtag('js', new Date());
     gtag('config', 'G-TB4EW70KR8');
   </script>
-  <title>TacoNTodo | Authentic Mexican Catering — Coachella Valley, CA</title>
-  <meta name="description" content="TacoNTodo is a family-owned authentic Mexican catering service in Cathedral City, CA. Street taco bars, birria, and corporate catering for weddings, celebrations, and events across the Coachella Valley. Call (760) 668-6547.">
+  <title>Taco Catering Cathedral City | Authentic Mexican Catering — TacoNTodo</title>
+  <meta name="description" content="Authentic taco catering in Cathedral City &amp; the Coachella Valley. Birria, street tacos, and custom taco bars for weddings, corporate events &amp; parties. Call (760) 668-6547.">
   <link rel="canonical" href="https://www.tacontodops.com">
-  <meta property="og:title" content="TacoNTodo | Authentic Mexican Catering — Coachella Valley, CA">
-  <meta property="og:description" content="Rooted in tradition. Crafted for celebration. Authentic Mexican catering for weddings, corporate events, and private celebrations across the Coachella Valley.">
+  <meta property="og:title" content="Taco Catering Cathedral City | Authentic Mexican Catering — TacoNTodo">
+  <meta property="og:description" content="Authentic taco catering in Cathedral City &amp; the Coachella Valley. Birria, street tacos, and custom taco bars for weddings, corporate events &amp; parties. Call (760) 668-6547.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.tacontodops.com">
   <meta property="og:image" content="https://www.tacontodops.com/images/hero-chef.jpg">
 
+  <link rel="preload" as="image" href="images/hero-chef.webp" type="image/webp" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Oswald:wght@300;400;500;600&family=Rozha+One&display=swap" rel="stylesheet">
@@ -45,16 +46,43 @@
     "servesCuisine": "Mexican",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "68235 Estio Rd",
       "addressLocality": "Cathedral City",
       "addressRegion": "CA",
       "postalCode": "92234",
       "addressCountry": "US"
     },
-    "areaServed": ["Cathedral City","Palm Springs","Rancho Mirage","Palm Desert","Indio","La Quinta","Coachella","Desert Hot Springs","Thousand Palms"],
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "33.7797",
+      "longitude": "-116.4574"
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Cathedral City", "sameAs": "https://en.wikipedia.org/wiki/Cathedral_City,_California"},
+      {"@type": "City", "name": "Palm Springs"},
+      {"@type": "City", "name": "Rancho Mirage"},
+      {"@type": "City", "name": "Palm Desert"},
+      {"@type": "City", "name": "Indio"},
+      {"@type": "City", "name": "La Quinta"},
+      {"@type": "City", "name": "Coachella"},
+      {"@type": "City", "name": "Desert Hot Springs"},
+      {"@type": "City", "name": "Thousand Palms"}
+    ],
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5.0",
       "reviewCount": "7"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Catering Packages",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Street Taco Bar Catering"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Birria Taco Catering"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Corporate Event Catering"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Wedding Taco Catering"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Private Party Catering"}}
+      ]
     }
   }
   </script>
@@ -96,9 +124,13 @@
       font-size: 1.05rem;
       -webkit-font-smoothing: antialiased;
     }
-    img { max-width: 100%; display: block; }
+    img { max-width: 100%; height: auto; display: block; }
     a { text-decoration: none; color: inherit; }
     ul { list-style: none; }
+    .skip-link { position: absolute; left: -9999px; top: 0; z-index: 2000;
+      background: var(--terracotta); color: #fff; padding: 10px 16px; border-radius: 0 0 4px 0;
+      font-family: 'Oswald', sans-serif; font-size: .85rem; letter-spacing: .08em; }
+    .skip-link:focus { left: 0; top: 0; }
 
     /* ========== UTILITY ========== */
     .container { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
@@ -130,7 +162,7 @@
     /* ========== TALAVERA TILE BORDER ========== */
     .talavera {
       height: 50px;
-      background: url("images/talavera-tile.png") repeat-x center;
+      background: url("images/talavera-tile.webp") repeat-x center;
       background-size: auto 100%;
     }
 
@@ -533,6 +565,7 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ==================== HEADER ==================== -->
   <header class="header" role="banner">
@@ -547,7 +580,7 @@
         <a href="/about">Our Story</a>
         <a href="/menu">Packages</a>
         <a href="/gallery">Gallery</a>
-        <a href="index.html#reviews">Reviews</a>
+        <a href="#reviews">Reviews</a>
         <a href="/contact">Contact</a>
         <a href="/contact" class="btn btn-primary">Get a Quote</a>
       </nav>
@@ -564,10 +597,12 @@
     <a href="/about">Our Story</a>
     <a href="/menu">Packages</a>
     <a href="/gallery">Gallery</a>
-    <a href="index.html#reviews">Reviews</a>
+    <a href="#reviews">Reviews</a>
     <a href="/contact">Contact</a>
     <a href="/contact" class="btn btn-primary">Get a Quote</a>
   </aside>
+
+  <main id="main">
 
   <!-- ==================== HERO ==================== -->
   <section class="hero">
@@ -576,6 +611,7 @@
         <svg class="hero-watermark" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><path d="M50 2 C52 30 60 40 80 50 C60 52 52 60 50 98 C48 60 40 52 20 50 C40 40 48 30 50 2 Z M50 20 C51 38 56 44 70 50 C56 56 51 62 50 80 C49 62 44 56 30 50 C44 44 49 38 50 20 Z"/></svg>
         <span class="label">Authentic Mexican Catering</span>
         <h1>Rooted in Tradition.<span class="script">Crafted for Celebration.</span></h1>
+        <h2 style="font-family:'Oswald',sans-serif;font-weight:500;font-size:clamp(1rem,2.2vw,1.3rem);letter-spacing:.05em;text-transform:uppercase;opacity:.9;margin:.6rem 0 0;">Authentic Mexican Taco Catering in Cathedral City &amp; the Coachella Valley</h2>
         <div class="hero-flourish flourish" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1 4 3 6 7 7-4 1-6 3-7 7-1-4-3-6-7-7 4-1 6-3 7-7z"/></svg>
         </div>
@@ -584,7 +620,7 @@
       </div>
     </div>
     <div class="hero-media">
-      <img src="images/hero-chef.jpg" alt="TacoNTodo chef grilling fresh tacos al pastor at a Coachella Valley desert event">
+      <img width="1920" height="1288" src="images/hero-chef.webp" alt="TacoNTodo chef grilling fresh tacos al pastor at a Coachella Valley desert event" fetchpriority="high">
     </div>
   </section>
 
@@ -596,7 +632,7 @@
     <div class="container">
       <div class="story-grid">
         <div class="story-photo">
-          <img src="images/team-group.jpg" alt="The TacoNTodo family catering team at a Coachella Valley event">
+          <img width="1080" height="1440" src="images/team-group.webp" alt="The TacoNTodo family catering team at a Coachella Valley event">
         </div>
         <div class="story-copy">
           <span class="label">Our Story</span>
@@ -620,28 +656,28 @@
       </div>
       <div class="values-grid">
         <div class="value-card">
-          <img src="images/birria-taco-closeup.jpg" alt="Close-up of authentic birria tacos with rich consomé" loading="lazy">
+          <img width="640" height="1136" src="images/birria-taco-closeup.jpg" alt="Close-up of authentic birria tacos with rich consomé" loading="lazy">
           <div class="value-card-content">
             <div class="vc-label">Authentic Flavor</div>
             <div class="vc-sub">Recipes from Guadalajara, Jalisco</div>
           </div>
         </div>
         <div class="value-card">
-          <img src="images/cocktail-table-setup.jpg" alt="Elegant taco catering setup for a Coachella Valley celebration" loading="lazy">
+          <img width="720" height="960" src="images/cocktail-table-setup.webp" alt="Elegant taco catering setup for a Coachella Valley celebration" loading="lazy">
           <div class="value-card-content">
             <div class="vc-label">Made for Celebrations</div>
             <div class="vc-sub">Weddings, parties &amp; corporate events</div>
           </div>
         </div>
         <div class="value-card">
-          <img src="images/gabby-tortillas.jpg" alt="Handmade tortillas prepared fresh on-site by TacoNTodo" loading="lazy">
+          <img width="640" height="1136" src="images/gabby-tortillas.webp" alt="Handmade tortillas prepared fresh on-site by TacoNTodo" loading="lazy">
           <div class="value-card-content">
             <div class="vc-label">Rooted in Tradition</div>
             <div class="vc-sub">Three generations of family recipes</div>
           </div>
         </div>
         <div class="value-card">
-          <img src="images/garnish-bar-colorful.jpg" alt="Colorful garnish bar with fresh salsas, limes, and toppings" loading="lazy">
+          <img width="1080" height="1440" src="images/garnish-bar-colorful.webp" alt="Colorful garnish bar with fresh salsas, limes, and toppings" loading="lazy">
           <div class="value-card-content">
             <div class="vc-label">Crafted with Care</div>
             <div class="vc-sub">Every detail, from setup to cleanup</div>
@@ -662,7 +698,7 @@
 
         <article class="pkg-card">
           <div class="pkg-photo">
-            <img src="images/garnish-bar-colorful.jpg" alt="Colorful street taco garnish bar with fresh salsas and toppings">
+            <img width="1080" height="1440" src="images/garnish-bar-colorful.webp" alt="Colorful street taco garnish bar with fresh salsas and toppings" loading="lazy">
             <span class="pkg-badge" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M3 14a9 9 0 0 1 18 0z"/><path d="M3 14h18l-1.2 3.2a2 2 0 0 1-1.9 1.3H6.1a2 2 0 0 1-1.9-1.3z"/></svg>
             </span>
@@ -678,7 +714,7 @@
 
         <article class="pkg-card">
           <div class="pkg-photo">
-            <img src="images/birria-taco-closeup.jpg" alt="TacoNTodo signature birria tacos with rich consomé">
+            <img width="640" height="1136" src="images/birria-taco-closeup.jpg" alt="TacoNTodo signature birria tacos with rich consomé" loading="lazy">
             <span class="pkg-badge" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M4 11h16a8 8 0 0 1-16 0z"/><path d="M2 20h20"/><path d="M9 7c0-1 1-1 1-2M13 7c0-1 1-1 1-2"/></svg>
             </span>
@@ -694,7 +730,7 @@
 
         <article class="pkg-card">
           <div class="pkg-photo">
-            <img src="images/setup-elegant.jpg" alt="Elevated TacoNTodo catering setup for a corporate event">
+            <img width="1080" height="1349" src="images/setup-elegant.webp" alt="Elevated TacoNTodo catering setup for a corporate event" loading="lazy">
             <span class="pkg-badge olive" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M12 2c1.5 5 4 7 9 8-5 1-7.5 3-9 8-1.5-5-4-7-9-8 5-1 7.5-3 9-8z"/></svg>
             </span>
@@ -717,11 +753,11 @@
     <div class="container">
       <h2>Celebrating Life's Best Moments</h2>
       <div class="gallery-row">
-        <a href="/gallery"><img src="images/cocktail-mountain-view.jpg" alt="Signature cocktail with a Coachella Valley mountain view"></a>
-        <a href="/gallery"><img src="images/omar-serving.jpg" alt="TacoNTodo chef serving guests at an event"></a>
-        <a href="/gallery"><img src="images/table-setting.jpg" alt="Elegant event table setting catered by TacoNTodo"></a>
-        <a href="/gallery"><img src="images/desert-guac-view.jpg" alt="Fresh guacamole and chips with a desert backdrop"></a>
-        <a href="/gallery"><img src="images/golf-club-view.jpg" alt="Outdoor desert celebration catered by TacoNTodo"></a>
+        <a href="/gallery"><img width="1080" height="1440" src="images/cocktail-mountain-view.webp" alt="Signature cocktail with a Coachella Valley mountain view" loading="lazy"></a>
+        <a href="/gallery"><img width="640" height="1136" src="images/omar-serving.jpg" alt="TacoNTodo chef serving guests at an event" loading="lazy"></a>
+        <a href="/gallery"><img width="720" height="900" src="images/table-setting.webp" alt="Elegant event table setting catered by TacoNTodo" loading="lazy"></a>
+        <a href="/gallery"><img width="1080" height="1349" src="images/desert-guac-view.webp" alt="Fresh guacamole and chips with a desert backdrop" loading="lazy"></a>
+        <a href="/gallery"><img width="1080" height="1920" src="images/golf-club-view.webp" alt="Outdoor desert celebration catered by TacoNTodo" loading="lazy"></a>
       </div>
       <div class="btn-wrap">
         <a href="/gallery" class="btn btn-light">View Gallery</a>
@@ -856,6 +892,7 @@
   </section>
 
   <!-- ==================== FOOTER ==================== -->
+  </main>
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-top">
@@ -906,7 +943,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 TacoNTodo. All rights reserved.</p>
+      <p>&copy; 2026 TacoNTodo. All rights reserved. · <a href="/privacy" style="color:inherit;">Privacy Policy</a></p>
       <p>Website by Desert Nomad Media</p>
     </div>
   </footer>

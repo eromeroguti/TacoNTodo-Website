@@ -16,11 +16,11 @@
     gtag('js', new Date());
     gtag('config', 'G-TB4EW70KR8');
   </script>
-  <title>About Us | TacoNTodo — Cathedral City Taco Catering</title>
-  <meta name="description" content="TacoNTodo is a family-owned taco catering business in Cathedral City, CA. Learn about our story, our commitment to fresh ingredients, and authentic Mexican flavors.">
+  <title>About TacoNTodo | Family-Owned Taco Catering Since 2021 — Cathedral City</title>
+  <meta name="description" content="Meet the family behind TacoNTodo — authentic taco catering from Cathedral City, CA. Recipes from Guadalajara, Jalisco, serving the Coachella Valley since 2021.">
   <link rel="canonical" href="https://www.tacontodops.com/about">
-  <meta property="og:title" content="About Us | TacoNTodo — Cathedral City Taco Catering">
-  <meta property="og:description" content="Family-owned taco catering in Cathedral City, CA. Fresh ingredients, authentic recipes, and professional service since 2021.">
+  <meta property="og:title" content="About TacoNTodo | Family-Owned Taco Catering Since 2021 — Cathedral City">
+  <meta property="og:description" content="Meet the family behind TacoNTodo — authentic taco catering from Cathedral City, CA. Recipes from Guadalajara, Jalisco, serving the Coachella Valley since 2021.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.tacontodops.com/about">
   <meta property="og:image" content="https://www.tacontodops.com/images/omar-owner.jpg">
@@ -66,9 +66,13 @@
       font-size: 1.05rem;
       -webkit-font-smoothing: antialiased;
     }
-    img { max-width: 100%; display: block; }
+    img { max-width: 100%; height: auto; display: block; }
     a { text-decoration: none; color: inherit; }
     ul { list-style: none; }
+    .skip-link { position: absolute; left: -9999px; top: 0; z-index: 2000;
+      background: var(--terracotta); color: #fff; padding: 10px 16px; border-radius: 0 0 4px 0;
+      font-family: 'Oswald', sans-serif; font-size: .85rem; letter-spacing: .08em; }
+    .skip-link:focus { left: 0; top: 0; }
 
     /* ========== UTILITY ========== */
     .container { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
@@ -100,7 +104,7 @@
     /* ========== TALAVERA TILE BORDER ========== */
     .talavera {
       height: 50px;
-      background: url("images/talavera-tile.png") repeat-x center;
+      background: url("images/talavera-tile.webp") repeat-x center;
       background-size: auto 100%;
     }
 
@@ -375,21 +379,49 @@
     "servesCuisine": "Mexican",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "68235 Estio Rd",
       "addressLocality": "Cathedral City",
       "addressRegion": "CA",
       "postalCode": "92234",
       "addressCountry": "US"
     },
-    "areaServed": ["Cathedral City","Palm Springs","Rancho Mirage","Palm Desert","Indio","La Quinta","Coachella","Desert Hot Springs","Thousand Palms"],
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "33.7797",
+      "longitude": "-116.4574"
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Cathedral City", "sameAs": "https://en.wikipedia.org/wiki/Cathedral_City,_California"},
+      {"@type": "City", "name": "Palm Springs"},
+      {"@type": "City", "name": "Rancho Mirage"},
+      {"@type": "City", "name": "Palm Desert"},
+      {"@type": "City", "name": "Indio"},
+      {"@type": "City", "name": "La Quinta"},
+      {"@type": "City", "name": "Coachella"},
+      {"@type": "City", "name": "Desert Hot Springs"},
+      {"@type": "City", "name": "Thousand Palms"}
+    ],
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5.0",
       "reviewCount": "7"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Catering Packages",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Street Taco Bar Catering"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Birria Taco Catering"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Corporate Event Catering"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Wedding Taco Catering"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Private Party Catering"}}
+      ]
     }
   }
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ==================== HEADER ==================== -->
   <header class="header" role="banner">
@@ -404,7 +436,7 @@
         <a href="/about" class="active">Our Story</a>
         <a href="/menu">Packages</a>
         <a href="/gallery">Gallery</a>
-        <a href="index.html#reviews">Reviews</a>
+        <a href="/#reviews">Reviews</a>
         <a href="/contact">Contact</a>
         <a href="/contact" class="btn btn-primary">Get a Quote</a>
       </nav>
@@ -421,10 +453,12 @@
     <a href="/about" class="active">Our Story</a>
     <a href="/menu">Packages</a>
     <a href="/gallery">Gallery</a>
-    <a href="index.html#reviews">Reviews</a>
+    <a href="/#reviews">Reviews</a>
     <a href="/contact">Contact</a>
     <a href="/contact" class="btn btn-primary">Get a Quote</a>
   </aside>
+
+  <main id="main">
 
   <!-- ==================== PAGE HERO ==================== -->
   <section class="page-hero">
@@ -432,6 +466,7 @@
     <div class="container">
       <span class="label">Our Story</span>
       <h1>Generations of Flavor.<span class="script">One Passion.</span></h1>
+      <h2 style="font-family:'Oswald',sans-serif;font-weight:500;font-size:clamp(1rem,2.2vw,1.3rem);letter-spacing:.05em;text-transform:uppercase;opacity:.9;margin:.6rem 0 0;">Family-Owned Taco Catering Since 2021 — Cathedral City, CA</h2>
       <div class="hero-flourish flourish" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1 4 3 6 7 7-4 1-6 3-7 7-1-4-3-6-7-7 4-1 6-3 7-7z"/></svg>
       </div>
@@ -447,7 +482,7 @@
     <div class="container">
       <div class="story-grid">
         <div class="story-photo">
-          <img src="images/omar-owner.jpg" alt="Omar, TacoNTodo owner, grilling birria tacos on the flattop at a catering event">
+          <img width="720" height="960" src="images/omar-owner.webp" alt="Omar, TacoNTodo owner, grilling birria tacos on the flattop at a catering event">
         </div>
         <div class="story-copy">
           <span class="label">Discover Our Story</span>
@@ -585,6 +620,7 @@
   </section>
 
   <!-- ==================== FOOTER ==================== -->
+  </main>
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-top">
@@ -635,7 +671,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 TacoNTodo. All rights reserved.</p>
+      <p>&copy; 2026 TacoNTodo. All rights reserved. · <a href="/privacy" style="color:inherit;">Privacy Policy</a></p>
       <p>Website by Desert Nomad Media</p>
     </div>
   </footer>

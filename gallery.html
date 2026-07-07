@@ -16,11 +16,11 @@
     gtag('js', new Date());
     gtag('config', 'G-TB4EW70KR8');
   </script>
-  <title>Gallery | TacoNTodo — Authentic Mexican Catering, Coachella Valley</title>
-  <meta name="description" content="Browse the TacoNTodo gallery — birria tacos, street taco bars, weddings, and corporate catering across the Coachella Valley. See the food, fiesta, and unforgettable moments. Call (760) 668-6547.">
+  <title>Taco Catering Photos | Weddings, Events &amp; Birria — TacoNTodo</title>
+  <meta name="description" content="Browse TacoNTodo catering photos — birria tacos, street taco bars, weddings, and corporate events across Cathedral City and the Coachella Valley.">
   <link rel="canonical" href="https://www.tacontodops.com/gallery">
-  <meta property="og:title" content="Gallery | TacoNTodo — Authentic Mexican Catering, Coachella Valley">
-  <meta property="og:description" content="Photos from TacoNTodo catering events — birria, street taco bars, weddings, and celebrations across the Coachella Valley.">
+  <meta property="og:title" content="Taco Catering Photos | Weddings, Events &amp; Birria — TacoNTodo">
+  <meta property="og:description" content="Browse TacoNTodo catering photos — birria tacos, street taco bars, weddings, and corporate events across Cathedral City and the Coachella Valley.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.tacontodops.com/gallery">
   <meta property="og:image" content="https://www.tacontodops.com/images/omar-grilling.jpg">
@@ -66,9 +66,13 @@
       font-size: 1.05rem;
       -webkit-font-smoothing: antialiased;
     }
-    img { max-width: 100%; display: block; }
+    img { max-width: 100%; height: auto; display: block; }
     a { text-decoration: none; color: inherit; }
     ul { list-style: none; }
+    .skip-link { position: absolute; left: -9999px; top: 0; z-index: 2000;
+      background: var(--terracotta); color: #fff; padding: 10px 16px; border-radius: 0 0 4px 0;
+      font-family: 'Oswald', sans-serif; font-size: .85rem; letter-spacing: .08em; }
+    .skip-link:focus { left: 0; top: 0; }
 
     /* ========== UTILITY ========== */
     .container { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
@@ -100,7 +104,7 @@
     /* ========== TALAVERA TILE BORDER ========== */
     .talavera {
       height: 50px;
-      background: url("images/talavera-tile.png") repeat-x center;
+      background: url("images/talavera-tile.webp") repeat-x center;
       background-size: auto 100%;
     }
 
@@ -414,21 +418,49 @@
     "servesCuisine": "Mexican",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "68235 Estio Rd",
       "addressLocality": "Cathedral City",
       "addressRegion": "CA",
       "postalCode": "92234",
       "addressCountry": "US"
     },
-    "areaServed": ["Cathedral City","Palm Springs","Rancho Mirage","Palm Desert","Indio","La Quinta","Coachella","Desert Hot Springs","Thousand Palms"],
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "33.7797",
+      "longitude": "-116.4574"
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Cathedral City", "sameAs": "https://en.wikipedia.org/wiki/Cathedral_City,_California"},
+      {"@type": "City", "name": "Palm Springs"},
+      {"@type": "City", "name": "Rancho Mirage"},
+      {"@type": "City", "name": "Palm Desert"},
+      {"@type": "City", "name": "Indio"},
+      {"@type": "City", "name": "La Quinta"},
+      {"@type": "City", "name": "Coachella"},
+      {"@type": "City", "name": "Desert Hot Springs"},
+      {"@type": "City", "name": "Thousand Palms"}
+    ],
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5.0",
       "reviewCount": "7"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Catering Packages",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Street Taco Bar Catering"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Birria Taco Catering"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Corporate Event Catering"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Wedding Taco Catering"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Private Party Catering"}}
+      ]
     }
   }
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ==================== HEADER ==================== -->
   <header class="header" role="banner">
@@ -443,7 +475,7 @@
         <a href="/about">Our Story</a>
         <a href="/menu">Packages</a>
         <a href="/gallery" class="active">Gallery</a>
-        <a href="index.html#reviews">Reviews</a>
+        <a href="/#reviews">Reviews</a>
         <a href="/contact">Contact</a>
         <a href="/contact" class="btn btn-primary">Get a Quote</a>
       </nav>
@@ -460,10 +492,12 @@
     <a href="/about">Our Story</a>
     <a href="/menu">Packages</a>
     <a href="/gallery">Gallery</a>
-    <a href="index.html#reviews">Reviews</a>
+    <a href="/#reviews">Reviews</a>
     <a href="/contact">Contact</a>
     <a href="/contact" class="btn btn-primary">Get a Quote</a>
   </aside>
+
+  <main id="main">
 
   <!-- ==================== INTERIOR PAGE HERO ==================== -->
   <section class="page-hero">
@@ -471,6 +505,7 @@
     <div class="container">
       <span class="label">Gallery</span>
       <h1>Celebrating<span class="script">Life's Best Moments</span></h1>
+      <h2 style="font-family:'Oswald',sans-serif;font-weight:500;font-size:clamp(1rem,2.2vw,1.3rem);letter-spacing:.05em;text-transform:uppercase;opacity:.9;margin:.6rem 0 0;">Taco Catering Photos from Weddings &amp; Events Across the Coachella Valley</h2>
       <div class="flourish" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1 4 3 6 7 7-4 1-6 3-7 7-1-4-3-6-7-7 4-1 6-3 7-7z"/></svg>
       </div>
@@ -499,82 +534,82 @@
       <div class="photo-grid">
 
         <div class="photo-card" data-title="Sunset Salsa Bar" data-desc="Fresh guacamole, salsas, and garnishes with a Rancho Mirage sunset backdrop.">
-          <img src="images/hero-salsa-bar.jpg" alt="Sunset salsa bar with guacamole and fresh salsas at a Rancho Mirage catering event" loading="lazy">
+          <img width="1080" height="1349" src="images/hero-salsa-bar.webp" alt="Sunset salsa bar with guacamole and fresh salsas at a Rancho Mirage catering event">
           <div class="photo-caption"><h4>Sunset Salsa Bar</h4><p>Rancho Mirage private event</p></div>
         </div>
 
         <div class="photo-card" data-title="Team Ready to Serve" data-desc="The TacoNTodo crew at a private catering station — setup complete and ready to go.">
-          <img src="images/team-station.jpg" alt="TacoNTodo team at a catering station ready to serve guests" loading="lazy">
+          <img width="1080" height="1349" src="images/team-station.webp" alt="TacoNTodo team at a catering station ready to serve guests" loading="lazy">
           <div class="photo-caption"><h4>Team Ready to Serve</h4><p>Private event setup</p></div>
         </div>
 
         <div class="photo-card" data-title="Fresh Garnish Bar" data-desc="Colorful garnish bar with fresh cilantro, onions, corn, and limes on vibrant Mexican textiles.">
-          <img src="images/garnish-bar-colorful.jpg" alt="Colorful TacoNTodo garnish bar with fresh toppings on a Mexican textile" loading="lazy">
+          <img width="1080" height="1440" src="images/garnish-bar-colorful.webp" alt="Colorful TacoNTodo garnish bar with fresh toppings on a Mexican textile" loading="lazy">
           <div class="photo-caption"><h4>Fresh Garnish Bar</h4><p>Corporate appreciation lunch</p></div>
         </div>
 
         <div class="photo-card" data-title="Desert Dining" data-desc="Framed catering menu with cacti, mountains, and poolside views — the Coachella Valley at its finest.">
-          <img src="images/menu-frame-cacti.jpg" alt="Framed TacoNTodo catering menu with desert cacti and a pool backdrop" loading="lazy">
+          <img width="1080" height="1440" src="images/menu-frame-cacti.webp" alt="Framed TacoNTodo catering menu with desert cacti and a pool backdrop" loading="lazy">
           <div class="photo-caption"><h4>Desert Dining</h4><p>Private dinner, Coachella Valley</p></div>
         </div>
 
         <div class="photo-card" data-title="Elegant Table Setting" data-desc="Luxury outdoor dining setup for a private catered event — clean, modern, beautiful.">
-          <img src="images/table-setting.jpg" alt="Elegant outdoor table setting for a private TacoNTodo catering event" loading="lazy">
+          <img width="720" height="900" src="images/table-setting.webp" alt="Elegant outdoor table setting for a private TacoNTodo catering event" loading="lazy">
           <div class="photo-caption"><h4>Elegant Table Setting</h4><p>Rancho Mirage private dinner</p></div>
         </div>
 
         <div class="photo-card" data-title="Wedding Rehearsal Dinner" data-desc="A stunning long table with colorful floral runners and coral napkins under the palm trees.">
-          <img src="images/wedding-table-long.jpg" alt="Long wedding rehearsal dinner table with a floral runner under palm trees" loading="lazy">
+          <img width="1080" height="1921" src="images/wedding-table-long.webp" alt="Long wedding rehearsal dinner table with a floral runner under palm trees" loading="lazy">
           <div class="photo-caption"><h4>Wedding Rehearsal Dinner</h4><p>Palm Springs wedding catering</p></div>
         </div>
 
         <div class="photo-card" data-title="The Night Before" data-desc="Rehearsal dinner garnish bar — clay bowls with pickled onions, limes, and radishes set against lush greenery.">
-          <img src="images/rehearsal-garnish.jpg" alt="Elegant garnish bar in clay bowls at a rehearsal dinner" loading="lazy">
+          <img width="640" height="1136" src="images/rehearsal-garnish.webp" alt="Elegant garnish bar in clay bowls at a rehearsal dinner" loading="lazy">
           <div class="photo-caption"><h4>The Night Before</h4><p>Rehearsal dinner garnishes</p></div>
         </div>
 
         <div class="photo-card" data-title="Bridal Shower Salsas" data-desc="Our signature salsa lineup on wooden risers with pink florals for a bridal shower.">
-          <img src="images/bridal-shower-salsas.jpg" alt="TacoNTodo salsas displayed at a bridal shower catering event" loading="lazy">
+          <img width="640" height="1136" src="images/bridal-shower-salsas.webp" alt="TacoNTodo salsas displayed at a bridal shower catering event" loading="lazy">
           <div class="photo-caption"><h4>Bridal Shower Salsas</h4><p>Bridal shower, Cathedral City</p></div>
         </div>
 
         <div class="photo-card" data-title="Bachelorette Fiesta" data-desc="Cocktails, flowers, and the perfect fiesta setup for a destination bachelorette in the desert.">
-          <img src="images/flowers-cocktails.jpg" alt="Cocktail menu and fresh flowers at a bachelorette catering event" loading="lazy">
+          <img width="1080" height="1440" src="images/flowers-cocktails.webp" alt="Cocktail menu and fresh flowers at a bachelorette catering event" loading="lazy">
           <div class="photo-caption"><h4>Bachelorette Fiesta</h4><p>Destination party, Palm Springs</p></div>
         </div>
 
         <div class="photo-card" data-title="Bachelorette Party" data-desc="Omar standing proud after setting up a bachelorette spread — cacti, chandelier, and chips ready to go.">
-          <img src="images/omar-bachelorette.jpg" alt="Omar at a bachelorette party catering setup with elegant decor" loading="lazy">
+          <img width="1080" height="1921" src="images/omar-bachelorette.webp" alt="Omar at a bachelorette party catering setup with elegant decor" loading="lazy">
           <div class="photo-caption"><h4>Bachelorette Party</h4><p>Palm Springs bachelorette</p></div>
         </div>
 
         <div class="photo-card" data-title="Casino Catering" data-desc="TacoNTodo taco cart setup at Agua Caliente Casino Palm Springs for an employee appreciation event.">
-          <img src="images/casino-setup.jpg" alt="TacoNTodo taco cart setup at Agua Caliente Casino in Palm Springs" loading="lazy">
+          <img width="720" height="960" src="images/casino-setup.webp" alt="TacoNTodo taco cart setup at Agua Caliente Casino in Palm Springs" loading="lazy">
           <div class="photo-caption"><h4>Casino Catering</h4><p>Agua Caliente Casino, Palm Springs</p></div>
         </div>
 
         <div class="photo-card" data-title="Elevated Spaces" data-desc="Same hustle, elevated spaces — catering at a luxury Rolls-Royce showroom in Palm Springs.">
-          <img src="images/rolls-royce-event.jpg" alt="TacoNTodo team at a Rolls-Royce showroom catering event" loading="lazy">
+          <img width="1080" height="1921" src="images/rolls-royce-event.webp" alt="TacoNTodo team at a Rolls-Royce showroom catering event" loading="lazy">
           <div class="photo-caption"><h4>Elevated Spaces</h4><p>Rolls-Royce, Palm Springs</p></div>
         </div>
 
         <div class="photo-card" data-title="Tacos in the Dunes" data-desc="The whole crew out in the desert dunes — catering meets adventure with curated vintage supercars.">
-          <img src="images/team-dunes.jpg" alt="TacoNTodo team in the desert sand dunes with vintage cars" loading="lazy">
+          <img width="640" height="1136" src="images/team-dunes.jpg" alt="TacoNTodo team in the desert sand dunes with vintage cars" loading="lazy">
           <div class="photo-caption"><h4>Tacos in the Dunes</h4><p>Desert dunes catering adventure</p></div>
         </div>
 
         <div class="photo-card" data-title="Tacos &amp; Golf" data-desc="Putting greens and taco dreams — catering at O'Donnell Golf Club with palm trees and mountain views.">
-          <img src="images/golf-club-view.jpg" alt="O'Donnell Golf Club with palm trees and mountains in Palm Springs" loading="lazy">
+          <img width="1080" height="1920" src="images/golf-club-view.webp" alt="O'Donnell Golf Club with palm trees and mountains in Palm Springs" loading="lazy">
           <div class="photo-caption"><h4>Tacos &amp; Golf</h4><p>O'Donnell Golf Club</p></div>
         </div>
 
         <div class="photo-card" data-title="Signature Salsas" data-desc="Our handcrafted salsa lineup — Mom's Salsa, Miss Jalapeño, Mr. Habanero, La Taquera — with mountain views.">
-          <img src="images/salsa-bottles-mountains.jpg" alt="TacoNTodo signature salsa bottles with desert mountain views" loading="lazy">
+          <img width="1080" height="1440" src="images/salsa-bottles-mountains.webp" alt="TacoNTodo signature salsa bottles with desert mountain views" loading="lazy">
           <div class="photo-caption"><h4>Signature Salsas</h4><p>Our handcrafted salsa lineup</p></div>
         </div>
 
         <div class="photo-card" data-title="Desert Cocktails" data-desc="Craft cocktail with mountain views and poolside vibes — the Coachella Valley at golden hour.">
-          <img src="images/cocktail-mountain-view.jpg" alt="Craft cocktail with desert mountain and pool views at sunset" loading="lazy">
+          <img width="1080" height="1440" src="images/cocktail-mountain-view.webp" alt="Craft cocktail with desert mountain and pool views at sunset" loading="lazy">
           <div class="photo-caption"><h4>Desert Cocktails</h4><p>Private dinner, Coachella Valley</p></div>
         </div>
 
@@ -590,32 +625,32 @@
       <div class="photo-grid">
 
         <div class="photo-card" data-title="Omar on the Grill" data-desc="Omar working the flattop at an Agua Caliente Casino employee appreciation event.">
-          <img src="images/omar-grilling.jpg" alt="Omar grilling fresh tacos at an Agua Caliente Casino corporate event" loading="lazy">
+          <img width="720" height="960" src="images/omar-grilling.webp" alt="Omar grilling fresh tacos at an Agua Caliente Casino corporate event" loading="lazy">
           <div class="photo-caption"><h4>Omar on the Grill</h4><p>Agua Caliente Casino</p></div>
         </div>
 
         <div class="photo-card" data-title="Omar Serving" data-desc="Omar plating up with TacoNTodo signature salsas at an outdoor taquiza party.">
-          <img src="images/omar-serving.jpg" alt="Omar serving tacos with signature salsas at an outdoor event" loading="lazy">
+          <img width="640" height="1136" src="images/omar-serving.jpg" alt="Omar serving tacos with signature salsas at an outdoor event" loading="lazy">
           <div class="photo-caption"><h4>Omar Serving</h4><p>Taquiza party, Palm Springs</p></div>
         </div>
 
         <div class="photo-card" data-title="Meet Gabby" data-desc="Gabby making handmade tortillas fresh to order — available for private catering events.">
-          <img src="images/gabby-tortillas.jpg" alt="Gabby making handmade tortillas at a private catering event" loading="lazy">
+          <img width="640" height="1136" src="images/gabby-tortillas.webp" alt="Gabby making handmade tortillas at a private catering event" loading="lazy">
           <div class="photo-caption"><h4>Meet Gabby</h4><p>Handmade tortillas, fresh to order</p></div>
         </div>
 
         <div class="photo-card" data-title="Churros &amp; Strawberries" data-desc="Behind the scenes — prepping churros with fresh strawberries and ice cream for a private dinner.">
-          <img src="images/churros-prep.jpg" alt="Preparing churros with fresh strawberries for a private dinner" loading="lazy">
+          <img width="640" height="1136" src="images/churros-prep.webp" alt="Preparing churros with fresh strawberries for a private dinner" loading="lazy">
           <div class="photo-caption"><h4>Churros &amp; Strawberries</h4><p>Private dinner dessert prep</p></div>
         </div>
 
         <div class="photo-card" data-title="The Morning After" data-desc="Loaded chilaquiles with crema, red onion, and cilantro — the ultimate recovery breakfast.">
-          <img src="images/chilaquiles-morning.jpg" alt="Loaded chilaquiles recovery breakfast for the morning after a wedding" loading="lazy">
+          <img width="640" height="1136" src="images/chilaquiles-morning.webp" alt="Loaded chilaquiles recovery breakfast for the morning after a wedding" loading="lazy">
           <div class="photo-caption"><h4>The Morning After</h4><p>Wedding recovery breakfast</p></div>
         </div>
 
         <div class="photo-card" data-title="The Family Team" data-desc="The TacoNTodo family catering team — the heart behind every event we serve.">
-          <img src="images/team-group.jpg" alt="The TacoNTodo family catering team at a Coachella Valley event" loading="lazy">
+          <img width="1080" height="1440" src="images/team-group.webp" alt="The TacoNTodo family catering team at a Coachella Valley event" loading="lazy">
           <div class="photo-caption"><h4>The Family Team</h4><p>The heart behind every event</p></div>
         </div>
 
@@ -645,47 +680,47 @@
       <div class="photo-grid">
 
         <div class="photo-card" data-title="Birria El Jefe Style" data-desc="Signature birria taco with bone marrow — crispy, loaded, and served on branded TacoNTodo paper.">
-          <img src="images/birria-taco-closeup.jpg" alt="Closeup of a signature TacoNTodo birria taco with bone marrow on branded paper" loading="lazy">
+          <img width="640" height="1136" src="images/birria-taco-closeup.jpg" alt="Closeup of a signature TacoNTodo birria taco with bone marrow on branded paper" loading="lazy">
           <div class="photo-caption"><h4>Birria El Jefe Style</h4><p>Signature birria + bone marrow</p></div>
         </div>
 
         <div class="photo-card" data-title="Birria Platter" data-desc="Magazine-quality birria taco platter with golden tortillas, consommé, and fresh lime.">
-          <img src="gallery-birria-01.jpg" alt="Birria taco platter with consommé and lime wedges" loading="lazy">
+          <img width="1600" height="1067" src="gallery-birria-01.webp" alt="Birria taco platter with consommé and lime wedges" loading="lazy">
           <div class="photo-caption"><h4>Birria Platter</h4><p>Signature birria tacos</p></div>
         </div>
 
         <div class="photo-card" data-title="Cilantro Lime Birria" data-desc="Golden birria tacos loaded with fresh cilantro, onions, and a side of lime.">
-          <img src="gallery-birria-02.jpg" alt="Birria tacos with cilantro, lime, and fresh toppings" loading="lazy">
+          <img width="1600" height="667" src="gallery-birria-02.webp" alt="Birria tacos with cilantro, lime, and fresh toppings" loading="lazy">
           <div class="photo-caption"><h4>Cilantro Lime Birria</h4><p>Fresh toppings, bold flavor</p></div>
         </div>
 
         <div class="photo-card" data-title="Full Spread" data-desc="Overhead view of birria tacos with a consommé bowl, cilantro, lime wedges, and fresh radishes.">
-          <img src="gallery-birria-03.jpg" alt="Overhead birria taco spread with consommé and garnishes" loading="lazy">
+          <img width="933" height="1400" src="gallery-birria-03.webp" alt="Overhead birria taco spread with consommé and garnishes" loading="lazy">
           <div class="photo-caption"><h4>Full Spread</h4><p>The complete birria experience</p></div>
         </div>
 
         <div class="photo-card" data-title="Cheese Pull" data-desc="Melty cheese pull action shot — quesabirria dipped into rich consommé.">
-          <img src="gallery-birria-04.jpg" alt="Quesabirria cheese pull dipping into consommé" loading="lazy">
+          <img width="1200" height="1800" src="gallery-birria-04.webp" alt="Quesabirria cheese pull dipping into consommé" loading="lazy">
           <div class="photo-caption"><h4>Cheese Pull</h4><p>Quesabirria perfection</p></div>
         </div>
 
         <div class="photo-card" data-title="Birria &amp; Shrimp" data-desc="Gourmet birria tacos with shrimp, cilantro, and rich consommé on a newspaper-lined tray.">
-          <img src="gallery-birria-05.jpg" alt="Gourmet birria tacos with shrimp and consommé" loading="lazy">
+          <img width="667" height="1000" src="gallery-birria-05.webp" alt="Gourmet birria tacos with shrimp and consommé" loading="lazy">
           <div class="photo-caption"><h4>Birria &amp; Shrimp</h4><p>Gourmet taco plating</p></div>
         </div>
 
         <div class="photo-card" data-title="Editorial Plating" data-desc="Restaurant-quality single birria taco on a dark plate with fresh garnishes and salsa verde.">
-          <img src="gallery-birria-06.jpg" alt="Editorial-style birria taco plating with garnishes" loading="lazy">
+          <img width="1600" height="1067" src="gallery-birria-06.webp" alt="Editorial-style birria taco plating with garnishes" loading="lazy">
           <div class="photo-caption"><h4>Editorial Plating</h4><p>Restaurant-quality presentation</p></div>
         </div>
 
         <div class="photo-card" data-title="Fine Dining Taco" data-desc="Elevated birria taco with fine dining presentation — colorful garnishes on a sleek dark plate.">
-          <img src="gallery-birria-07.jpg" alt="Fine dining style birria taco with elegant plating" loading="lazy">
+          <img width="1600" height="1067" src="gallery-birria-07.webp" alt="Fine dining style birria taco with elegant plating" loading="lazy">
           <div class="photo-caption"><h4>Fine Dining Taco</h4><p>Elevated taco experience</p></div>
         </div>
 
         <div class="photo-card" data-title="Top-Down Spread" data-desc="Rustic overhead view of birria tacos with consommé, cilantro, and onions on a wooden board.">
-          <img src="gallery-birria-08.jpg" alt="Top-down rustic birria taco spread with consommé" loading="lazy">
+          <img width="900" height="1195" src="gallery-birria-08.webp" alt="Top-down rustic birria taco spread with consommé" loading="lazy">
           <div class="photo-caption"><h4>Top-Down Spread</h4><p>Rustic birria styling</p></div>
         </div>
 
@@ -727,6 +762,7 @@
   </section>
 
   <!-- ==================== FOOTER ==================== -->
+  </main>
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-top">
@@ -777,7 +813,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 TacoNTodo. All rights reserved.</p>
+      <p>&copy; 2026 TacoNTodo. All rights reserved. · <a href="/privacy" style="color:inherit;">Privacy Policy</a></p>
       <p>Website by Desert Nomad Media</p>
     </div>
   </footer>
