@@ -16,11 +16,11 @@
     gtag('js', new Date());
     gtag('config', 'G-TB4EW70KR8');
   </script>
-  <title>Taco Catering Cathedral City | Authentic Mexican Catering — TacoNTodo</title>
-  <meta name="description" content="Authentic taco catering in Cathedral City &amp; the Coachella Valley. Birria, street tacos, and custom taco bars for weddings, corporate events &amp; parties. Call (760) 668-6547.">
+  <title>Taco Catering Cathedral City &amp; Palm Springs | TacoNTodo</title>
+  <meta name="description" content="Authentic taco catering in Cathedral City &amp; Palm Springs. Birria, street taco bars &amp; menus for 20-500+ guests. 5-star rated. Call (760) 668-6547.">
   <link rel="canonical" href="https://www.tacontodops.com">
-  <meta property="og:title" content="Taco Catering Cathedral City | Authentic Mexican Catering — TacoNTodo">
-  <meta property="og:description" content="Authentic taco catering in Cathedral City &amp; the Coachella Valley. Birria, street tacos, and custom taco bars for weddings, corporate events &amp; parties. Call (760) 668-6547.">
+  <meta property="og:title" content="Taco Catering Cathedral City &amp; Palm Springs | TacoNTodo">
+  <meta property="og:description" content="Authentic taco catering in Cathedral City &amp; Palm Springs. Birria, street taco bars &amp; menus for 20-500+ guests. 5-star rated. Call (760) 668-6547.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.tacontodops.com">
   <meta property="og:image" content="https://www.tacontodops.com/images/hero-chef.jpg">
@@ -37,6 +37,7 @@
     "@id": "https://www.tacontodops.com/#business",
     "additionalType": "https://www.productontology.org/id/Caterer",
     "name": "TacoNTodo",
+    "alternateName": ["Tacon Todo", "TaconTodo", "Taco N Todo", "Taco Todo", "Tacos Con Todo", "TacoTodo"],
     "image": "https://www.tacontodops.com/images/hero-chef.jpg",
     "description": "Authentic Mexican taco catering and mobile taco carts for weddings, corporate events, and private celebrations in Cathedral City and throughout the Coachella Valley.",
     "telephone": "+17606686547",
@@ -44,6 +45,7 @@
     "sameAs": ["https://www.instagram.com/tacontodo.est2021"],
     "priceRange": "$$",
     "servesCuisine": "Mexican",
+    "foundingDate": "2021",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "68235 Estio Rd",
@@ -71,7 +73,7 @@
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5.0",
-      "reviewCount": "7"
+      "reviewCount": "8"
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -81,7 +83,9 @@
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Birria Taco Catering"}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Corporate Event Catering"}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Wedding Taco Catering"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Private Party Catering"}}
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Private Party Catering"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "BBQ Taco Catering"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mobile Taco Cart"}}
       ]
     }
   }
@@ -283,8 +287,43 @@
     }
     .hero-flourish { margin: 28px 0 22px; }
     .hero p {
-      font-size: 1.18rem; color: var(--muted); max-width: 460px; margin-bottom: 36px;
+      font-size: 1.18rem; color: var(--muted); max-width: 460px; margin-bottom: 28px;
     }
+
+    /* Above-the-fold social proof */
+    .hero-proof {
+      list-style: none; display: flex; flex-wrap: wrap; gap: 10px 26px;
+      margin: 0 0 32px; padding: 0; max-width: 520px;
+    }
+    .hero-proof li {
+      font-family: 'Oswald', sans-serif; font-size: .82rem; letter-spacing: .04em;
+      text-transform: uppercase; color: var(--muted); display: flex;
+      align-items: baseline; gap: 6px;
+    }
+    .hero-proof strong { color: var(--ink); font-weight: 600; }
+    .hero-proof-stars { color: var(--gold); letter-spacing: .06em; font-size: .9rem; }
+    .hero-proof-sub { text-transform: none; letter-spacing: 0; font-size: .8rem; opacity: .85; }
+
+    /* Areas We Serve — signals full-valley coverage + links the 7 city pages */
+    .areas-band { background: var(--cream-3); padding: 74px 0; border-block: 1px solid var(--line); }
+    .areas-band .section-head { text-align: center; margin-bottom: 34px; }
+    .areas-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px; max-width: 940px; margin: 0 auto;
+    }
+    .areas-grid a, .areas-grid span {
+      display: block; padding: 16px 18px; background: var(--cream-2);
+      border: 1px solid var(--line); border-radius: var(--radius);
+      font-family: 'Oswald', sans-serif; font-size: .92rem; letter-spacing: .04em;
+      text-transform: uppercase; color: var(--ink); text-decoration: none;
+      transition: background .2s ease, color .2s ease, transform .2s ease;
+    }
+    .areas-grid a:hover, .areas-grid a:focus-visible {
+      background: var(--terracotta); color: var(--cream-2);
+      border-color: var(--terracotta); transform: translateY(-2px);
+    }
+    .areas-grid span { color: var(--muted); }
+    .areas-note { text-align: center; margin-top: 26px; color: var(--muted); font-size: .98rem; }
 
     /* Hero image bleeds from the right, fading into the cream on the left */
     .hero-media { position: absolute; top: 0; right: 0; bottom: 0; width: 56%; z-index: 1; }
@@ -616,6 +655,12 @@
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1 4 3 6 7 7-4 1-6 3-7 7-1-4-3-6-7-7 4-1 6-3 7-7z"/></svg>
         </div>
         <p>Authentic Mexican flavors brought to life for weddings, corporate events, and private celebrations across the Coachella Valley.</p>
+        <!-- Social proof above the fold — GA4 shows 12s avg homepage engagement; proof earns the scroll -->
+        <ul class="hero-proof">
+          <li><span class="hero-proof-stars" aria-hidden="true">★★★★★</span> <strong>5.0</strong> on Google <span class="hero-proof-sub">(8 reviews)</span></li>
+          <li><strong>Since 2021</strong> <span class="hero-proof-sub">family-owned in Cathedral City</span></li>
+          <li><strong>20&ndash;500+</strong> <span class="hero-proof-sub">guests catered on-site</span></li>
+        </ul>
         <a href="/contact" class="btn btn-primary">Let's Taco 'Bout It</a>
       </div>
     </div>
@@ -693,6 +738,7 @@
       <div class="section-head">
         <span class="label">Our Packages</span>
         <h2>Made for Every Celebration</h2>
+        <p style="margin-top:12px;max-width:660px;margin-left:auto;margin-right:auto;color:var(--muted);">Planning something specific? Explore our <a href="/weddings" style="color:var(--terracotta);font-weight:600;">wedding catering</a> and <a href="/corporate" style="color:var(--terracotta);font-weight:600;">corporate catering</a>, or see all the <a href="/areas-served" style="color:var(--terracotta);font-weight:600;">areas we serve</a> across the Coachella Valley.</p>
       </div>
       <div class="pkg-grid">
 
@@ -738,7 +784,7 @@
           <div class="pkg-body">
             <h3>Corporate Catering</h3>
             <p>Elevated, efficient, and unforgettable catering for corporate lunches, meetings and company events.</p>
-            <a href="/menu" class="pkg-link">View Package
+            <a href="/corporate" class="pkg-link">Learn More
               <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
           </div>
@@ -766,12 +812,35 @@
   </section>
 
   <!-- ==================== REVIEWS ==================== -->
+  <!-- ==================== AREAS WE SERVE ==================== -->
+  <section class="areas-band" id="areas">
+    <div class="container">
+      <div class="section-head">
+        <span class="label">Areas We Serve</span>
+        <h2>Taco Catering Across the Coachella Valley</h2>
+        <p style="margin-top:12px;max-width:640px;margin-left:auto;margin-right:auto;color:var(--muted);">We bring the full mobile setup &mdash; grills, garnish bar, and staff &mdash; to all nine Coachella Valley cities. Everything is cooked fresh on-site at your venue.</p>
+      </div>
+      <div class="areas-grid">
+        <a href="/taco-catering-cathedral-city">Cathedral City</a>
+        <a href="/taco-catering-palm-springs">Palm Springs</a>
+        <a href="/taco-catering-palm-desert">Palm Desert</a>
+        <a href="/taco-catering-rancho-mirage">Rancho Mirage</a>
+        <a href="/taco-catering-indio">Indio</a>
+        <a href="/taco-catering-la-quinta">La Quinta</a>
+        <a href="/taco-catering-desert-hot-springs">Desert Hot Springs</a>
+        <span>Coachella</span>
+        <span>Thousand Palms</span>
+      </div>
+      <p class="areas-note">Not sure if we reach your venue? <a href="/areas-served" style="color:var(--terracotta);font-weight:600;">See all areas we serve</a> or call <a href="tel:+17606686547" style="color:var(--terracotta);font-weight:600;">(760) 668-6547</a>.</p>
+    </div>
+  </section>
+
   <section class="section reviews" id="reviews">
     <div class="container">
       <div class="section-head">
         <span class="label">Reviews</span>
         <h2>Loved Across the Valley</h2>
-        <p class="reviews-badge"><span class="stars">★★★★★</span> 5.0 Rating · 7 Google Reviews</p>
+        <p class="reviews-badge"><span class="stars">★★★★★</span> 5.0 Rating · 8 Google Reviews</p>
       </div>
       <!-- REPLACE: Swap in / add real Google reviews as they come in -->
       <div class="review-grid">
@@ -917,6 +986,7 @@
             <li><a href="/about">Our Story</a></li>
             <li><a href="/menu">Packages</a></li>
             <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/areas-served">Areas We Serve</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
