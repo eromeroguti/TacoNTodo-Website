@@ -30,6 +30,12 @@
     }
   ],
   "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "tacontodops.com" }],
+      "destination": "https://www.tacontodops.com/:path*",
+      "statusCode": 301
+    },
     { "source": "/index.html", "destination": "/", "statusCode": 308 },
     { "source": "/index", "destination": "/", "statusCode": 308 }
   ]
